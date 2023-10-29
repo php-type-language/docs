@@ -110,7 +110,7 @@ Every floating point number accepts the format `[0-9]+\.[0-9]+`. The leading or 
 * ✔️ **10e2** — Сorrect (number `1000.0`).
 * ✔️ **10E2** — Сorrect (also number `1000.0`).
 * ✔️ **10e-2** — Сorrect (also number `0.1`).
-* ❌ 10e-F —  Incorrect
+* ❌ 10e-F —  Incorrect.
 
 ## AST API
 

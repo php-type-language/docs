@@ -16,8 +16,16 @@ If the PHP language supported generic types, then the declaration (in pseudo-lan
 
 ### Examples
 
-* ✔️ **example\<T>** — Сorrect
-* ✔️ **iterable\<int<0, max>, non-empty-string>** — Сorrect
-* ✔️ **HashMap\<Request, User,>** — Сorrect: Trailing comma is allowed
-* ❌ **example<>** —  Incorrect: Missing Template Argument
-* ❌ **example<,T>** — Incorrect: Leading comma is not allowed
+* ✔️ **example\<T>** — Сorrect.
+* ✔️ **iterable\<int<0, max>, non-empty-string>** — Сorrect.
+* ✔️ **HashMap\<Request, User,>** — Сorrect: Trailing comma is allowed.
+* ❌ **example<>** —  Incorrect: Missing template argument.
+* ❌ **example<,T>** — Incorrect: Leading comma is not allowed.
+
+### List Syntax
+
+In addition to modern list declarations such as `list<int>` or `array<array-key, int>`, the legacy `int[]` syntax is allowed.
+
+* ✔️ **User\[]** — Сorrect (list of `User` type).
+* ✔️ **User\[]\[]** — Сorrect (list of list of `User` type, similar to `list<list<User>>`).
+* ❌ **User\[int]** —  Incorrect: Incorrect syntax (was [used in the PSR](https://github.com/php-fig/event-dispatcher/blob/1.0.0/src/ListenerProviderInterface.php#L14) by mistake).

@@ -10,16 +10,16 @@ In addition, it is worth noting that the case-insensitive names `true`, `false` 
 
 ### Examples
 
-* ✔️ **example** — Сorrect
-* ✔️ **example-type** — Сorrect
-* ✔️ **example-42** — Сorrect
-* ✔️ **ExampleTypeName** — Сorrect
-* ✔️ **true-type** — Сorrect
-* ✔️ **false-type** — Сorrect
-* ❌ **true** —  Incorrect: Reserved Name
-* ❌ **TRUE** — Incorrect: Reserved Name
-* ❌ **42type** — Incorrect: Starts With A Number
-* ❌ **-type** — Incorrect: Starts With A Dash Symbol
+* ✔️ **example** — Сorrect.
+* ✔️ **example-type** — Сorrect.
+* ✔️ **example-42** — Сorrect.
+* ✔️ **ExampleTypeName** — Сorrect.
+* ✔️ **true-type** — Сorrect.
+* ✔️ **false-type** — Сorrect.
+* ❌ **true** —  Incorrect: Reserved name.
+* ❌ **TRUE** — Incorrect: Reserved name.
+* ❌ **42type** — Incorrect: Starts with a number.
+* ❌ **-type** — Incorrect: Starts with a dash symbol.
 
 ## Namespace
 
@@ -29,13 +29,13 @@ The namespace delimiter can be used in conjunction with keywords such as `true`,
 
 ### Examples
 
-* ✔️ **example\name** — Сorrect
-* ✔️ **\prefixed\example\name** — Сorrect
-* ✔️ **\true**— Сorrect
-* ✔️ **\true\null** — Сorrect
-* ❌ **true\null** —  Incorrect: Reserved Name
-* ❌ **example\name\\** — Incorrect: Trailing Delimiter
-* ❌ **example\2type** — Incorrect: Starts With A Number
+* ✔️ **example\name** — Сorrect.
+* ✔️ **\prefixed\example\name** — Сorrect.
+* ✔️ **\true**— Сorrect.
+* ✔️ **\true\null** — Сorrect.
+* ❌ **true\null** —  Incorrect: Reserved name.
+* ❌ **example\name\\** — Incorrect: Trailing delimiter.
+* ❌ **example\2type** — Incorrect: Starts with a number.
 
 [^1]: see the summary below
 
