@@ -51,6 +51,10 @@ the sequence of characters matching the regular expression `[0-9A-Fa-f]+` is a U
 
 The syntax of numbers is similar to the PHP language. Binary, octal, decimal and hexadecimal number systems are supported.
 
+{% hint style="info" %}
+Please note that in addition to numbers, underscores (`_`) are allowed.
+{% endhint %}
+
 Decimal numbers can contain any digits from `0` to `9` (leading `0` not allowed) and must match the regular expression `[1-9][0-9]*`. For any other numbers, a special prefixed format is used, described below.
 
 #### Binary
@@ -58,6 +62,7 @@ Decimal numbers can contain any digits from `0` to `9` (leading `0` not allowed)
 Every binary number is prefixed with `0b` and can only contain the numbers `1` and `0` and must match the regular expression `0b[0-1]+`.
 
 * ✔️ **0b10101101** — Сorrect (number `173`).
+* ✔️ **0b10\_10\_11\_01** — Сorrect (also number `173`).
 * ❌ **0b101042** —  Incorrect: Can only contain "1" and "0".
 
 #### Octal
@@ -65,17 +70,18 @@ Every binary number is prefixed with `0b` and can only contain the numbers `1` a
 Every octal number is prefixed with `0o` and can only contain the numbers between `0` and `7` and must match the regular expression `0o[0-7]+` or `[0-7]+`.
 
 {% hint style="info" %}
-For compatibility with older versions of PHP, the prefix `0` is allowed.
+For compatibility with older versions of PHP, the prefix `0` is also allowed.
 {% endhint %}
 
 * ✔️ **0o42** — Сorrect (number `34`).
-* ✔️ **042** — Сorrect (number `34`, legacy PHP syntax).
+* ✔️ **0o42\_23** — Сorrect (number `2195`).
+* ✔️ **042** — Сorrect (number `34`, legacy octal PHP syntax).
 * ❌ **0o4281** —  Incorrect: Can only contain numbers between `0` and `7`.
 
 #### Hexadecimal
 
-Every hexadecimal number is prefixed with `0x` and can only contain the numbers between `0` and `f` and must match the regular expression `0x[0-9a-fA-F]+`.
+Every hexadecimal number is prefixed with `0x` and can only contain the numbers between `0` and `F` and must match the regular expression `0x[0-9a-fA-F]+`.
 
 * ✔️ **0xDEAD** — Сorrect (number `57005`).
-* ✔️ **042** — Сorrect (number `34`, legacy PHP syntax).
-* ❌ **0o4281** —  Incorrect: Can only contain numbers between `0` and `7`.
+* ✔️ **0xDEAD\_BEEF** — Сorrect (number `3735928559`).
+* ❌ **0xHELL** —  Incorrect: Can only contain numbers between `0` and `F`.
