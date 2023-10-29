@@ -1,3 +1,4 @@
 # Table of contents
 
-* [Syntax](README.md)
+* [Language](README.md)
+  * [Basic Types](language/basic-types.md)
