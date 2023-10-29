@@ -8,7 +8,7 @@ description: Language Literal Types
 
 As a type description, specific values corresponding to a specific type are allowed: `bool`, `string`, `int`, `float` and `null`.
 
-### Boolean And Nulls
+### Boolean And Null
 
 The literals `true` and `false` are used as the value of the PHP `bool` type.&#x20;
 
@@ -49,15 +49,15 @@ the sequence of characters matching the regular expression `[0-9A-Fa-f]+` is a U
 
 * `"\u{1F60A}"` — [`"😊"` unciode char](https://www.compart.com/en/unicode/U+1F60A) equivalent.
 
-### Integers
+### Integer
 
-The syntax of numbers is similar to the PHP language. Binary, octal, decimal and hexadecimal number systems are supported.
+The syntax of integer numbers is similar to the PHP language. Binary, octal, decimal and hexadecimal number systems are supported.
 
 {% hint style="info" %}
 Please note that in addition to numbers, underscores (`_`) are allowed.
 {% endhint %}
 
-Decimal numbers can contain any digits from `0` to `9` (leading `0` not allowed) and must match the regular expression `[1-9][0-9]*`. For any other numbers, a special prefixed format is used, described below.
+Decimal numbers can contain any digits from `0` to `9` (leading `0` not allowed) and must match the regular expression `[1-9][0-9]*`. For any other numbers, a special prefixed format is used, described below. Negative values are prefixed with a minus (`-`).
 
 #### Binary
 
@@ -65,6 +65,7 @@ Every binary number is prefixed with `0b` or `0B` and can only contain the numbe
 
 * ✔️ **0b10101101** — Сorrect (number `173`).
 * ✔️ **0B1010** — Сorrect (number `10`).
+* ✔️ **-0b1010** — Сorrect (number `-10`).
 * ✔️ **0b10\_10\_11\_01** — Сorrect (also number `173`).
 * ❌ **0b101042** —  Incorrect: Can only contain "1" and "0".
 
@@ -90,6 +91,26 @@ Every hexadecimal number is prefixed with `0x` or `0X` and can only contain the 
 * ✔️ **0XDEAD** — Сorrect (also number `57005`).
 * ✔️ **0xDEAD\_BEEF** — Сorrect (number `3735928559`).
 * ❌ **0xHELL** —  Incorrect: Can only contain numbers between `0` and `F`.
+
+### Float
+
+The syntax of float numbers is similar to the PHP language. Basic floating point syntax and scientific notation are supported.
+
+Every floating point number accepts the format `[0-9]+\.[0-9]+`. The leading or trailing number may be omitted. Negative values are prefixed with a minus (`-`).
+
+* ✔️ **0.9** — Сorrect.
+* ✔️ **.9** — Сorrect (also number `0.9`).
+* ✔️ -**.9** — Сorrect (also number `0.9`).
+* ✔️ **1.** — Сorrect (number `1.0`).
+* ❌ **.** —  Incorrect: Only leading or trailing number may be omitted (not both).
+* ❌ 0.0A —  Incorrect: Only number between `0` and `9` are allowed.
+
+#### Scientific Notation
+
+* ✔️ **10e2** — Сorrect (number `1000.0`).
+* ✔️ **10E2** — Сorrect (also number `1000.0`).
+* ✔️ **10e-2** — Сorrect (also number `0.1`).
+* ❌ 10e-F —  Incorrect
 
 ## AST API
 
