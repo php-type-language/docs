@@ -1,3 +1,7 @@
+---
+description: Atomic Types
+---
+
 # Basic Types
 
 The parser does not impose restrictions on type naming. The type name must begin with the characters `[a-zA-Z\x80-\xff]` (any letter[^1]) and `_` (underscore) and can contain any characters within the limit `[a-zA-Z0-9\x80-\xff]` (any letter[^2]), as well as the characters `_` (underscore) and `-` (dash).
@@ -8,7 +12,7 @@ In this case, the only difference from [the PHP grammar](https://www.php.net/man
 
 In addition, it is worth noting that the case-insensitive names `true`, `false` and `null` are registered PHP literals, so their use as a custom type name is **unacceptable**.
 
-### Examples
+#### Examples
 
 * ✔️ **example** — Сorrect.
 * ✔️ **example-type** — Сorrect.
@@ -27,7 +31,7 @@ Each name can contain a namespace symbol (`\` — backslash), which is [similar 
 
 The namespace delimiter can be used in conjunction with keywords such as `true`, `false`, or `null` to explicitly indicate a type reference.
 
-### Examples
+#### Examples
 
 * ✔️ **example\name** — Сorrect.
 * ✔️ **\prefixed\example\name** — Сorrect.
