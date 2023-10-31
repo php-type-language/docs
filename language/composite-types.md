@@ -22,5 +22,12 @@ Each intersection type is separated by a ampersand character (`&`) and may conta
 
 * &#x20;**`A & B & C` ** — The "A" _and_ "B" _and_ "C".
 
-#### Nullable
+### Nullable
 
+Nullable type is a shortened alias for union type `T | null` and is written as `?T.`
+
+#### Example
+
+* ✔️ **?example** — Сorrect.
+* ❌ **example?** —  Incorrect: The question mark must be placed before the type name.
+* ❌ **? | example** —  Incorrect: The question mark must be placed before the type name.
