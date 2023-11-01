@@ -12,7 +12,7 @@ Below is a comparison list of all syntactic structures (grammar). The logical co
 
 Below is a list of simple and logical (composite) types.
 
-<table><thead><tr><th width="252">Code Example</th><th>phptl</th><th data-hidden>psalm</th><th data-hidden>phpstan</th></tr></thead><tbody><tr><td><code>ClassName</code></td><td>✔️</td><td>✔️</td><td>✔️</td></tr><tr><td><code>Non\Qualified\Name</code></td><td>✔️</td><td>✔️</td><td>✔️</td></tr><tr><td><code>\Full\Qualified\Name</code></td><td>✔️</td><td>✔️</td><td>✔️</td></tr><tr><td><code>type-name</code></td><td>✔️</td><td>✔️</td><td>✔️</td></tr><tr><td>Union <code>T1 | T2</code></td><td>✔️</td><td>✔️</td><td>✔️</td></tr><tr><td>Intersection <code>T1 &#x26; T2</code></td><td>✔️</td><td>✔️</td><td>✔️</td></tr><tr><td>Nullable <code>?T</code></td><td>✔️</td><td>✔️</td><td>✔️</td></tr></tbody></table>
+<table><thead><tr><th width="252">Code Example</th><th>phptl</th><th>psalm</th><th>phpstan</th><th data-hidden>psalm</th><th data-hidden>phpstan</th></tr></thead><tbody><tr><td><code>ClassName</code></td><td>✔️</td><td>✔️</td><td>✔️</td><td>✔️</td><td>✔️</td></tr><tr><td><code>Non\Qualified\Name</code></td><td>✔️</td><td>✔️</td><td>✔️</td><td>✔️</td><td>✔️</td></tr><tr><td><code>\Full\Qualified\Name</code></td><td>✔️</td><td>✔️</td><td>✔️</td><td>✔️</td><td>✔️</td></tr><tr><td><code>type-name</code></td><td>✔️</td><td>✔️</td><td>✔️</td><td>✔️</td><td>✔️</td></tr><tr><td>Union <code>T1 | T2</code></td><td>✔️</td><td>✔️</td><td>✔️</td><td>✔️</td><td>✔️</td></tr><tr><td>Intersection <code>T1 &#x26; T2</code></td><td>✔️</td><td>✔️</td><td>✔️</td><td>✔️</td><td>✔️</td></tr><tr><td>Nullable <code>?T</code></td><td>✔️</td><td>✔️</td><td>✔️</td><td>✔️</td><td>✔️</td></tr></tbody></table>
 
 ### Literals
 
