@@ -3,6 +3,7 @@
 * [Introduction](README.md)
 * [Parser](<README (1).md>)
   * [Visitors](parser/visitors.md)
+* [Printer](printer.md)
 * [Language](language.md)
   * [Comparison Table](language/comparison-table.md)
   * [Basic Types](language/basic-types.md)
