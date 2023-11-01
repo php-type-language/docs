@@ -1,6 +1,7 @@
 # Table of contents
 
-* [Parser](parser.md)
+* [Parser](README.md)
+  * [Visitors](parser/visitors.md)
 * [Language](language.md)
   * [Comparison Table](language/comparison-table.md)
   * [Basic Types](language/basic-types.md)

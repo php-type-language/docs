@@ -1,44 +1,19 @@
 ---
-description: Parser API Usage Documentation
+description: Bypassing AST Nodes
+layout:
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: false
+  pagination:
+    visible: true
 ---
 
-# Parser
-
-A parser component is used to analyze and construct types AST with their information and grammar checking.
-
-Make sure it is installed by running:
-
-{% hint style="warning" %}
-```bash
-composer require phptl/parser
-```
-{% endhint %}
-
-## Basic Usage
-
-To create a parser instance, the `TypeLang\Parser\Parser` class is used. To run code analysis, you should use the `parse()` method.
-
-The first argument of the `parse()` method corresponds to the source code data and can be of the following types:
-
-* `resource` (stream)
-* `string`
-* Instance of `SplFileInfo` or `SplFileObject`
-* Instance of `Phplrt\Contracts\Source\ReadableInterface`
-
-```php
-$parser = new TypeLang\Parser\Parser();
-
-$result = $parser->parse(<<<'PHPTL'
-    array<array-key, object{
-      key: int<0, max>,
-      ...
-    }>
-    PHPTL);
-
-var_dump($result);
-```
-
-## Visitors
+# Visitors
 
 To completely traverse a graph of all types, you can use the `TypeLang\Parser\Traverser` class. The traverser instance can accept several the `TypeLang\Parser\Traverser\VisitorInterface` implementation as a constructor argument.
 
@@ -89,9 +64,9 @@ You can see the following text as the output result:
  - TypeLang\Parser\Node\Identifier
 ```
 
-### Visitor Commands
+## Commands
 
-#### Skip Children Nodes
+### Skip Children Nodes
 
 To skip any nodes when traversing, you can use the appropriate command `TypeLang\Parser\Traverser\Command::SKIP_CHILDREN`.
 
@@ -120,9 +95,9 @@ $traverser = new Traverser([
 $traverser->traverse([$result]);
 ```
 
-### Predefined Visitors
+## Predefined Visitors
 
-#### Debugging
+### Debugging
 
 To easily debug the structure and output of the AST, you can use the `StreamDumperVisitor` visitor.
 
@@ -158,7 +133,7 @@ Stmt\NamedTypeNode
             Identifier(key)
 ```
 
-#### Node Finder
+### Node Finder
 
 To search for the first suitable node for an instance of a class, you can use the `ClassNameMatcherVisitor` visitor.
 
