@@ -1,8 +1,24 @@
 ---
 description: Basic Language Syntax
+cover: .gitbook/assets/dark.png
+coverY: 0
+layout:
+  cover:
+    visible: true
+    size: full
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
-# Syntax
+# Language
 
 The language is defined by a syntax that is based on the grammar of popular static code analysis tools: [PHPStan](https://phpstan.org/) and [Psalm](https://psalm.dev/).
 
