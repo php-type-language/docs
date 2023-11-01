@@ -18,6 +18,34 @@ Below is a list of simple and logical (composite) types.
 
 Below is a list of literal types/lexemes: Built-in and supported by PHP.
 
+| Code Example                                  | psalm                                     | phpstan                                                               | phptl                                          |
+| --------------------------------------------- | ----------------------------------------- | --------------------------------------------------------------------- | ---------------------------------------------- |
+| Single-quoted string `'test'`                 | ✔️                                        | ✔️                                                                    | ✔️                                             |
+| Double-quoted string `"test"`                 | ✔️                                        | ✔️                                                                    | ✔️                                             |
+| Escape chars`"test\n"`                        | ❌ ([ref](https://psalm.dev/r/a4763e39ea)) | ❌ ([ref](https://phpstan.org/r/ef392d41-f4e5-474c-8426-4ecdc583080a)) | ✔️                                             |
+| Hexadecimal chars `"\xDE\xAD"`                | ❌ ([ref](https://psalm.dev/r/ce7cdf12ba)) | ❌ ([ref](https://phpstan.org/r/06c7f670-4db4-433b-b181-d3c8b7219980)) | ✔️                                             |
+| Unicode chars `"\u{1F60A}"`                   | ❌ ([ref](https://psalm.dev/r/73412b8746)) | ❌ ([ref](https://phpstan.org/r/ebfdf3b6-e8e2-413d-adc5-a56ddd564bab)) | ✔️                                             |
+| Int `42`                                      | ✔️                                        | ✔️                                                                    | ✔️                                             |
+| BigInt `PHP_INT_MAX + 1` or `PHP_INT_MIN - 1` | ✔️/❌_(cast to float)_                     | ✔️/❌_(cast to float)_                                                 | ✔️/❌_(round to int min/max + store as string)_ |
+| Binary Int `0b10`                             | ❌ ([ref](https://psalm.dev/r/75794af443)) | ❌ ([ref](https://phpstan.org/r/79283030-f55e-4eb1-8b6b-2bdbc4083d30)) | ✔️                                             |
+| Octal Int `0o42`                              | ❌ ([ref](https://psalm.dev/r/8552461d46)) | ❌ ([ref](https://phpstan.org/r/362869d4-5b65-441c-8708-f9f32993b560)) | ✔️                                             |
+| Legacy Octal Int `042`                        | ❌ ([ref](https://psalm.dev/r/e4ab56c714)) | ❌ ([ref](https://phpstan.org/r/20f18b17-94c8-403c-8ad7-14058eb8a0ef)) | ✔️                                             |
+| Hexadecimal Int `0xDEAD`                      | ❌ ([ref](https://psalm.dev/r/60176a85f4)) | ❌ ([ref](https://phpstan.org/r/f9fcaaa6-384e-4d58-b38c-8a51f091abf8)) | ✔️                                             |
+| Float `0.2`                                   | ✔️                                        | ✔️                                                                    | ✔️                                             |
+| Suffixed Float `.2`                           | ❌ ([ref](https://psalm.dev/r/816ae7db23)) | ✔️                                                                    | ✔️                                             |
+| Prefixed Float `2.`                           | ❌ ([ref](https://psalm.dev/r/053808f77b)) | ✔️                                                                    | ✔️                                             |
+| Scientific `2e2`                              | ❌ ([ref](https://psalm.dev/r/fbd87ab0b6)) | ✔️                                                                    | ✔️                                             |
+| Binary Scientific `0b10e2`                    | ❌                                         | ❌                                                                     | ❌                                              |
+| Octal Scientific `0o42e2`                     | ❌                                         | ❌                                                                     | ❌                                              |
+| Legacy Octal Scientific `042e2`               | ❌                                         | ❌                                                                     | ❌                                              |
+| Hexadecimal Scientific `0x42e2`               | ❌                                         | ❌                                                                     | ❌                                              |
+| `true` or `false`                             | ✔️                                        | ✔️                                                                    | ✔️                                             |
+| `null`                                        | ✔️                                        | ✔️                                                                    | ✔️                                             |
+
+### Type Shapes
+
+Below is a list of grammar of shaped types.
+
 | Code Example                                                          | psalm                                                                         | phpstan                                                               | phptl                                          |
 | --------------------------------------------------------------------- | ----------------------------------------------------------------------------- | --------------------------------------------------------------------- | ---------------------------------------------- |
 | Single-quoted string `'test'`                                         | ✔️                                                                            | ✔️                                                                    | ✔️                                             |
