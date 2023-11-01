@@ -12,7 +12,7 @@ Each union type is separated by a pipe character (`|`) and may contain any other
 
 #### Example
 
-* &#x20;**`A | B | C` ** — One of "A" _or_ "B" _or_ "C".
+* **`A | B | C`** — One of "A" _or_ "B" _or_ "C".
 
 ### Intersection
 
@@ -20,7 +20,7 @@ Each intersection type is separated by a ampersand character (`&`) and may conta
 
 #### Example
 
-* &#x20;**`A & B & C` ** — The "A" _and_ "B" _and_ "C".
+* **`A & B & C`** — The "A" _and_ "B" _and_ "C".
 
 ### Nullable
 
