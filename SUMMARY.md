@@ -1,6 +1,7 @@
 # Table of contents
 
-* [Language](README.md)
+* [Parser](README.md)
+* [Language](<README (1).md>)
   * [Comparison Table](language/comparison-table.md)
   * [Basic Types](language/basic-types.md)
   * [Logical Types](language/composite-types.md)
