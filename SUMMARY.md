@@ -1,7 +1,7 @@
 # Table of contents
 
 * [Introduction](README.md)
-* [Parser](<README (1).md>)
+* [Parser](parser.md)
   * [Visitors](parser/visitors.md)
 * [Printer](printer.md)
 * [Language](language.md)
