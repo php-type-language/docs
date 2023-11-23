@@ -50,7 +50,7 @@ Below is a list of literal types/lexemes: Built-in and supported by PHP.
 | Binary Scientific `0b10e2`                    | ❌                                               | ❌                                         | ❌                                                                     |
 | Octal Scientific `0o42e2`                     | ❌                                               | ❌                                         | ❌                                                                     |
 | Legacy Octal Scientific `042e2`               | ❌                                               | ❌                                         | ❌                                                                     |
-| Hexadecimal Scientific `0x42e2`               | ❌                                               | ❌                                         | ❌                                                                     |
+| Hexadecimal Scientific `0x42e2`               | ✔️                                              | ❌                                         | ❌                                                                     |
 | `true` or `false`                             | ✔️                                              | ✔️                                        | ✔️                                                                    |
 | `null`                                        | ✔️                                              | ✔️                                        | ✔️                                                                    |
 
