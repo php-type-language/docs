@@ -21,13 +21,14 @@ Make sure it is installed by running:
 
 {% hint style="warning" %}
 ```bash
-composer require phptl/parser
+composer require type-lang/printer
 ```
 {% endhint %}
 
 This package supports two rendering classes:
-- `TypeLang\Printer\PrettyPrinter` — Used to display types as accurately as possible.
-- `TypeLang\Printer\NativeTypePrinter` — Used to display types compatible with PHP.
+
+* `TypeLang\Printer\PrettyPrinter` — Used to display types as accurately as possible.
+* `TypeLang\Printer\NativeTypePrinter` — Used to display types compatible with PHP.
 
 ### Usage
 
