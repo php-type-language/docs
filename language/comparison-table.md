@@ -4,14 +4,15 @@ description: Syntax Comparison Table
 
 # Comparison Table
 
-low is a comparison list of all syntactic structures (grammar). The logical component (the physical existence of the type) is not taken into account.
+Below is a comparison list of all syntactic structures (grammar). The logical
+component (the physical existence of the type) is not taken into account.
 
 ### Basic And Common Types
 
 Below is a list of simple, logical (composite) and other common types.
 
 | Code Example                  | Type Language | Psalm                                     | PHPStan |
-| ----------------------------- | ------------- | ----------------------------------------- | ------- |
+|-------------------------------|---------------|-------------------------------------------|---------|
 | `ClassName`                   | ✔️            | ✔️                                        | ✔️      |
 | `Non\Qualified\Name`          | ✔️            | ✔️                                        | ✔️      |
 | `\Full\Qualified\Name`        | ✔️            | ✔️                                        | ✔️      |
@@ -30,7 +31,7 @@ Below is a list of simple, logical (composite) and other common types.
 Below is a list of conditional types.
 
 | Code Example                              | Type Language | Psalm                                     | PHPStan                                                               |
-| ----------------------------------------- | ------------- | ----------------------------------------- | --------------------------------------------------------------------- |
+|-------------------------------------------|---------------|-------------------------------------------|-----------------------------------------------------------------------|
 | Simple eq `T is A ? B : C`                | ✔️            | ✔️                                        | ✔️                                                                    |
 | Simple neq `T is not A ? B : C`           | ✔️            | ✔️                                        | ✔️                                                                    |
 | Referenced eq `$var is A ? B : C`         | ✔️            | ✔️                                        | ✔️                                                                    |
@@ -43,7 +44,7 @@ Below is a list of conditional types.
 Below is a list of literal types/lexemes: Built-in and supported by PHP.
 
 | Code Example                                                | Type Language                                   | Psalm                                     | PHPStan                                                               |
-| ----------------------------------------------------------- | ----------------------------------------------- | ----------------------------------------- | --------------------------------------------------------------------- |
+|-------------------------------------------------------------|-------------------------------------------------|-------------------------------------------|-----------------------------------------------------------------------|
 | Single-quoted string `'test'`                               | ✔️                                              | ✔️                                        | ✔️                                                                    |
 | Double-quoted string `"test"`                               | ✔️                                              | ✔️                                        | ✔️                                                                    |
 | Escape chars`"test\n"`                                      | ✔️                                              | ❌ ([ref](https://psalm.dev/r/a4763e39ea)) | ❌ ([ref](https://phpstan.org/r/ef392d41-f4e5-474c-8426-4ecdc583080a)) |
@@ -71,7 +72,7 @@ Below is a list of literal types/lexemes: Built-in and supported by PHP.
 Below is a list of grammar of shaped types.
 
 | Code Example                                   | Type Language | Psalm                                                                         | PHPStan                                                               |
-| ---------------------------------------------- | ------------- | ----------------------------------------------------------------------------- | --------------------------------------------------------------------- |
+|------------------------------------------------|---------------|-------------------------------------------------------------------------------|-----------------------------------------------------------------------|
 | Explicit Shape `Type{key:val}`                 | ✔️            | ✔️/❌ _(only `array` and `object`:_ [_ref_](https://psalm.dev/r/4ec6feecc1)_)_ | ✔️                                                                    |
 | Implicit Shape `Type{val}`                     | ✔️            | ✔️/❌ _(only `array` and `object`:_ [_ref_](https://psalm.dev/r/932713f109)_)_ | ✔️                                                                    |
 | Optional Shape Key `array{key?: int}`          | ✔️            | ✔️                                                                            | ✔️                                                                    |
@@ -85,3 +86,26 @@ Below is a list of grammar of shaped types.
 ### Callables
 
 Below is a list of grammar of callable (function) types.
+
+| Code Example                                                          | PHP Type Language     | Psalm                                                           | PHPStan           |
+|-----------------------------------------------------------------------|-----------------------|-----------------------------------------------------------------|-------------------|
+| Simple Func `callable()`                                              | ✔️                    | ✔️                                                              | ✔️                |
+| Typed Func `callable(): mixed`                                        | ✔️                    | ✔️                                                              | ✔️                |
+| Func Args `callable(T)`                                               | ✔️                    | ✔️                                                              | ✔️                |
+| Optional Arg `callable(T=)`                                           | ✔️                    | ✔️                                                              | ✔️                |
+| Named Arg `callable(T $name)`                                         | ✔️                    | ✔️                                                              | ✔️                |
+| Optional Named Arg `callable(T $name=)`                               | ✔️                    | ❌ _(Internal Error:_ [_ref_](https://psalm.dev/r/9ae58ed797)_)_ | ✔️                |
+| Suffixed Variadic Arg `callable(T...)`                                | ✔️                    | ✔️                                                              | ✔️                |
+| Prefixed Variadic Arg `callable(...T)`                                | ✔️                    | ✔️                                                              | ✔️                |
+| Prefixed + Suffixed Variadic Named Arg `callable(...T ...$name)`      | ✔️ _(Syntax Error)_   | ❌ _(Internal Error:_ [_ref_](https://psalm.dev/r/4a6476fff6)_)_ | ✔️/❌ _(No Error)_ |
+| Optional Variadic Arg `callable(...T=)`                               | ✔️ _(Semantic Error)_ | ✔️ _(Semantic Error)_                                           | ✔️ _(No Error)_   |
+| Suffixed Variadic Named Arg `callable(T ...$arg)`                     | ✔️                    | ✔️                                                              | ✔️                |
+| Prefixed Variadic Named Arg `callable(...T $arg)`                     | ✔️                    | ❌ _(Internal Error:_ [_ref_](https://psalm.dev/r/2dac434b3f)_)_ | ✔️                |
+| Reference Arg `callable(T&)`                                          | ✔️                    | ❌ ([ref](https://psalm.dev/r/bb604c4219))                       | ✔️                |
+| Optional Reference Arg `callable(T&=)`                                | ✔️                    | ❌ ([ref](https://psalm.dev/r/fc3041a846))                       | ✔️                |
+| Optional Reference Named Arg `callable(T &$name=)`                    | ✔️                    | ❌ ([ref](https://psalm.dev/r/14dcf8634f))                       | ✔️                |
+| Reference Named Variadic Arg `callable(T &...$name)`                  | ✔️                    | ❌ ([ref](https://psalm.dev/r/7a64356034))                       | ✔️                |
+| Reference Named Prefix Variadic Arg `callable(...T &$name)`           | ✔️                    | ❌ ([ref](https://psalm.dev/r/bf7dcbc9b4))                       | ✔️                |
+| Optional Reference Named Variadic Arg `callable(T &...$name=)`        | ✔️ _(Semantic Error)_ | ✔️ _(Semantic Error)_                                           | ✔️ _(No Error)_   |
+| Optional Reference Named Prefix Variadic Arg `callable(...T &$name=)` | ✔️ _(Semantic Error)_ | ✔️ _(Semantic Error)_                                           | ✔️ _(No Error)_   |
+
