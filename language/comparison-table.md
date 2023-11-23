@@ -10,39 +10,39 @@ low is a comparison list of all syntactic structures (grammar). The logical comp
 
 Below is a list of simple, logical (composite) and other common types.
 
-| Code Example                  | PHP Type Language | Psalm                                     | PHPStan |
-| ----------------------------- | ----------------- | ----------------------------------------- | ------- |
-| `ClassName`                   | ✔️                | ✔️                                        | ✔️      |
-| `Non\Qualified\Name`          | ✔️                | ✔️                                        | ✔️      |
-| `\Full\Qualified\Name`        | ✔️                | ✔️                                        | ✔️      |
-| `type-name`                   | ✔️                | ✔️                                        | ✔️      |
-| Union `T1 \| T2`              | ✔️                | ✔️                                        | ✔️      |
-| Intersection `T1 & T2`        | ✔️                | ✔️                                        | ✔️      |
-| Nullable `?T`                 | ✔️                | ✔️                                        | ✔️      |
-| `OneTemplateParam<T>`         | ✔️                | ✔️                                        | ✔️      |
-| `ManyTemplateParams<T, Y, Z>` | ✔️                | ✔️                                        | ✔️      |
-| `TrailingComma<T, Y,>`        | ✔️                | ❌ ([ref](https://psalm.dev/r/866c32c49d)) | ✔️      |
-| Legacy List `T[]`             | ✔️                | ✔️                                        | ✔️      |
-| Legacy Nested List `T[][]`    | ✔️                | ✔️                                        | ✔️      |
+| Code Example                  | Type Language | Psalm                                     | PHPStan |
+| ----------------------------- | ------------- | ----------------------------------------- | ------- |
+| `ClassName`                   | ✔️            | ✔️                                        | ✔️      |
+| `Non\Qualified\Name`          | ✔️            | ✔️                                        | ✔️      |
+| `\Full\Qualified\Name`        | ✔️            | ✔️                                        | ✔️      |
+| `type-name`                   | ✔️            | ✔️                                        | ✔️      |
+| Union `T1 \| T2`              | ✔️            | ✔️                                        | ✔️      |
+| Intersection `T1 & T2`        | ✔️            | ✔️                                        | ✔️      |
+| Nullable `?T`                 | ✔️            | ✔️                                        | ✔️      |
+| `OneTemplateParam<T>`         | ✔️            | ✔️                                        | ✔️      |
+| `ManyTemplateParams<T, Y, Z>` | ✔️            | ✔️                                        | ✔️      |
+| `TrailingComma<T, Y,>`        | ✔️            | ❌ ([ref](https://psalm.dev/r/866c32c49d)) | ✔️      |
+| Legacy List `T[]`             | ✔️            | ✔️                                        | ✔️      |
+| Legacy Nested List `T[][]`    | ✔️            | ✔️                                        | ✔️      |
 
 ### Conditional (Expressions)
 
 Below is a list of conditional types.
 
-| Code Example                              | PHP Type Language | Psalm                                     | PHPStan                                                               |
-| ----------------------------------------- | ----------------- | ----------------------------------------- | --------------------------------------------------------------------- |
-| Simple eq `T is A ? B : C`                | ✔️                | ✔️                                        | ✔️                                                                    |
-| Simple neq `T is not A ? B : C`           | ✔️                | ✔️                                        | ✔️                                                                    |
-| Referenced eq `$var is A ? B : C`         | ✔️                | ✔️                                        | ✔️                                                                    |
-| Referenced neq `$var is not A ? B : C`    | ✔️                | ✔️                                        | ✔️                                                                    |
-| Referenced inv eq `A is $var ? B : C`     | ✔️                | ❌ ([ref](https://psalm.dev/r/c70473ea70)) | ❌ ([ref](https://phpstan.org/r/dc886f85-85b6-46b4-9a21-a37a90e6b0c9)) |
-| Referenced inv eq `A is not $var ? B : C` | ✔️                | ❌ ([ref](https://psalm.dev/r/ebe7c053d6)) | ❌ ([ref](https://phpstan.org/r/0b7b5621-cec4-4967-be6f-3bca3c032df9)) |
+| Code Example                              | Type Language | Psalm                                     | PHPStan                                                               |
+| ----------------------------------------- | ------------- | ----------------------------------------- | --------------------------------------------------------------------- |
+| Simple eq `T is A ? B : C`                | ✔️            | ✔️                                        | ✔️                                                                    |
+| Simple neq `T is not A ? B : C`           | ✔️            | ✔️                                        | ✔️                                                                    |
+| Referenced eq `$var is A ? B : C`         | ✔️            | ✔️                                        | ✔️                                                                    |
+| Referenced neq `$var is not A ? B : C`    | ✔️            | ✔️                                        | ✔️                                                                    |
+| Referenced inv eq `A is $var ? B : C`     | ✔️            | ❌ ([ref](https://psalm.dev/r/c70473ea70)) | ❌ ([ref](https://phpstan.org/r/dc886f85-85b6-46b4-9a21-a37a90e6b0c9)) |
+| Referenced inv eq `A is not $var ? B : C` | ✔️            | ❌ ([ref](https://psalm.dev/r/ebe7c053d6)) | ❌ ([ref](https://phpstan.org/r/0b7b5621-cec4-4967-be6f-3bca3c032df9)) |
 
 ### Literals
 
 Below is a list of literal types/lexemes: Built-in and supported by PHP.
 
-| Code Example                                                | PHP Type Language                               | Psalm                                     | PHPStan                                                               |
+| Code Example                                                | Type Language                                   | Psalm                                     | PHPStan                                                               |
 | ----------------------------------------------------------- | ----------------------------------------------- | ----------------------------------------- | --------------------------------------------------------------------- |
 | Single-quoted string `'test'`                               | ✔️                                              | ✔️                                        | ✔️                                                                    |
 | Double-quoted string `"test"`                               | ✔️                                              | ✔️                                        | ✔️                                                                    |
@@ -70,17 +70,17 @@ Below is a list of literal types/lexemes: Built-in and supported by PHP.
 
 Below is a list of grammar of shaped types.
 
-| Code Example                                   | PHP Type Language | Psalm                                                                         | PHPStan                                                               |
-| ---------------------------------------------- | ----------------- | ----------------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| Explicit Shape `Type{key:val}`                 | ✔️                | ✔️/❌ _(only `array` and `object`:_ [_ref_](https://psalm.dev/r/4ec6feecc1)_)_ | ✔️                                                                    |
-| Implicit Shape `Type{val}`                     | ✔️                | ✔️/❌ _(only `array` and `object`:_ [_ref_](https://psalm.dev/r/932713f109)_)_ | ✔️                                                                    |
-| Optional Shape Key `array{key?: int}`          | ✔️                | ✔️                                                                            | ✔️                                                                    |
-| Empty Shape `array{}`                          | ✔️                | ✔️                                                                            | ✔️                                                                    |
-| Unsealed Shape `array{...}`                    | ✔️                | ✔️                                                                            | ✔️                                                                    |
-| Explicit Unsealed Shape `array{key: val, ...}` | ✔️                | ✔️/❌ _(only `array` and `object`:_ [_ref_](https://psalm.dev/r/00688c401a)_)_ | ✔️                                                                    |
-| Implicit Unsealed Shape `array{val, ...}`      | ✔️                | ✔️/❌ _(only `array` and `object`:_ [_ref_](https://psalm.dev/r/d346e9704b)_)_ | ✔️                                                                    |
-| Typed Shape `array{...<string>}`               | ✔️                | ✔️                                                                            | ❌ ([ref](https://phpstan.org/r/401619e4-36a2-4c30-94eb-16c40a62c7ad)) |
-| `TrailingComma{value,}`                        | ✔️                | ❌ ([ref](https://psalm.dev/r/d63771c22a))                                     | ✔️                                                                    |
+| Code Example                                   | Type Language | Psalm                                                                         | PHPStan                                                               |
+| ---------------------------------------------- | ------------- | ----------------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| Explicit Shape `Type{key:val}`                 | ✔️            | ✔️/❌ _(only `array` and `object`:_ [_ref_](https://psalm.dev/r/4ec6feecc1)_)_ | ✔️                                                                    |
+| Implicit Shape `Type{val}`                     | ✔️            | ✔️/❌ _(only `array` and `object`:_ [_ref_](https://psalm.dev/r/932713f109)_)_ | ✔️                                                                    |
+| Optional Shape Key `array{key?: int}`          | ✔️            | ✔️                                                                            | ✔️                                                                    |
+| Empty Shape `array{}`                          | ✔️            | ✔️                                                                            | ✔️                                                                    |
+| Unsealed Shape `array{...}`                    | ✔️            | ✔️                                                                            | ✔️                                                                    |
+| Explicit Unsealed Shape `array{key: val, ...}` | ✔️            | ✔️/❌ _(only `array` and `object`:_ [_ref_](https://psalm.dev/r/00688c401a)_)_ | ✔️                                                                    |
+| Implicit Unsealed Shape `array{val, ...}`      | ✔️            | ✔️/❌ _(only `array` and `object`:_ [_ref_](https://psalm.dev/r/d346e9704b)_)_ | ✔️                                                                    |
+| Typed Shape `array{...<string>}`               | ✔️            | ✔️                                                                            | ❌ ([ref](https://phpstan.org/r/401619e4-36a2-4c30-94eb-16c40a62c7ad)) |
+| `TrailingComma{value,}`                        | ✔️            | ❌ ([ref](https://psalm.dev/r/d63771c22a))                                     | ✔️                                                                    |
 
 ### Callables
 
