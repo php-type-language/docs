@@ -21,7 +21,7 @@ Make sure it is installed by running:
 
 {% hint style="warning" %}
 ```bash
-composer require phptl/parser
+composer require type-lang/parser
 ```
 {% endhint %}
 
@@ -39,12 +39,12 @@ The first argument of the `parse()` method corresponds to the source code data a
 ```php
 $parser = new TypeLang\Parser\Parser();
 
-$result = $parser->parse(<<<'PHPTL'
+$result = $parser->parse(<<<'PHP'
     array<array-key, object{
       key: int<0, max>,
       ...
     }>
-    PHPTL);
+    PHP);
 
 var_dump($result);
 ```
