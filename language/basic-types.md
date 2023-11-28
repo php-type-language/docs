@@ -12,8 +12,6 @@ In this case, the only difference from [the PHP grammar](https://www.php.net/man
 
 In addition, it is worth noting that the case-insensitive names `true`, `false` and `null` are registered PHP literals, so their use as a custom type name is **unacceptable**.
 
-#### Examples
-
 * ✔️ **example** — Сorrect.
 * ✔️ **example-type** — Сorrect.
 * ✔️ **example-42** — Сorrect.
@@ -30,8 +28,6 @@ In addition, it is worth noting that the case-insensitive names `true`, `false` 
 Each name can contain a namespace symbol (`\` — backslash), which is [similar to that in PHP](https://www.php.net/manual/en/language.namespaces.rationale.php). The separator can be located either in the middle or at the beginning of any type name. End position is not allowed.
 
 The namespace delimiter can be used in conjunction with keywords such as `true`, `false`, or `null` to explicitly indicate a type reference.
-
-#### Examples
 
 * ✔️ **example\name** — Сorrect.
 * ✔️ **\prefixed\example\name** — Сorrect.
