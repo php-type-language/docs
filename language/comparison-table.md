@@ -4,7 +4,8 @@ description: Syntax Comparison Table
 
 # Comparison Table
 
-Below is a comparison list of all syntactic structures (grammar). The logical component (the physical existence of the type) is not taken into account.
+Below is a comparison list of all syntactic structures (grammar). The logical
+component (the physical existence of the type) is not taken into account.
 
 ### Basic And Common Types
 

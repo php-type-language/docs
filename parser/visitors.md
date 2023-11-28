@@ -15,9 +15,13 @@ layout:
 
 # Visitors
 
-To completely traverse a graph of all types, you can use the `TypeLang\Parser\Traverser` class. The traverser instance can accept several the `TypeLang\Parser\Traverser\VisitorInterface` implementation as a constructor argument.
+To completely traverse a graph of all types, you can use the
+`TypeLang\Parser\Traverser` class. The traverser instance can accept several
+the `TypeLang\Parser\Traverser\VisitorInterface` implementation as a constructor
+argument.
 
-Let's try to write a simple visitor that will display the names of all classes when entering each AST node.
+Let's try to write a simple visitor that will display the names of all classes
+when entering each AST node.
 
 ```php
 use TypeLang\Parser\Node\Node;
@@ -68,7 +72,8 @@ You can see the following text as the output result:
 
 ### Skip Children Nodes
 
-To skip any nodes when traversing, you can use the appropriate command `TypeLang\Parser\Traverser\Command::SKIP_CHILDREN`.
+To skip any nodes when traversing, you can use the appropriate
+command `TypeLang\Parser\Traverser\Command::SKIP_CHILDREN`.
 
 ```php
 use TypeLang\Parser\Node\Node;
@@ -84,7 +89,7 @@ $traverser = new Traverser([
             if ($node instanceof ArgumentNode) {
                 return Command::SKIP_CHILDREN;
             }
-            
+
             echo \sprintf(" - %s\n", $node::class);
 
             return null;
@@ -135,7 +140,8 @@ Stmt\NamedTypeNode
 
 ### Node Finder
 
-To search for the first suitable node for an instance of a class, you can use the `ClassNameMatcherVisitor` visitor.
+To search for the first suitable node for an instance of a class, you can
+use the `ClassNameMatcherVisitor` visitor.
 
 ```php
 use TypeLang\Parser\Node\Name;
@@ -145,7 +151,7 @@ Traverser::new([
     $finder = new Traverser\ClassNameMatcherVisitor(Name::class),
 ])
     ->traverse([$result]);
-    
+
 var_dump($finder->getFoundNode());
 ```
 

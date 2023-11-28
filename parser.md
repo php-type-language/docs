@@ -15,7 +15,8 @@ layout:
 
 # Parser
 
-A parser component is used to analyze and construct types AST with their information and grammar checking.
+A parser component is used to analyze and construct types AST with their
+information and grammar checking.
 
 Make sure it is installed by running:
 
@@ -27,9 +28,11 @@ composer require type-lang/parser
 
 ## Basic Usage
 
-To create a parser instance, the `TypeLang\Parser\Parser` class is used. To run code analysis, you should use the `parse()` method.
+To create a parser instance, the `TypeLang\Parser\Parser` class is used.
+To run code analysis, you should use the `parse()` method.
 
-The first argument of the `parse()` method corresponds to the source code data and can be of the following types:
+The first argument of the `parse()` method corresponds to the source code data
+and can be of the following types:
 
 * `resource` (stream)
 * `string`
