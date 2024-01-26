@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE instance-profile
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
+
+<instance-profile id="tl"
+                  name="PHP Type Language"
+                  start-page="index.topic">
+
+    <toc-element topic="index.topic">
+        <toc-element topic="basic-types.md"/>
+        <toc-element topic="logical-types.md"/>
+        <toc-element topic="generic-types.md"/>
+        <toc-element topic="literal-types.md"/>
+        <toc-element topic="shapes.md"/>
+        <toc-element topic="callables.md"/>
+    </toc-element>
+
+    <toc-element topic="language.md" />
+
+    <toc-element topic="parser.md">
+        <toc-element topic="visitors.md"/>
+    </toc-element>
+
+    <toc-element topic="printer.md"/>
+</instance-profile>

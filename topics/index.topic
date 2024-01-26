@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       title="Language"
+       id="index" help-id="overview">
+    <section-starting-page>
+        <title>Language Overview</title>
+        <description>
+            The language is defined by a syntax that is based on the grammar of
+            popular static code analysis tools: PHPStan, Psalm and other.
+        </description>
+
+        <spotlight>
+            <a href="parser.md" type="mixed"
+               summary="Parser component analyzes the code and builds the language AST.">Parser</a>
+            <a href="printer.md" type="creative"
+               summary="Printer component converts the parsed AST to an arbitrary string.">Printer</a>
+        </spotlight>
+
+        <primary>
+            <title>Get started</title>
+            <a href="basic-types.md"
+               summary="Description of simple type definitions."/>
+            <a href="logical-types.md"
+               summary="Description of logical AND, OR and other types." />
+            <a href="generic-types.md"
+               summary="Description of generic types and alternative (obsolete) syntax." />
+            <a href="literal-types.md"
+               summary="Description of numbers, strings, boolean and other literal types." />
+        </primary>
+
+        <secondary>
+            <title>Explore advanced features</title>
+            <a href="shapes.md"
+               summary="Description of type fields that allow you to clarify information about composite types." />
+            <a href="callables.md"
+               summary="Description of the syntax of any callable types and from arguments." />
+        </secondary>
+
+        <misc>
+            <links narrow="true">
+                <group>
+                    <title>Source Code</title>
+                    <a href="https://github.com/php-type-language/parser">Parser</a>
+                    <a href="https://github.com/php-type-language/printer">Printer</a>
+                    <a href="https://github.com/php-type-language/phpdoc-parser">PHPDoc Parser (Experimental)</a>
+                </group>
+                <group>
+                    <title>Other Language Supported Tools</title>
+                    <a href="https://psalm.dev/docs/annotating_code/type_syntax/atomic_types/">Psalm</a>
+                    <a href="https://phpstan.org/writing-php-code/phpdoc-types">PHPStan</a>
+                    <a href="https://docs.phpdoc.org/guide/guides/types.html">phpDocumentor</a>
+                    <a href="https://www.jetbrains.com/help/phpstorm/phpdoc-comments.html">PhpStorm</a>
+                </group>
+            </links>
+        </misc>
+    </section-starting-page>
+</topic>

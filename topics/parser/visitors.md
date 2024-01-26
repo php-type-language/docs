@@ -1,18 +1,3 @@
----
-description: Bypassing AST Nodes
-layout:
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: false
-  pagination:
-    visible: true
----
-
 # Visitors
 
 To completely traverse a graph of all types, you can use the
@@ -45,7 +30,7 @@ $traverser->traverse([$result]);
 
 You can see the following text as the output result:
 
-```abap
+```yaml
  - TypeLang\Parser\Node\Stmt\NamedTypeNode
  - TypeLang\Parser\Node\Name
  - TypeLang\Parser\Node\Stmt\Template\ArgumentsListNode
@@ -67,6 +52,7 @@ You can see the following text as the output result:
  - TypeLang\Parser\Node\Name
  - TypeLang\Parser\Node\Identifier
 ```
+{collapsible="true" collapsed-title="Result"}
 
 ## Commands
 
@@ -115,7 +101,7 @@ Traverser::new([new Traverser\StreamDumperVisitor()])
 
 You can see the following text as the output result:
 
-```abap
+```yaml
 Stmt\NamedTypeNode
   Name(array)
   Stmt\Template\ArgumentsListNode
@@ -137,6 +123,7 @@ Stmt\NamedTypeNode
                     Name(max)
             Identifier(key)
 ```
+{collapsible="true" collapsed-title="Result"}
 
 ### Node Finder
 
@@ -168,3 +155,4 @@ TypeLang\Parser\Node\Name {
   ]
 }
 ```
+{collapsible="true" collapsed-title="Result"}
