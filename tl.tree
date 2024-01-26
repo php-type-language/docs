@@ -3,10 +3,12 @@
         SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
 
 <instance-profile id="tl"
-                  name="PHP Type Language"
-                  start-page="index.topic">
+                  name="Type Language"
+                  status="eap"
+                  is-library="true"
+                  start-page="overview.topic">
 
-    <toc-element topic="index.topic">
+    <toc-element topic="overview.topic">
         <toc-element topic="basic-types.md"/>
         <toc-element topic="logical-types.md"/>
         <toc-element topic="generic-types.md"/>
