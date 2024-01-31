@@ -12,6 +12,7 @@ env:
   INSTANCE: Writerside/tl
   ARTIFACT: webHelpTL2-all.zip
   DOCKER_VERSION: 232.10275
+  ALGOLIA_ARTIFACT: algolia-indexes-TL.zip
 
 jobs:
   build:
@@ -31,6 +32,13 @@ jobs:
           name: docs
           path: |
             artifacts/${{ env.ARTIFACT }}
+            artifacts/report.json
+          retention-days: 7
+      - name: Upload Search Indexes
+        uses: actions/upload-artifact@v3
+        with:
+          name: algolia-indexes
+          path: artifacts/${{ env.ALGOLIA_ARTIFACT }}
           retention-days: 7
 
   deploy:
