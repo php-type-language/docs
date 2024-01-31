@@ -9,7 +9,7 @@ permissions:
   pages: write
 
 env:
-  INSTANCE: TypeLanguage/tl
+  INSTANCE: tl
   ARTIFACT: webHelpTL2-all.zip
   DOCKER_VERSION: 232.10275
 
