@@ -18,7 +18,7 @@
         <showDownloadButton>true</showDownloadButton>
 
         <enable-browser-edits>true</enable-browser-edits>
-        <browser-edits-url>https://github.com/php-type-language/docs/blob/master/</browser-edits-url>
+        <browser-edits-url>https://github.com/php-type-language/docs/blob/master/Writerside/</browser-edits-url>
     </variables>
 
     <footer>
