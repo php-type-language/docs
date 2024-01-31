@@ -17,11 +17,10 @@
         <download-page>https://github.com/php-type-language</download-page>
         <showDownloadButton>true</showDownloadButton>
 
-
         <enable-browser-edits>true</enable-browser-edits>
         <browser-edits-url>https://github.com/php-type-language/docs/blob/master/</browser-edits-url>
     </variables>
-    
+
     <footer>
         <link href="https://github.com/php-type-language" />
         <copyright>PHP Type Language</copyright>
