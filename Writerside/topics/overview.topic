@@ -44,11 +44,15 @@
                 <group>
                     <title>Source Code</title>
                     <a href="https://github.com/php-type-language/parser"
-                       summary="GirHub Parser Repository">Parser</a>
+                       summary="GirHub TypeLang Parser Repository">TypeLang Parser</a>
                     <a href="https://github.com/php-type-language/printer"
-                        summary="GitHub Printer Repository">Printer</a>
-                    <a href="https://github.com/php-type-language/phpdoc-parser"
-                       summary="GitHub PHPDoc Parser Repository">PHPDoc Parser (Experimental)</a>
+                        summary="GitHub TypeLang Printer Repository">TypeLang Printer</a>
+                    <a href="https://github.com/php-type-language/phpdoc"
+                       summary="GitHub PhpDoc Parser Repository">PhpDoc Parser</a>
+                    <a href="https://github.com/php-type-language/mapper"
+                       summary="GitHub Type Mapper Repository">Type Mapper</a>
+                    <a href="https://github.com/php-type-language/reader"
+                       summary="GitHub Reader Repository">Type Reader</a>
                 </group>
                 <group>
                     <title>Other Tools</title>
