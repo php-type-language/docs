@@ -1,6 +1,6 @@
 # Logical Types
 
-The Type Language, [like PHP](https://www.php.net/manual/en/language.types.type-system.php#language.types.type-system.composite), supports two types of composite (logical)
+The TypeLang, [like PHP](https://www.php.net/manual/en/language.types.type-system.php#language.types.type-system.composite), supports two types of composite (logical)
 types: Union and Intersection. The ability to specify a _nullable_ type using a
 separate expression is also supported.
 

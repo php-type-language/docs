@@ -3,7 +3,7 @@
         SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
 
 <instance-profile id="tl"
-                  name="Type Language"
+                  name="TypeLang"
                   status="eap"
                   is-library="true"
                   start-page="overview.topic">
