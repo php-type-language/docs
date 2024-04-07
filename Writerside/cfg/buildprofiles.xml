@@ -4,7 +4,7 @@
     <variables>
         <primary-color>iris</primary-color>
         <custom-favicons>icon.png</custom-favicons>
-        <header-logo>icon.png</header-logo>
+        <header-logo>logo.svg</header-logo>
         <product-web-url>https://typelang.dev</product-web-url>
         <noindex-content>false</noindex-content>
 
