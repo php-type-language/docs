@@ -20,7 +20,7 @@
         </spotlight>
 
         <primary>
-            <title>Get started</title>
+            <title>Language Reference</title>
             <a href="basic-types.md"
                summary="Description of simple type definitions."/>
             <a href="logical-types.md"
@@ -32,7 +32,7 @@
         </primary>
 
         <secondary>
-            <title>Explore advanced features</title>
+            <title>Advanced Features</title>
             <a href="shapes.md"
                summary="Description of type fields that allow you to clarify information about composite types." />
             <a href="callables.md"
@@ -42,17 +42,24 @@
         <misc>
             <links narrow="true">
                 <group>
-                    <title>Source Code</title>
+                    <title>Language Components</title>
                     <a href="https://github.com/php-type-language/parser"
-                       summary="GirHub TypeLang Parser Repository">TypeLang Parser</a>
+                       summary="GirHub TypeLang Parser Repository">Parser</a>
                     <a href="https://github.com/php-type-language/printer"
-                        summary="GitHub TypeLang Printer Repository">TypeLang Printer</a>
-                    <a href="https://github.com/php-type-language/phpdoc"
-                       summary="GitHub PhpDoc Parser Repository">PhpDoc Parser</a>
+                        summary="GitHub TypeLang Printer Repository">Printer</a>
                     <a href="https://github.com/php-type-language/mapper"
-                       summary="GitHub Type Mapper Repository">Type Mapper</a>
+                       summary="GitHub Type Mapper Repository">Mapper</a>
                     <a href="https://github.com/php-type-language/reader"
-                       summary="GitHub Reader Repository">Type Reader</a>
+                       summary="GitHub Reader Repository">Reflection Reader</a>
+                </group>
+                <group>
+                    <title>PHPDoc Comments</title>
+                    <a href="https://github.com/php-type-language/phpdoc"
+                       summary="GitHub PHPDoc Parser Repository">Parser</a>
+                    <a href="https://github.com/php-type-language/phpdoc-standard-tags"
+                       summary="GitHub PHPDoc Standard Tags Repository">Standard Tags Extension</a>
+                    <a href="https://github.com/php-type-language/phpdoc-template-tags"
+                       summary="GitHub PHPDoc Template Tags Repository">Template Tags Extension</a>
                 </group>
                 <group>
                     <title>Other Tools</title>
