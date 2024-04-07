@@ -1,13 +1,29 @@
 # Literals
 
 As a type description, specific values corresponding to a specific type are
-allowed: `bool`, `string`, `int`, `float` and `null`.
+allowed:
+
+- `bool`
+- `string`
+- `int`
+- `float`
+- `null`.
 
 ## Boolean And Null
 
 The literals `true` and `false` are used as the value of the PHP `bool` type.
 
-For PHP `null` types, the `null` literal is used.&#x20;
+> Note: `true` and `false` values are not case sensitive.
+> ```typescript
+> TruE
+> ```
+
+For PHP `null` types, the `null` literal is used.
+
+> Note: `null` value is not case sensitive.
+> ```typescript
+> NulL
+> ```
 
 For other types the logic is more complicated.
 
@@ -16,8 +32,17 @@ For other types the logic is more complicated.
 The syntax of string types is similar to that in PHP: The string allows single
 (`'`) and double (`"`) quotes, which can be escaped using a backslash (`\`).
 
-* `'single-quoted string wrapped by \' symbol'`
-* `"double-quoted string wrapped by \" symbol"`
+> Single-quoted string wrapped by `'` symbol.
+> ```typescript
+> 'I am single-quoted string wrapped by \' symbol'
+> ```
+> {style="note"}
+
+> Double-quoted string wrapped by `"` symbol.
+> ```typescript
+> "I am double-quoted string wrapped by \" symbol"'
+> ```
+> {style="note"}
 
 Strings in single quotes are processed "as is", strings in double quotes allow
 insertion of special sequences.
@@ -34,12 +59,43 @@ All control sequences are similar to the PHP language: [https://www.php.net/manu
 * `\f` — Form Feed (`0x0C` code)
 * `\$` — Dollar Sign (`0x24` code)
 
+> Double-quoted string with new line (`0x0A`) escape sequence.
+> ```typescript
+> "String with\nNew Line"
+> 
+> // String with
+> // New Line
+> ```
+> {style="note"}
+
+> Single-quoted string with ignored escape sequence.
+> ```typescript
+> 'String without\nNew Line'
+> 
+> // String without\nNew Line
+> ```
+> {style="note"}
+
 ### Hexadecimal Sequences
 
 The sequence of characters matching the regular expression `[0-9A-Fa-f]{1,2}` is
 a character in hexadecimal notation (e.g. `"\x41" === "A"`)
 
-* `"\x48\x65\x6c\x6c\x6f\x20\x57\x6f\x72\x6c\x64"` — `"Hello World"` string equivalent.
+> `"Hello World"` string equivalent in hexadecimal sequences format.
+> ```typescript
+> "\x48\x65\x6c\x6c\x6f\x20\x57\x6f\x72\x6c\x64"
+> 
+> // Hello World
+> ```
+> {style="note"}
+
+> Single-quoted string does not process such sequences.
+> ```typescript
+> '\x48\x65\x6c\x6c\x6f\x20\x57\x6f\x72\x6c\x64'
+> 
+> // \x48\x65\x6c\x6c\x6f\x20\x57\x6f\x72\x6c\x64
+> ```
+> {style="note"}
 
 ### Unicode Sequences
 
@@ -47,7 +103,21 @@ the sequence of characters matching the regular expression `[0-9A-Fa-f]+` is a
 Unicode codepoint, which will be output to the string as that codepoint's UTF-8
 representation. The braces are required in the sequence. E.g. `"\u{41}" === "A"`
 
-* `"\u{1F60A}"` — [`"😊"` unciode char](https://www.compart.com/en/unicode/U+1F60A) equivalent.
+> [`"😊"` unciode char](https://www.compart.com/en/unicode/U+1F60A) equivalent.
+> ```typescript
+> "\u{1F60A}"
+> 
+> // 😊
+> ```
+> {style="note"}
+
+> Single-quoted string does not process such sequences.
+> ```typescript
+> '\u{1F60A}'
+> 
+> // \u{1F60A}
+> ```
+> {style="note"}
 
 ## Integer
 
@@ -55,7 +125,6 @@ The syntax of integer numbers is similar to the PHP language. Binary, octal,
 decimal and hexadecimal number systems are supported.
 
 > Please note that in addition to numbers, underscores (`_`) are allowed.
-{style="note"}
 
 Decimal numbers can contain any digits from `0` to `9` (leading `0` not allowed)
 and must match the regular expression `[1-9][0-9]*`. For any other numbers,
@@ -70,14 +139,42 @@ numbers `1` and `0` and must match the regular expression `0b[0-1]+`.
 <tabs>
 <tab title="examples">
 
-* ✔️ **0b10101101** — Number `173`.
-* ✔️ **0B1010** — Number `10`.
-* ✔️ **-0b1010** — Number `-10`.
-* ✔️ **0b10\_10\_11\_01** — Also number `173`.
+> Number `173` in binary format.
+> ```typescript
+> 0b10101101
+> ```
+> {style="note"}
+
+> Also number `173` in binary format with `_` delimiters.
+> ```typescript
+> 0b10_10_11_01
+> ```
+> {style="note"}
+
+> Number `10` in binary format: 
+> - The `0b` or `0B` prefix can be in any case.
+> ```typescript
+> 0B1010
+> ```
+> {style="note"}
+
+> Negative number `10` in binary format.
+> ```typescript
+> -0b1010
+> ```
+> {style="note"}
+
 </tab>
 <tab title="counterexamples">
 
-* ❌ **0b101042** — Binary numbers can only contain `1` and `0` digits.
+> Binary numbers can only contain `1` and `0` digits.
+> ```typescript
+> 0b101042
+> 
+> // Syntax error, unexpected "42"
+> ```
+> {style="warning"}
+
 </tab>
 </tabs>
 
@@ -93,14 +190,42 @@ numbers between `0` and `7` and must match the regular expression
 <tabs>
 <tab title="examples">
 
-* ✔️ **0o42** — Number `34`.
-* ✔️ **0O42** — Also number `34`.
-* ✔️ **0o42\_23** — Number `2195`.
-* ✔️ **042** — Number `34`, legacy octal PHP syntax.
+> Number `34` in octal format.
+> ```typescript
+> 0o42
+> ```
+> {style="note"}
+
+> Also number `34` in octal format: 
+> - The `0o` or `0O` prefix can be in any case.
+> ```typescript
+> 0O42
+> ```
+> {style="note"}
+
+> Also number `34` in "legacy" octal format.
+> ```typescript
+> 042
+> ```
+> {style="note"}
+
+> Number `2195` in octal format with `_` delimiters.
+> ```typescript
+> 0o42_23
+> ```
+> {style="note"}
+
 </tab>
 <tab title="counterexamples">
 
-* ❌ **0o4281** — Octal numbers can only contain digits between `0` and `7`.
+> Octal numbers can only contain digits between `0` and `7`.
+> ```typescript
+> 0o4281
+> 
+> // Syntax error, unexpected "81"
+> ```
+> {style="warning"}
+
 </tab>
 </tabs>
 
@@ -112,13 +237,35 @@ numbers between `0` and `F` and must match the regular expression `0x[0-9a-fA-F]
 <tabs>
 <tab title="examples">
 
-* ✔️ **0xDEAD** — Number `57005`.
-* ✔️ **0XDEAD** — Also number `57005`.
-* ✔️ **0xDEAD\_BEEF** — Number `3735928559`.
+> Number `57005` in hexadecimal format.
+> ```typescript
+> 0xDEAD
+> ```
+> {style="note"}
+
+> Also number `57005` in hexadecimal format: 
+> - The `0x` or `0X` prefix can be in any case.
+> - The `A-F` letters can also be in any case.
+> ```typescript
+> 0XDeaD
+> ```
+> {style="note"}
+
+> Number `3735928559` in hexadecimal format with `_` delimiters.
+> ```typescript
+> 0xDEAD_BEEF
+> ```
+> {style="note"}
+
 </tab>
 <tab title="counterexamples">
 
-* ❌ **0xHELL** — Can only contain digits between `0` and `F`.
+> Hexadecimal numbers can only contain digits between `0` and `F`.
+> ```typescript
+> 0xHELL
+> ```
+> {style="warning"}
+
 </tab>
 </tabs>
 
@@ -133,15 +280,49 @@ trailing number may be omitted. Negative values are prefixed with a minus (`-`.
 <tabs>
 <tab title="examples">
 
-* ✔️ **0.9** — Correct.
-* ✔️ **.9** — Also number `0.9`.
-* ✔️ -**.9** — Also number `0.9`.
-* ✔️ **1.** — Number `1.0`.
+> Simple floating point literal value.
+> ```typescript
+> 0.9
+> ```
+> {style="note"}
+
+> Non-prefixed floating point literal value (equivalent of `0.9`).
+> ```typescript
+> .9
+> ```
+> {style="note"}
+
+> Non-suffixed floating point literal value (equivalent of `1.0`).
+> ```typescript
+> 1.
+> ```
+> {style="note"}
+
+> Negative floating point literal value.
+> ```typescript
+> -0.9
+> ```
+> {style="note"}
+
 </tab>
 <tab title="counterexamples">
 
-* ❌ **.** — Only leading or trailing number may be omitted (not both).
-* ❌ **0.0A** — Only number between `0` and `9` are allowed.
+> Only leading or trailing number may be omitted (not both).
+> ```typescript
+> .
+> 
+> // Syntax error, unexpected "."
+> ```
+> {style="warning"}
+
+> Only number between `0` and `9` are allowed.
+> ```typescript
+> 0.0A
+> 
+> // Syntax error, unexpected "A"
+> ```
+> {style="warning"}
+
 </tab>
 </tabs>
 
@@ -154,13 +335,36 @@ inconveniently long string of digits.
 <tabs>
 <tab title="examples">
 
-* ✔️ **10e2** — Number `1000.0`.
-* ✔️ **10E2** — Also number `1000.0`.
-* ✔️ **10e-2** — Also number `0.1`.
+> Number `1000.0` in scientific notation.
+> ```typescript
+> 10e2
+> ```
+> {style="note"}
+
+> Also number `1000.0` in scientific notation:
+> - The `e` or `E` suffix can be in any case.
+> ```typescript
+> 10E2
+> ```
+> {style="note"}
+
+> Number `0.1` in scientific notation (negative exponent).
+> ```typescript
+> 10e-2
+> ```
+> {style="note"}
+
 </tab>
 <tab title="counterexamples">
 
-* ❌ **10e-F** — Incorrect.
+> The exponent value must be in decimal (digits between `0` and `9`) form only.
+> ```typescript
+> 10e-F
+> 
+> // Syntax error, unexpected "e-F"
+> ```
+> {style="warning"}
+
 </tab>
 </tabs>
 
