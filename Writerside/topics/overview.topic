@@ -3,7 +3,7 @@
         SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
 <topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
-       title="Language"
+       title="Language Overview"
        id="overview" help-id="index">
     <section-starting-page>
         <title>Language Overview</title>
@@ -53,7 +53,7 @@
                        summary="GitHub Reader Repository">Reflection Reader</a>
                 </group>
                 <group>
-                    <title>PHPDoc Comments</title>
+                    <title>PHPDoc</title>
                     <a href="https://github.com/php-type-language/phpdoc"
                        summary="GitHub PHPDoc Parser Repository">Parser</a>
                     <a href="https://github.com/php-type-language/phpdoc-standard-tags"

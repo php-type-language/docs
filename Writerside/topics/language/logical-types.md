@@ -9,14 +9,22 @@ separate expression is also supported.
 Each union type is separated by a pipe character (`|`) and may contain any other
 type definition.
 
-* `A | B | C` — One of "A" **or** "B" **or** "C".
+> One of `A` **OR** `B` **OR** `C`.
+> ```typescript
+> A | B | C
+> ```
+> {style="note"}
 
 ### Intersection Type
 
 Each intersection type is separated by an ampersand character (`&`) and may
 contain any other type definition.
 
-* `A & B & C` — The "A" **and** "B" **and** "C".
+> All of `A` **AND** `B` **AND** `C`.
+> ```typescript
+> A & B & C
+> ```
+> {style="note"}
 
 ### Nullable Type
 
@@ -25,13 +33,22 @@ Nullable type is a shortened alias for union type `T | null` and is written as `
 <tabs>
 <tab title="examples">
 
-* ✔️ **?example** — Nullable "example" type.
-* ✔️ **example | null** — Similar full type definition.
+> Description of nullable type `Example` (equivalent to `Example | null`)
+> ```typescript
+> ?Example
+> ```
+> {style="note"}
+
 </tab>
 <tab title="counterexamples">
 
-* ❌ **example?** — The question mark must be placed before the type name.
-* ❌ **? | example** — The question mark must be placed before the type name.
+> The question mark must be placed before the type name.
+> ```typescript
+> Example?
+> 
+> // Syntax error, unexpected "?"
+> ```
+> {style="warning"}
 </tab>
 </tabs>
 

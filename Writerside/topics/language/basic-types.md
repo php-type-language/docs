@@ -5,7 +5,6 @@ characters `[a-zA-Z\x80-\xff]` (any letter) and `_` (underscore) and can contain
 within the limit `[a-zA-Z0-9\x80-\xff]` (any letter), as well as the characters `_` (underscore) and `-` (dash).
 
 > For our purposes here, a **letter** is `a-z`, `A-Z`, and the bytes from 128 through 255 (`0x80-0xff`).
-{style="note"}
 
 In this case, the only difference from [the PHP grammar](https://www.php.net/manual/en/language.variables.basics.php) 
 is that a **dash** (`-`) symbol is allowed in the middle of the name.
@@ -16,39 +15,100 @@ PHP literals, so their use as a custom type name is **unacceptable**.
 <tabs>
 <tab title="examples">
 
-* ✔️ **example**
-* ✔️ **ExampleTypeName**
-* ✔️ **example-type** — Dash (`-`) char is allowed.
-* ✔️ **example-42** — Digits is allowed.
-* ✔️ **true-type** — The reserved keyword (`true`) is allowed as part of the full name.
+> Example of a simple <tooltip term="Identifier">Identifier</tooltip>.
+> ```typescript
+> ExampleTypeName
+> ```
+> {style="note"}
+
+> Dashes (`-`) in <tooltip term="Identifier">Identifier</tooltip> 
+> are also acceptable.
+> ```typescript
+> example-type
+> ```
+> {style="note"}
+
+> The reserved keyword (`true`) is allowed as part of the <tooltip 
+> term="Identifier">Identifier</tooltip>.
+> ```typescript
+> true-type
+> ```
+> {style="note"}
+
 </tab>
 <tab title="counterexamples">
 
-* ❌ **true** — Reserved name.
-* ❌ **TRUE** — Reserved name (case-insensitive).
-* ❌ **42type** — Starts with a number.
-* ❌ **-type** — Starts with a dash symbol.
+> The standalone keywords (`true`) is NOT available as an <tooltip 
+> term="Identifier">Identifier</tooltip> regardless of case and is 
+> parsed as a literal value rather than an <tooltip 
+> term="Identifier">Identifier</tooltip>.
+> ```typescript
+> TrUe
+> 
+> // TypeLang\Parser\Node\Literal\BoolLiteralNode {
+> //    +offset: 0
+> //    +raw: "TrUe"
+> //    +value: true
+> // }
+> ```
+> {style="warning"}
+
+> <tooltip term="Identifier">Identifiers</tooltip> cannot begin with 
+digits (`0-9`) or a dash (`-`) symbol.
+> ```typescript
+> 42type
+> 
+> // Syntax error, unexpected "type"
+> ```
+> {style="warning"}
+
 </tab>
 </tabs>
 
 ## Namespace
 
-Each name can contain a namespace symbol (`\` — backslash), which is [similar to that in PHP](https://www.php.net/manual/en/language.namespaces.rationale.php). The separator 
-can be located either in the middle or at the beginning of any type name. End position is not allowed.
+Each name can contain a namespace symbol (`\` — backslash), which is 
+[similar to that in PHP](https://www.php.net/manual/en/language.namespaces.rationale.php). The separator can be located either in 
+the middle or at the beginning of any <tooltip 
+term="Identifier">Identifier</tooltip>. End position is not allowed.
 
-The namespace delimiter can be used in conjunction with keywords such as `true`, `false`, or `null` to explicitly 
-indicate a type reference.
+The namespace delimiter can be used in conjunction with keywords such 
+as `true`, `false`, or `null` to explicitly indicate a type reference.
 
 <tabs>
 <tab title="examples">
 
-* ✔️ **example\name** — Relative class <tooltip term="FQN">FQN</tooltip>.
-* ✔️ **\prefixed\example\name** — Absolute class <tooltip term="FQN">FQN</tooltip>.
+> Relative class <tooltip term="FQN">FQN</tooltip> reference.
+> ```typescript
+> Example\Name
+> ```
+> {style="note"}
+
+> Absolute class <tooltip term="FQN">FQN</tooltip> reference.
+> ```typescript
+> \Absolute\Type\Name
+> ```
+> {style="note"}
+
 </tab>
 <tab title="counterexamples">
 
-* ❌ **true\null** — Reserved name.
-* ❌ **example\name\\** — Trailing delimiter.
-* ❌ **example\2type** — Name starts with a number.
+> <tooltip term="Identifier">Identifiers</tooltip> cannot contain keywords
+> reserved for literal values.
+> ```typescript
+> true\null
+> 
+> // Syntax error, unexpected "\"
+> ```
+> {style="warning"}
+
+> <tooltip term="FQN">FQN</tooltip> type names cannot end in `\` delimiter.
+> ```typescript
+> example\name\
+>
+> // Syntax error, unexpected end of input
+> ```
+> {style="warning"}
+
 </tab>
 </tabs>

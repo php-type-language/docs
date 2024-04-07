@@ -24,14 +24,81 @@ comma (`,`).
 <tabs>
 <tab title="examples">
 
-* ✔️ **example\<T>**
-* ✔️ **iterable\<int<0, max>, non-empty-string>**
-* ✔️ **HashMap\<Request, User,>** — Trailing comma is allowed.
+> Reference to an existing class, interface or enum with template arguments.
+> ```typescript
+> Path\To\ExampleClass<T, U>
+> ```
+> {style="note"}
+
+> Reference to builtin type with template arguments containing other generics.
+>  ```typescript
+>  iterable<int<0, max>, Collection<User>>
+>  ```
+> {style="note"}
+
+> Trailing comma is allowed.
+>  ```typescript
+>  HashMap<Request, User,>
+>  ```
+> {style="note"}
+
 </tab>
 <tab title="counterexamples">
 
-* ❌ **example<>** — Missing template argument.
-* ❌ **example<,T>** — Leading comma is not allowed.
+> Missing template argument.
+> ```typescript
+> example<>
+> 
+> // Syntax error, unexpected ">"
+> ```
+> {style="warning"}
+
+> Leading comma is NOT allowed.
+> ```typescript
+> example<,T>
+> 
+> // Syntax error, unexpected ","
+> ```
+> {style="warning"}
+
+</tab>
+</tabs>
+
+### Call-Site Hints
+
+Each generic argument allows you to define an additional hint, which can 
+be used, for example, in static analyzers to indicate the
+[call-site variance](https://phpstan.org/blog/guide-to-call-site-generic-variance#call-site-variance).
+
+
+<tabs>
+<tab title="examples">
+
+> Any identifier (in this case "`covariant`") before the template argument`s type is acceptable.
+> ```typescript
+> HashMap<array-key, covariant Request>
+> ```
+> {style="note"}
+
+</tab>
+<tab title="counterexamples">
+
+> Only valid identifiers are allowed.
+> ```typescript
+> Collection<42 User>
+> 
+> // Syntax error, unexpected "User"
+> ```
+> {style="warning"}
+
+> Multiple hints are not allowed.
+> ```typescript
+>  HashMap<array-key, some covariant Request>
+> 
+> // Syntax error, unexpected "Request"
+> ```
+> {style="warning"}
+
 </tab>
 </tabs>
 
@@ -43,11 +110,28 @@ In addition to modern list declarations such as `list<int>` or
 <tabs>
 <tab title="examples">
 
-* ✔️ **User\[]** — Correct (list of `User` type).
-* ✔️ **User\[]\[]** — Correct (list of lists of `User` type, similar to `list<list<User>>`).
+> List (array) of `User` objects.
+> ```typescript
+> User[]
+> ```
+> {style="note"}
+
+> List of list (nested array) of `User` objects.
+> ```typescript
+> User[][]
+> ```
+> {style="note"}
+
 </tab>
 <tab title="counterexamples">
 
-* ❌ **User\[int]** —  Incorrect syntax (was [used in the PSR](https://github.com/php-fig/event-dispatcher/blob/1.0.0/src/ListenerProviderInterface.php#L14) by mistake).
+> Incorrect syntax (was [used in the PSR](https://github.com/php-fig/event-dispatcher/blob/1.0.0/src/ListenerProviderInterface.php#L14) by mistake).
+> ```typescript
+> User[int]
+> 
+> // Syntax error, unexpected "int"
+> ```
+> {style="warning"}
+
 </tab>
 </tabs>

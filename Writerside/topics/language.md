@@ -91,24 +91,24 @@ Below is a list of grammar of shaped types.
 
 Below is a list of grammar of callable (function) types.
 
-| Code Example                                                          | TypeLang          | Psalm                                              | PHPStan     |
-|-----------------------------------------------------------------------|-------------------|----------------------------------------------------|-------------|
-| Simple Func `callable()`                                              | ✔️                | ✔️                                                 | ✔️          |
-| Typed Func `callable(): mixed`                                        | ✔️                | ✔️                                                 | ✔️          |
-| Func Args `callable(T)`                                               | ✔️                | ✔️                                                 | ✔️          |
-| Optional Arg `callable(T=)`                                           | ✔️                | ✔️                                                 | ✔️          |
-| Named Arg `callable(T $name)`                                         | ✔️                | ✔️                                                 | ✔️          |
-| Optional Named Arg `callable(T $name=)`                               | ✔️                | [❌ Internal Error](https://psalm.dev/r/9ae58ed797) | ✔️          |
-| Suffixed Variadic Arg `callable(T...)`                                | ✔️                | ✔️                                                 | ✔️          |
-| Prefixed Variadic Arg `callable(...T)`                                | ✔️                | ✔️                                                 | ✔️          |
-| Prefixed + Suffixed Variadic Named Arg `callable(...T ...$name)`      | ✔️ Syntax Error   | [❌ Internal Error](https://psalm.dev/r/4a6476fff6) | ❌ No Error  |
-| Optional Variadic Arg `callable(...T=)`                               | ✔️ Semantic Error | ✔️ Semantic Error                                  | ✔️ No Error |
-| Suffixed Variadic Named Arg `callable(T ...$arg)`                     | ✔️                | ✔️                                                 | ✔️          |
-| Prefixed Variadic Named Arg `callable(...T $arg)`                     | ✔️                | [❌ Internal Error](https://psalm.dev/r/2dac434b3f) | ✔️          |
-| Reference Arg `callable(T&)`                                          | ✔️                | [❌ Not Supported](https://psalm.dev/r/bb604c4219)  | ✔️          |
-| Optional Reference Arg `callable(T&=)`                                | ✔️                | [❌ Not Supported](https://psalm.dev/r/fc3041a846)  | ✔️          |
-| Optional Reference Named Arg `callable(T &$name=)`                    | ✔️                | [❌ Not Supported](https://psalm.dev/r/14dcf8634f)  | ✔️          |
-| Reference Named Variadic Arg `callable(T &...$name)`                  | ✔️                | [❌ Not Supported](https://psalm.dev/r/7a64356034)  | ✔️          |
-| Reference Named Prefix Variadic Arg `callable(...T &$name)`           | ✔️                | [❌ Not Supported](https://psalm.dev/r/bf7dcbc9b4)  | ✔️          |
-| Optional Reference Named Variadic Arg `callable(T &...$name=)`        | ✔️ Semantic Error | ✔️ Semantic Error                                  | ❌ No Error  |
-| Optional Reference Named Prefix Variadic Arg `callable(...T &$name=)` | ✔️ Semantic Error | ✔️ Semantic Error                                  | ❌ No Error  |
+| Code Example                                                          | TypeLang          | Psalm                                              | PHPStan    |
+|-----------------------------------------------------------------------|-------------------|----------------------------------------------------|------------|
+| Simple Func `callable()`                                              | ✔️                | ✔️                                                 | ✔️         |
+| Typed Func `callable(): mixed`                                        | ✔️                | ✔️                                                 | ✔️         |
+| Func Args `callable(T)`                                               | ✔️                | ✔️                                                 | ✔️         |
+| Optional Arg `callable(T=)`                                           | ✔️                | ✔️                                                 | ✔️         |
+| Named Arg `callable(T $name)`                                         | ✔️                | ✔️                                                 | ✔️         |
+| Optional Named Arg `callable(T $name=)`                               | ✔️                | [❌ Internal Error](https://psalm.dev/r/9ae58ed797) | ✔️         |
+| Suffixed Variadic Arg `callable(T...)`                                | ✔️                | ✔️                                                 | ✔️         |
+| Prefixed Variadic Arg `callable(...T)`                                | ✔️                | ✔️                                                 | ✔️         |
+| Prefixed + Suffixed Variadic Named Arg `callable(...T ...$name)`      | ✔️ Syntax Error   | [❌ Internal Error](https://psalm.dev/r/4a6476fff6) | ❌ No Error |
+| Optional Variadic Arg `callable(...T=)`                               | ✔️ Semantic Error | ✔️ Semantic Error                                  | ❌ No Error |
+| Suffixed Variadic Named Arg `callable(T ...$arg)`                     | ✔️                | ✔️                                                 | ✔️         |
+| Prefixed Variadic Named Arg `callable(...T $arg)`                     | ✔️                | [❌ Internal Error](https://psalm.dev/r/2dac434b3f) | ✔️         |
+| Reference Arg `callable(T&)`                                          | ✔️                | [❌ Not Supported](https://psalm.dev/r/bb604c4219)  | ✔️         |
+| Optional Reference Arg `callable(T&=)`                                | ✔️                | [❌ Not Supported](https://psalm.dev/r/fc3041a846)  | ✔️         |
+| Optional Reference Named Arg `callable(T &$name=)`                    | ✔️                | [❌ Not Supported](https://psalm.dev/r/14dcf8634f)  | ✔️         |
+| Reference Named Variadic Arg `callable(T &...$name)`                  | ✔️                | [❌ Not Supported](https://psalm.dev/r/7a64356034)  | ✔️         |
+| Reference Named Prefix Variadic Arg `callable(...T &$name)`           | ✔️                | [❌ Not Supported](https://psalm.dev/r/bf7dcbc9b4)  | ✔️         |
+| Optional Reference Named Variadic Arg `callable(T &...$name=)`        | ✔️ Semantic Error | ✔️ Semantic Error                                  | ❌ No Error |
+| Optional Reference Named Prefix Variadic Arg `callable(...T &$name=)` | ✔️ Semantic Error | ✔️ Semantic Error                                  | ❌ No Error |
