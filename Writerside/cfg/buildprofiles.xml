@@ -5,7 +5,7 @@
         <primary-color>iris</primary-color>
         <custom-favicons>icon.png</custom-favicons>
         <header-logo>icon.png</header-logo>
-        <product-web-url>https://phpdoc.io</product-web-url>
+        <product-web-url>https://typelang.dev</product-web-url>
         <noindex-content>false</noindex-content>
 
         <feedback-url>https://github.com/php-type-language/docs/issues</feedback-url>
