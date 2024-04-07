@@ -3,7 +3,7 @@
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <variables>
         <primary-color>iris</primary-color>
-        <custom-favicons>icon.png</custom-favicons>
+        <custom-favicons>logo.svg</custom-favicons>
         <header-logo>logo.svg</header-logo>
         <product-web-url>https://typelang.dev</product-web-url>
         <noindex-content>false</noindex-content>
