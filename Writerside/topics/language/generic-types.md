@@ -22,7 +22,7 @@ comma (`,`).
 > * `Traversable<int<0, max>, string>` would contain **arguments**.
 
 <tabs>
-<tab title="examples">
+<tab title="Examples">
 
 > Reference to an existing class, interface or enum with template arguments.
 > ```typescript
@@ -43,7 +43,7 @@ comma (`,`).
 > {style="note"}
 
 </tab>
-<tab title="counterexamples">
+<tab title="Counterexamples">
 
 > Missing template argument.
 > ```typescript
@@ -72,7 +72,7 @@ be used, for example, in static analyzers to indicate the
 
 
 <tabs>
-<tab title="examples">
+<tab title="Examples">
 
 > Any identifier (in this case "`covariant`") before the template argument`s type is acceptable.
 > ```typescript
@@ -81,7 +81,7 @@ be used, for example, in static analyzers to indicate the
 > {style="note"}
 
 </tab>
-<tab title="counterexamples">
+<tab title="Counterexamples">
 
 > Only valid identifiers are allowed.
 > ```typescript
@@ -108,7 +108,7 @@ In addition to modern list declarations such as `list<int>` or
 `array<array-key, int>`, the legacy `int[]` syntax is allowed.
 
 <tabs>
-<tab title="examples">
+<tab title="Examples">
 
 > List (array) of `User` objects.
 > ```typescript
@@ -123,7 +123,7 @@ In addition to modern list declarations such as `list<int>` or
 > {style="note"}
 
 </tab>
-<tab title="counterexamples">
+<tab title="Counterexamples">
 
 > Incorrect syntax (was [used in the PSR](https://github.com/php-fig/event-dispatcher/blob/1.0.0/src/ListenerProviderInterface.php#L14) by mistake).
 > ```typescript

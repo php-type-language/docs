@@ -13,7 +13,7 @@ In addition, it is worth noting that the case-insensitive names `true`, `false` 
 PHP literals, so their use as a custom type name is **unacceptable**.
 
 <tabs>
-<tab title="examples">
+<tab title="Examples">
 
 > Example of a simple <tooltip term="Identifier">Identifier</tooltip>.
 > ```typescript
@@ -36,7 +36,7 @@ PHP literals, so their use as a custom type name is **unacceptable**.
 > {style="note"}
 
 </tab>
-<tab title="counterexamples">
+<tab title="Counterexamples">
 
 > The standalone keywords (`true`) is NOT available as an <tooltip 
 > term="Identifier">Identifier</tooltip> regardless of case and is 
@@ -76,7 +76,7 @@ The namespace delimiter can be used in conjunction with keywords such
 as `true`, `false`, or `null` to explicitly indicate a type reference.
 
 <tabs>
-<tab title="examples">
+<tab title="Examples">
 
 > Relative class <tooltip term="FQN">FQN</tooltip> reference.
 > ```typescript
@@ -91,7 +91,7 @@ as `true`, `false`, or `null` to explicitly indicate a type reference.
 > {style="note"}
 
 </tab>
-<tab title="counterexamples">
+<tab title="Counterexamples">
 
 > <tooltip term="Identifier">Identifiers</tooltip> cannot contain keywords
 > reserved for literal values.

@@ -20,8 +20,14 @@
     </toc-element>
 
     <toc-element topic="parser.md">
-        <toc-element topic="visitors.md"/>
+        <toc-element topic="visitors.md">
+            <toc-element topic="class-name-matcher-visitor.md"/>
+            <toc-element topic="stream-dumper-visitor.md"/>
+            <toc-element topic="string-dumper-visitor.md"/>
+            <toc-element topic="type-map-visitor.md"/>
+        </toc-element>
     </toc-element>
 
     <toc-element topic="printer.md"/>
+    <toc-element topic="reader.md"/>
 </instance-profile>

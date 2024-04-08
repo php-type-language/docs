@@ -3,7 +3,9 @@
 ## Installation
 
 A parser component is used to analyze and construct types AST with their
-information and grammar checking. You can install it with:
+information and grammar checking. 
+
+You can install it with:
 
 ```bash
 composer require type-lang/parser

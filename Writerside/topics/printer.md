@@ -3,7 +3,9 @@
 ## Installation
 
 The printer package is responsible for visualizing the AST as string 
-formats. You can install it with:
+formats.
+
+You can install it with:
 
 ```bash
 composer require type-lang/printer

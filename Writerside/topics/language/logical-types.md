@@ -13,7 +13,6 @@ type definition.
 > ```typescript
 > A | B | C
 > ```
-> {style="note"}
 
 ### Intersection Type
 
@@ -24,14 +23,13 @@ contain any other type definition.
 > ```typescript
 > A & B & C
 > ```
-> {style="note"}
 
 ### Nullable Type
 
 Nullable type is a shortened alias for union type `T | null` and is written as `?T.`
 
 <tabs>
-<tab title="examples">
+<tab title="Examples">
 
 > Description of nullable type `Example` (equivalent to `Example | null`)
 > ```typescript
@@ -40,7 +38,7 @@ Nullable type is a shortened alias for union type `T | null` and is written as `
 > {style="note"}
 
 </tab>
-<tab title="counterexamples">
+<tab title="Counterexamples">
 
 > The question mark must be placed before the type name.
 > ```typescript

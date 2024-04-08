@@ -8,11 +8,23 @@ Callable types describe an arbitrary type that describes a function.
 
 Each callable MAY have a list of parameters and/or a return type definition.
 
-* ✔️ **foo()** — Callable without parameters and return type.
-* ✔️ **foo(): void** — Callable without parameters with return type.
-* ✔️ **foo(T)** — Callable with 1 parameter without return type.
-* ✔️ **foo(A, B, C): void** .
-* ✔️ **a( b(), c(?C): mixed ): void**.
+<procedure title="Examples" collapsible="true">
+
+> Callable type without parameters and return type.
+> ```typescript
+> foo()
+> ```
+
+> Callable type with 1 parameter with return type.
+> ```typescript
+> foo(T): void
+> ```
+
+> Complex example (see details below).
+> ```typescript
+> a(int<0, max>, c(?C): mixed): void
+> ```
+</procedure>
 
 ### Named Parameters
 
@@ -23,14 +35,31 @@ The name must appear after the parameter type and begin with a "`$`" sign.
 Just like in the PHP language.
 
 <tabs>
-<tab title="examples">
+<tab title="Examples">
 
-* ✔️ **foo(T $name)**
-* ✔️ **foo(?A $a, B)** — Named parameter and anonymous.
+> Callable type with one `$name` named parameter.
+> ```typescript
+> foo(T $name)
+> ```
+> {style="note"}
+
+> Callable type with `$name` named and anonymous parameters.
+> ```typescript
+> foo(A $a, B, C)
+> ```
+> {style="note"} 
+
 </tab>
-<tab title="counterexamples">
+<tab title="Counterexamples">
 
-* ❌ **foo($name)** — Type required.
+> Callable type without parameter's type.
+> ```typescript
+> foo($name)
+> 
+> // Syntax error, unexpected ")"
+> ```
+> {style="warning"}
+
 </tab>
 </tabs>
 
@@ -43,14 +72,31 @@ To indicate that a parameter is passed by reference, an "`&`" sign is used after
 the type and before the name.
 
 <tabs>
-<tab title="examples">
+<tab title="Examples">
 
-* ✔️ **foo(T&)**.
-* ✔️ **foo(T &$name)**.
+> Callable type with one output (referenced) parameter.
+> ```typescript
+> foo(T&)
+> ```
+> {style="note"}
+
+> Callable type with one output (referenced) named parameter.
+> ```typescript
+> foo(T &$name)
+> ```
+> {style="note"}
+
 </tab>
-<tab title="counterexamples">
+<tab title="Counterexamples">
 
-* ❌ **foo(\&T)** — Syntax error.
+> The ampersand (`&`) must be placed after the parameter's type.
+> ```typescript
+> foo(&T)
+> 
+> // Syntax error, unexpected "&"
+> ```
+> {style="warning"}
+
 </tab>
 </tabs>
 
@@ -63,16 +109,43 @@ An optional parameter is indicated by the "`=`" sign at the end of the
 parameter description.
 
 <tabs>
-<tab title="examples">
+<tab title="Examples">
 
-* ✔️ **foo(T=)**
-* ✔️ **foo(T $name=)**
-* ✔️ **foo(T&=)**
-* ✔️ **foo(T &$name=)**
+> Callable type with one optional parameter.
+> ```typescript
+> foo(T=)
+> ```
+> {style="note"}
+
+> Callable type with one optional named parameter.
+> ```typescript
+> foo(T $name=)
+> ```
+> {style="note"}
+
+> Callable type with one optional output parameter.
+> ```typescript
+> foo(T&=)
+> ```
+> {style="note"}
+
+> Callable type with one optional output named parameter.
+> ```typescript
+> foo(T &$name=)
+> ```
+> {style="note"}
+
 </tab>
-<tab title="counterexamples">
+<tab title="Counterexamples">
 
-* ❌ **foo(T= $name)** — Syntax error.
+> The optionality char (`=`) must be placed at the end.
+> ```typescript
+> foo(T= $name)
+> 
+> // Syntax error, unexpected "$name"
+> ```
+> {style="warning"}
+
 </tab>
 </tabs>
 
@@ -85,18 +158,65 @@ _before the type_ or _before the parameter name._
 {style="warning"}
 
 <tabs>
-<tab title="examples">
+<tab title="Examples">
 
-* ✔️ **foo(...T)**
-* ✔️ **foo(...T $name)**
-* ✔️ **foo(...T &$name)**
-* ✔️ **foo(T...)**
-* ✔️ **foo(T ...$name)**
-* ✔️ **foo(T &...$name)**
+> Callable type with one variadic parameter.
+> ```typescript
+> foo(...T)
+> ```
+> {style="note"}
+
+> Callable type with one variadic named parameter.
+> ```typescript
+> foo(...T $name)
+> ```
+> {style="note"}
+
+> Callable type with one variadic output named parameter.
+> ```typescript
+> foo(...T &$name)
+> ```
+> {style="note"}
+
 </tab>
-<tab title="counterexamples">
+<tab title="Alternative Syntax">
 
-* ❌ **foo(...T...)** — Must be one of two options.
-* ❌ **foo(T ...$name=)** — Variadic parameter cannot be optional.
+> Callable type with one variadic parameter.
+> ```typescript
+> foo(T...)
+> ```
+> {style="note"}
+
+> Callable type with one variadic named parameter.
+> ```typescript
+> foo(T ...$name)
+> ```
+> {style="note"}
+
+> Callable type with one variadic output named parameter.
+> ```typescript
+> foo(T &...$name)
+> ```
+> {style="note"}
+
+</tab>
+<tab title="Counterexamples">
+
+> The ellipses (`...`) must come before or after the type.
+> ```typescript
+> foo(...T...)
+> 
+> // Syntax error, unexpected "..."
+> ```
+> {style="warning"}
+
+> Variadic parameter cannot be optional.
+> ```typescript
+> foo(T ...$name=)
+> 
+> // Cannot have variadic param with a default
+> ```
+> {style="warning"}
+
 </tab>
 </tabs>

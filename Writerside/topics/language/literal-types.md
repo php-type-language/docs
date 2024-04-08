@@ -137,7 +137,7 @@ Every binary number is prefixed with `0b` or `0B` and can only contain the
 numbers `1` and `0` and must match the regular expression `0b[0-1]+`.
 
 <tabs>
-<tab title="examples">
+<tab title="Examples">
 
 > Number `173` in binary format.
 > ```typescript
@@ -165,7 +165,7 @@ numbers `1` and `0` and must match the regular expression `0b[0-1]+`.
 > {style="note"}
 
 </tab>
-<tab title="counterexamples">
+<tab title="Counterexamples">
 
 > Binary numbers can only contain `1` and `0` digits.
 > ```typescript
@@ -188,7 +188,7 @@ numbers between `0` and `7` and must match the regular expression
 {style="note"}
 
 <tabs>
-<tab title="examples">
+<tab title="Examples">
 
 > Number `34` in octal format.
 > ```typescript
@@ -216,7 +216,7 @@ numbers between `0` and `7` and must match the regular expression
 > {style="note"}
 
 </tab>
-<tab title="counterexamples">
+<tab title="Counterexamples">
 
 > Octal numbers can only contain digits between `0` and `7`.
 > ```typescript
@@ -235,7 +235,7 @@ Every hexadecimal number is prefixed with `0x` or `0X` and can only contain the
 numbers between `0` and `F` and must match the regular expression `0x[0-9a-fA-F]+`.
 
 <tabs>
-<tab title="examples">
+<tab title="Examples">
 
 > Number `57005` in hexadecimal format.
 > ```typescript
@@ -258,7 +258,7 @@ numbers between `0` and `F` and must match the regular expression `0x[0-9a-fA-F]
 > {style="note"}
 
 </tab>
-<tab title="counterexamples">
+<tab title="Counterexamples">
 
 > Hexadecimal numbers can only contain digits between `0` and `F`.
 > ```typescript
@@ -278,7 +278,7 @@ Every floating point number accepts the format `[0-9]+\.[0-9]+`. The leading or
 trailing number may be omitted. Negative values are prefixed with a minus (`-`.
 
 <tabs>
-<tab title="examples">
+<tab title="Examples">
 
 > Simple floating point literal value.
 > ```typescript
@@ -305,7 +305,7 @@ trailing number may be omitted. Negative values are prefixed with a minus (`-`.
 > {style="note"}
 
 </tab>
-<tab title="counterexamples">
+<tab title="Counterexamples">
 
 > Only leading or trailing number may be omitted (not both).
 > ```typescript
@@ -333,7 +333,7 @@ conveniently written in decimal form, since to do so would require writing out a
 inconveniently long string of digits.
 
 <tabs>
-<tab title="examples">
+<tab title="Examples">
 
 > Number `1000.0` in scientific notation.
 > ```typescript
@@ -355,7 +355,7 @@ inconveniently long string of digits.
 > {style="note"}
 
 </tab>
-<tab title="counterexamples">
+<tab title="Counterexamples">
 
 > The exponent value must be in decimal (digits between `0` and `9`) form only.
 > ```typescript
