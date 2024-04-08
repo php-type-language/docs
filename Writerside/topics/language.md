@@ -23,7 +23,7 @@ Below is a list of simple, logical and other common types.
         <td width="130">
             <icon src="typelang.svg" height="16"/>&nbsp;<a href="https://github.com/php-type-language">TypeLang</a>
         </td>
-        <td width="120">
+        <td width="100">
             <icon src="psalm.png" height="16"/>&nbsp;<a href="https://github.com/vimeo/psalm">Psalm</a>
         </td>
         <td width="120">
@@ -182,7 +182,7 @@ Below is a list of conditional types.
         <td width="130">
             <icon src="typelang.svg" height="16"/>&nbsp;<a href="https://github.com/php-type-language">TypeLang</a>
         </td>
-        <td width="120">
+        <td width="100">
             <icon src="psalm.png" height="16"/>&nbsp;<a href="https://github.com/vimeo/psalm">Psalm</a>
         </td>
         <td width="120">
