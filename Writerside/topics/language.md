@@ -19,19 +19,25 @@ Below is a list of simple, logical and other common types.
 
 <table style="both">
     <tr>
-        <td></td>
-        <td width="130">
+        <td width="1"></td>
+        <td width="150">
             <icon src="typelang.svg" height="16"/>&nbsp;<a href="https://github.com/php-type-language">TypeLang</a>
         </td>
-        <td width="100">
+        <td width="150">
             <icon src="psalm.png" height="16"/>&nbsp;<a href="https://github.com/vimeo/psalm">Psalm</a>
         </td>
-        <td width="120">
+        <td width="150">
             <icon src="phpstan.png" height="16"/>&nbsp;<a href="https://github.com/phpstan">PHPStan</a>
+        </td>
+        <td width="150">
+            <icon src="phan.png" height="16"/>&nbsp;<a href="https://github.com/phan">PHAN</a>
+        </td>
+        <td width="200">
+            <icon src="phpdocumentor.png" height="16"/>&nbsp;<a href="https://github.com/phpDocumentor">phpDocumentor</a>
         </td>
     </tr>
     <tr>
-        <td>
+        <td colspan="6">
             <a href="basic-types.md" anchor="namespace">
                 Class or type name (including <tooltip term="FQN">FQN</tooltip>)
             </a>
@@ -39,12 +45,17 @@ Below is a list of simple, logical and other common types.
             Non\Qualified\Name
             </code-block>
         </td>
-        <td><icon src="ok.svg"/></td>
-        <td><icon src="ok.svg"/></td>
-        <td><icon src="ok.svg"/></td>
     </tr>
     <tr>
-        <td>
+        <td></td>
+        <td><icon src="ok.svg"/></td>
+        <td><icon src="ok.svg"/></td>
+        <td><icon src="ok.svg"/></td>
+        <td><icon src="unknown.svg"/></td>
+        <td><icon src="unknown.svg"/></td>
+    </tr>
+    <tr>
+        <td colspan="6">
             <a href="logical-types.md" anchor="union-type">
                 Logical union types
             </a>
@@ -52,12 +63,17 @@ Below is a list of simple, logical and other common types.
             T | U | V
             </code-block>
         </td>
-        <td><icon src="ok.svg"/></td>
-        <td><icon src="ok.svg"/></td>
-        <td><icon src="ok.svg"/></td>
     </tr>
     <tr>
-        <td>
+        <td></td>
+        <td><icon src="ok.svg"/></td>
+        <td><icon src="ok.svg"/></td>
+        <td><icon src="ok.svg"/></td>
+        <td><icon src="unknown.svg"/></td>
+        <td><icon src="unknown.svg"/></td>
+    </tr>
+    <tr>
+        <td colspan="6">
             <a href="logical-types.md" anchor="intersection-type">
                 Logical intersection types
             </a>
@@ -65,12 +81,17 @@ Below is a list of simple, logical and other common types.
             T & U & V
             </code-block>
         </td>
-        <td><icon src="ok.svg"/></td>
-        <td><icon src="ok.svg"/></td>
-        <td><icon src="ok.svg"/></td>
     </tr>
     <tr>
-        <td>
+        <td></td>
+        <td><icon src="ok.svg"/></td>
+        <td><icon src="ok.svg"/></td>
+        <td><icon src="ok.svg"/></td>
+        <td><icon src="unknown.svg"/></td>
+        <td><icon src="unknown.svg"/></td>
+    </tr>
+    <tr>
+        <td colspan="6">
             <a href="logical-types.md" anchor="nullable-type">
                 Logical nullable types
             </a>
@@ -78,12 +99,17 @@ Below is a list of simple, logical and other common types.
             ?T
             </code-block>
         </td>
-        <td><icon src="ok.svg"/></td>
-        <td><icon src="ok.svg"/></td>
-        <td><icon src="ok.svg"/></td>
     </tr>
     <tr>
-        <td>
+        <td></td>
+        <td><icon src="ok.svg"/></td>
+        <td><icon src="ok.svg"/></td>
+        <td><icon src="ok.svg"/></td>
+        <td><icon src="unknown.svg"/></td>
+        <td><icon src="unknown.svg"/></td>
+    </tr>
+    <tr>
+        <td colspan="6">
             <a href="generic-types.md" anchor="list-syntax">
                 Legacy list types syntax
             </a>
@@ -91,12 +117,17 @@ Below is a list of simple, logical and other common types.
                 User[]
             </code-block>
         </td>
-        <td><icon src="ok.svg"/></td>
-        <td><icon src="ok.svg"/></td>
-        <td><icon src="ok.svg"/></td>
     </tr>
     <tr>
-        <td>
+        <td></td>
+        <td><icon src="ok.svg"/></td>
+        <td><icon src="ok.svg"/></td>
+        <td><icon src="ok.svg"/></td>
+        <td><icon src="unknown.svg"/></td>
+        <td><icon src="unknown.svg"/></td>
+    </tr>
+    <tr>
+        <td colspan="6">
             <a href="generic-types.md">
                 Template arguments (Generics)
             </a>
@@ -104,6 +135,9 @@ Below is a list of simple, logical and other common types.
                 ExampleCollection&lt;array-key, User>
             </code-block>
         </td>
+    </tr>
+    <tr>
+        <td></td>
         <td><icon src="ok.svg"/></td>
         <td>
             <icon src="warning.svg"/>
@@ -112,9 +146,24 @@ Below is a list of simple, logical and other common types.
             </a>
         </td>
         <td><icon src="ok.svg"/></td>
+        <td><icon src="unknown.svg"/></td>
+        <td><icon src="unknown.svg"/></td>
     </tr>
     <tr>
-        <td>
+        <td></td>
+        <td colspan="5">
+            <deflist>
+                <def title="1. Psalm does NOT support arguments ending with a comma" id="ref-1-1">
+                    <code-block lang="typescript">
+                    ExampleCollection&lt;array-key, User,>
+                    </code-block>
+                    <a href="https://psalm.dev/r/866c32c49d">Open in psalm.dev</a>
+                </def>
+            </deflist>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="6">
             <a href="generic-types.md" anchor="call-site-hints">
                 Template argument hints
             </a>
@@ -122,16 +171,34 @@ Below is a list of simple, logical and other common types.
                 ExampleCollection&lt;in array-key, out User>
             </code-block>
         </td>
+    </tr>
+    <tr>
+        <td></td>
         <td><icon src="ok.svg"/></td>
         <td>
             <icon src="ko.svg"/>
             <a href="https://psalm.dev/r/80a466e81c">Syntax Error</a>
         </td>
         <td>
-            <icon src="warning.svg"/>
+            <icon src="ok.svg"/>
             <a anchor="ref-1-2">
                 Call-site variance <sup>2</sup>
             </a>
+        </td>
+        <td><icon src="unknown.svg"/></td>
+        <td><icon src="unknown.svg"/></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td colspan="5">
+            <deflist>
+                <def title="2. PHPStan supports call-site variance" id="ref-1-2">
+                    <code-block lang="typescript">
+                    Collection&lt;covariant Animal>
+                    </code-block>
+                    <a href="https://phpstan.org/blog/whats-up-with-template-covariant#call-site-variance">Open in phpstan.org</a>
+                </def>
+            </deflist>
         </td>
     </tr>
     <tr>
@@ -151,23 +218,15 @@ Below is a list of simple, logical and other common types.
                 <format style="bold" color="DarkSeaGreen">7/7</format>
             </note>
         </td>
-    </tr>
-    <tr>
-        <td colspan="4">
-            <deflist>
-                <def title="1. Psalm does NOT support arguments ending with a comma" id="ref-1-1">
-                    <code-block lang="typescript">
-                    ExampleCollection&lt;array-key, User,>
-                    </code-block>
-                    <a href="https://psalm.dev/r/866c32c49d">Open in psalm.dev</a>
-                </def>
-                <def title="2. PHPStan supports call-site variance only" id="ref-1-2">
-                    <code-block lang="typescript">
-                    Collection&lt;covariant Animal>
-                    </code-block>
-                    <a href="https://phpstan.org/blog/whats-up-with-template-covariant#call-site-variance">Open in phpstan.org</a>
-                </def>
-            </deflist>
+        <td>
+            <tip>
+                <format style="bold" color="DarkGray">?/7</format>
+            </tip>
+        </td>
+        <td>
+            <tip>
+                <format style="bold" color="DarkGray">?/7</format>
+            </tip>
         </td>
     </tr>
 </table>
@@ -179,18 +238,24 @@ Below is a list of conditional types.
 <table style="both">
     <tr>
         <td></td>
-        <td width="130">
+        <td width="150">
             <icon src="typelang.svg" height="16"/>&nbsp;<a href="https://github.com/php-type-language">TypeLang</a>
         </td>
-        <td width="100">
+        <td width="150">
             <icon src="psalm.png" height="16"/>&nbsp;<a href="https://github.com/vimeo/psalm">Psalm</a>
         </td>
-        <td width="120">
+        <td width="150">
             <icon src="phpstan.png" height="16"/>&nbsp;<a href="https://github.com/phpstan">PHPStan</a>
+        </td>
+        <td width="150">
+            <icon src="phan.png" height="16"/>&nbsp;<a href="https://github.com/phan">PHAN</a>
+        </td>
+        <td width="200">
+            <icon src="phpdocumentor.png" height="16"/>&nbsp;<a href="https://github.com/phpDocumentor">phpDocumentor</a>
         </td>
     </tr>
     <tr>
-        <td>
+        <td colspan="6">
             <a href="conditional-types.md">
                 Conditional (negative) equality types
             </a>
@@ -198,12 +263,17 @@ Below is a list of conditional types.
             T is A ? B : C
             </code-block>
         </td>
-        <td><icon src="ok.svg"/></td>
-        <td><icon src="ok.svg"/></td>
-        <td><icon src="ok.svg"/></td>
     </tr>
     <tr>
-        <td>
+        <td></td>
+        <td><icon src="ok.svg"/></td>
+        <td><icon src="ok.svg"/></td>
+        <td><icon src="ok.svg"/></td>
+        <td><icon src="unknown.svg"/></td>
+        <td><icon src="unknown.svg"/></td>
+    </tr>
+    <tr>
+        <td colspan="6">
             <a href="conditional-types.md">
                 Conditional negative equality types
             </a>
@@ -211,12 +281,17 @@ Below is a list of conditional types.
             T is not A ? B : C
             </code-block>
         </td>
-        <td><icon src="ok.svg"/></td>
-        <td><icon src="ok.svg"/></td>
-        <td><icon src="ok.svg"/></td>
     </tr>
     <tr>
-        <td>
+        <td></td>
+        <td><icon src="ok.svg"/></td>
+        <td><icon src="ok.svg"/></td>
+        <td><icon src="ok.svg"/></td>
+        <td><icon src="unknown.svg"/></td>
+        <td><icon src="unknown.svg"/></td>
+    </tr>
+    <tr>
+        <td colspan="6">
             <a href="conditional-types.md">
                 Conditional referenced types
             </a>
@@ -225,12 +300,17 @@ Below is a list of conditional types.
             $var is not A ? B : C
             </code-block>
         </td>
-        <td><icon src="ok.svg"/></td>
-        <td><icon src="ok.svg"/></td>
-        <td><icon src="ok.svg"/></td>
     </tr>
     <tr>
-        <td>
+        <td></td>
+        <td><icon src="ok.svg"/></td>
+        <td><icon src="ok.svg"/></td>
+        <td><icon src="ok.svg"/></td>
+        <td><icon src="unknown.svg"/></td>
+        <td><icon src="unknown.svg"/></td>
+    </tr>
+    <tr>
+        <td colspan="6">
             <a href="conditional-types.md">
                 Conditional referenced types 
             </a>
@@ -242,6 +322,9 @@ Below is a list of conditional types.
             A is not $var ? B : C
             </code-block>
         </td>
+    </tr>
+    <tr>
+        <td></td>
         <td><icon src="ok.svg"/></td>
         <td>
             <icon src="ko.svg"/>
@@ -251,9 +334,11 @@ Below is a list of conditional types.
             <icon src="ko.svg"/>
             <a href="https://phpstan.org/r/dc886f85-85b6-46b4-9a21-a37a90e6b0c9">Syntax Error</a>
         </td>
+        <td><icon src="unknown.svg"/></td>
+        <td><icon src="unknown.svg"/></td>
     </tr>
     <tr>
-        <td>
+        <td colspan="6">
             <a href="conditional-types.md">
                 Functions in conditional types
             </a>
@@ -262,53 +347,18 @@ Below is a list of conditional types.
             foo() is not A ? B : C
             </code-block>
         </td>
-        <td><icon src="ok.svg"/></td>
-        <td><icon src="ok.svg"/> <a anchor="ref-2-1">List of supported functions <sup>1</sup></a></td>
-        <td><icon src="ok.svg"/> <a anchor="ref-2-2">List of supported functions <sup>2</sup></a></td>
-    </tr>
-    <tr>
-        <td>
-            <a href="conditional-types.md">
-                Functions in conditional types
-            </a>
-            <a href="https://en.wikipedia.org/wiki/Yoda_conditions">
-                in Yoda-style
-            </a>
-            <code-block lang="typescript">
-            A is foo() ? B : C
-            A is not foo() ? B : C
-            </code-block>
-        </td>
-        <td><icon src="ok.svg"/></td>
-        <td>
-            <icon src="ko.svg"/>
-            <a href="https://psalm.dev/r/d936b5ed48">Syntax Error</a>
-        </td>
-        <td>
-            <icon src="ko.svg"/>
-            <a href="https://phpstan.org/r/529ccac7-2c9b-4a59-837f-26c846bd216f">Syntax Error</a>
-        </td>
     </tr>
     <tr>
         <td></td>
-        <td>
-            <note>
-                <format style="bold" color="DarkSeaGreen">6/6</format>
-            </note>
-        </td>
-        <td>
-            <warning>
-                <format style="bold" color="RosyBrown">4/6</format>
-            </warning>
-        </td>
-        <td>
-            <warning>
-                <format style="bold" color="RosyBrown">4/6</format>
-            </warning>
-        </td>
+        <td><icon src="ok.svg"/></td>
+        <td><icon src="ok.svg"/> <a anchor="ref-2-1">List of supported functions <sup>1</sup></a></td>
+        <td><icon src="ok.svg"/> <a anchor="ref-2-2">List of supported functions <sup>2</sup></a></td>
+        <td><icon src="unknown.svg"/></td>
+        <td><icon src="unknown.svg"/></td>
     </tr>
     <tr>
-        <td colspan="4">
+        <td></td>
+        <td colspan="5">
             <deflist>
                 <def title="1. Psalm supports the following functions" id="ref-2-1">
                     <list>
@@ -331,6 +381,62 @@ Below is a list of conditional types.
                     </list>
                 </def>
             </deflist>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="6">
+            <a href="conditional-types.md">
+                Functions in conditional types
+            </a>
+            <a href="https://en.wikipedia.org/wiki/Yoda_conditions">
+                in Yoda-style
+            </a>
+            <code-block lang="typescript">
+            A is foo() ? B : C
+            A is not foo() ? B : C
+            </code-block>
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><icon src="ok.svg"/></td>
+        <td>
+            <icon src="ko.svg"/>
+            <a href="https://psalm.dev/r/d936b5ed48">Syntax Error</a>
+        </td>
+        <td>
+            <icon src="ko.svg"/>
+            <a href="https://phpstan.org/r/529ccac7-2c9b-4a59-837f-26c846bd216f">Syntax Error</a>
+        </td>
+        <td><icon src="unknown.svg"/></td>
+        <td><icon src="unknown.svg"/></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>
+            <note>
+                <format style="bold" color="DarkSeaGreen">6/6</format>
+            </note>
+        </td>
+        <td>
+            <warning>
+                <format style="bold" color="RosyBrown">4/6</format>
+            </warning>
+        </td>
+        <td>
+            <warning>
+                <format style="bold" color="RosyBrown">4/6</format>
+            </warning>
+        </td>
+        <td>
+            <tip>
+                <format style="bold" color="DarkGray">?/7</format>
+            </tip>
+        </td>
+        <td>
+            <tip>
+                <format style="bold" color="DarkGray">?/7</format>
+            </tip>
         </td>
     </tr>
 </table>
