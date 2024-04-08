@@ -6,21 +6,22 @@
        title="Language Overview"
        id="overview" help-id="index">
     <section-starting-page>
-        <title>Language Overview</title>
+        <title>Overview</title>
         <description>
             The language is defined by a syntax that is based on the grammar of
             popular static code analysis tools: PHPStan, Psalm and other.
         </description>
 
         <spotlight>
+            <a href="language.md" type="container"
+                summary="Language for describing more precise and strict PHP types.">Language</a>
             <a href="parser.md" type="mixed"
-               summary="Parser component analyzes the code and builds the language AST.">Parser</a>
-            <a href="printer.md" type="creative"
-               summary="Printer component converts the parsed AST to an arbitrary string.">Printer</a>
+                summary="Reference implementation of a TypeLang parser providing functionality
+                    for analysis, recognition and construction of AST.">Parser</a>
         </spotlight>
 
         <primary>
-            <title>Language Reference</title>
+            <title>Reference</title>
             <a href="basic-types.md"
                summary="Description of simple type definitions."/>
             <a href="logical-types.md"
@@ -33,10 +34,14 @@
 
         <secondary>
             <title>Advanced Features</title>
-            <a href="shapes.md"
+            <a href="const-types.md"
+               summary="Description of the constants and constant masks syntax." />
+            <a href="shape-types.md"
                summary="Description of type fields that allow you to clarify information about composite types." />
-            <a href="callables.md"
+            <a href="callable-types.md"
                summary="Description of the syntax of any callable types and from arguments." />
+            <a href="conditional-types.md"
+               summary="Description of the syntax of the condition dependent types." />
         </secondary>
 
         <misc>

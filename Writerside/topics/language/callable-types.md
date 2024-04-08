@@ -1,8 +1,6 @@
----
-description: Functional (Callable) Types
----
+# Callable Types
 
-# Callables
+<show-structure for="chapter" depth="2"/>
 
 Callable types describe an arbitrary type that describes a function.
 

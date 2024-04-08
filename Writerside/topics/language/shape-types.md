@@ -1,4 +1,6 @@
-# Shapes
+# Shape Types
+
+<show-structure for="chapter" depth="2"/>
 
 Each **composite** type can be rigidly described by a structural type called a
 "shape". A shape within the PHP language can be applied to any array or object

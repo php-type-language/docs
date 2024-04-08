@@ -1,15 +1,23 @@
 # Parser Component
 
-## Installation
+<show-structure for="chapter" depth="2"/>
 
 A parser component is used to analyze and construct types AST with their
-information and grammar checking. 
+information and grammar checking.
 
-You can install it with:
+## Installation
 
-```bash
-composer require type-lang/parser
-```
+<tldr>
+    <p>
+        Via <a href="https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies">Composer</a>:
+        <code lang="bash">composer require type-lang/parser</code>
+    </p>
+</tldr>
+
+**Requirements:**
+* `PHP >= 8.1`
+* `ext-pcre`
+* `ext-mbstring` <sup>optional</sup>
 
 ## Usage
 

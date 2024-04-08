@@ -1,5 +1,6 @@
-
 # StringDumperVisitor
+
+<show-structure for="chapter" depth="2"/>
 
 To easily debug the structure and capture AST structure, you can use the `StringDumperVisitor` visitor.
 

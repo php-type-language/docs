@@ -1,31 +1,43 @@
 # Reader Component
 
-## Installation
+<show-structure for="chapter" depth="2"/>
 
-The `reader` package provides a set of methods for reading PHP metadata and 
+This package provides a set of methods for reading PHP metadata and 
 converting it into the TypeLang AST Nodes.
 
-You can install it with:
+## Installation
 
-```bash
-composer require type-lang/reader
-```
+<tldr>
+    <p>
+        Via <a href="https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies">Composer</a>:
+        <code lang="bash">composer require type-lang/reader</code>
+    </p>
+</tldr>
+
+**Requirements:**
+* `PHP >= 8.1`
 
 ## Usage
 
-Package supports one reader class:
+Package supports one reader class.
 
-* `TypeLang\Reader\ReflectionReader` — Used to read metadata from reflection objects.
+<deflist>
+    <def title="TypeLang\Reader\ReflectionReader">
+        Used to read types metadata from reflection objects.
+    </def>
+</deflist>
 
 Any reader implements the `TypeLang\Reader\ReaderInterface` interface, which 
 contains several methods:
 
-- `findConstantType(ReflectionClassConstant)` — To read type from constants.
-- `findPropertyType(ReflectionProperty)` — To read type from properties.
-- `findFunctionType(ReflectionFunctionAbstract)` — To read type from functions and methods.
-- `findParameterType(ReflectionParameter)` — To read type from parameters.
+- [`findConstantType(ReflectionClassConstant): ?TypeStatement`](#constants)
+- [`findPropertyType(ReflectionProperty): ?TypeStatement`](#properties)
+- [`findFunctionType(ReflectionFunctionAbstract): ?TypeStatement`](#functions)
+- [`findParameterType(ReflectionParameter): ?TypeStatement`](#parameters)
 
 ### Constants
+
+Method `findConstantType()` is used to read types from constants.
 
 ```php
 class Example
@@ -65,6 +77,8 @@ TypeLang\Parser\Node\Stmt\NamedTypeNode {
 
 ### Properties
 
+Method `findPropertyType()` is used to read types from class properties.
+
 ```php
 class Example
 {
@@ -103,6 +117,9 @@ TypeLang\Parser\Node\Stmt\NamedTypeNode {
 
 ### Functions
 
+Method `findFunctionType()` is used to read return types from
+functions and class methods.
+
 ```php
 $example = function(): void {};
 
@@ -134,6 +151,9 @@ TypeLang\Parser\Node\Stmt\NamedTypeNode {
 {collapsible="true" collapsed-title="Result"}
 
 ### Parameters
+
+Method `findParameterType()` is used to read types from
+function and method parameters.
 
 ```php
 $example = function(bool $param) {};

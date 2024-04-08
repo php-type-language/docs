@@ -1,5 +1,7 @@
 # Visitors
 
+<show-structure for="chapter" depth="2"/>
+
 To completely traverse a graph of all types, you can use the
 `TypeLang\Parser\Traverser` class. The traverser instance can accept several
 the `TypeLang\Parser\Traverser\VisitorInterface` implementation as a constructor

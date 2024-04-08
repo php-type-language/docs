@@ -1,5 +1,6 @@
-
 # ClassNameMatcherVisitor
+
+<show-structure for="chapter" depth="2"/>
 
 To search for the first suitable node for an instance of a class, you can
 use the `ClassNameMatcherVisitor` visitor.

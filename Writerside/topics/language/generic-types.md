@@ -1,4 +1,6 @@
-# Generics
+# Generic Types
+
+<show-structure for="chapter" depth="2"/>
 
 Each type can take arguments containing other type declarations. Validation of
 arguments and their number lies on the implementing side; the parser does not
@@ -64,7 +66,7 @@ comma (`,`).
 </tab>
 </tabs>
 
-### Call-Site Hints
+## Call-Site Hints
 
 Each generic argument allows you to define an additional hint, which can 
 be used, for example, in static analyzers to indicate the
@@ -102,7 +104,7 @@ be used, for example, in static analyzers to indicate the
 </tab>
 </tabs>
 
-### List Syntax
+## List Syntax
 
 In addition to modern list declarations such as `list<int>` or
 `array<array-key, int>`, the legacy `int[]` syntax is allowed.

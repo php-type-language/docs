@@ -1,4 +1,6 @@
-# Literals
+# Literal Types
+
+<show-structure for="chapter" depth="2"/>
 
 As a type description, specific values corresponding to a specific type are
 allowed:

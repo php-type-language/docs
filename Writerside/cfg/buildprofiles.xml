@@ -25,6 +25,10 @@
         <browser-edits-url>https://github.com/php-type-language/docs/blob/master/Writerside/</browser-edits-url>
     </variables>
 
+    <icons>
+        <local-src>icons</local-src>
+    </icons>
+
     <footer>
         <social href="https://github.com/php-type-language" type="blog">GitHub</social>
         <link href="https://github.com/php-type-language/parser/issues">Issue tracker</link>
