@@ -23,13 +23,13 @@ Below is a list of simple, logical and other common types.
         <td width="150">
             <icon src="typelang.svg" height="16"/>&nbsp;<a href="https://github.com/php-type-language">TypeLang</a>
         </td>
-        <td width="150">
+        <td width="130">
             <icon src="psalm.png" height="16"/>&nbsp;<a href="https://github.com/vimeo/psalm">Psalm</a>
         </td>
-        <td width="150">
+        <td width="130">
             <icon src="phpstan.png" height="16"/>&nbsp;<a href="https://github.com/phpstan">PHPStan</a>
         </td>
-        <td width="150">
+        <td width="130">
             <icon src="phan.png" height="16"/>&nbsp;<a href="https://github.com/phan">PHAN</a>
         </td>
         <td width="200">
@@ -237,17 +237,17 @@ Below is a list of conditional types.
 
 <table style="both">
     <tr>
-        <td></td>
+        <td width="1"></td>
         <td width="150">
             <icon src="typelang.svg" height="16"/>&nbsp;<a href="https://github.com/php-type-language">TypeLang</a>
         </td>
-        <td width="150">
+        <td width="130">
             <icon src="psalm.png" height="16"/>&nbsp;<a href="https://github.com/vimeo/psalm">Psalm</a>
         </td>
-        <td width="150">
+        <td width="130">
             <icon src="phpstan.png" height="16"/>&nbsp;<a href="https://github.com/phpstan">PHPStan</a>
         </td>
-        <td width="150">
+        <td width="130">
             <icon src="phan.png" height="16"/>&nbsp;<a href="https://github.com/phan">PHAN</a>
         </td>
         <td width="200">
