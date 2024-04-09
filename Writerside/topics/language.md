@@ -14,6 +14,55 @@ static code analysis tools: [PHPStan](https://phpstan.org/) and [Psalm](https://
 > The logical component (the physical existence of the type) is **NOT**
 > taken into account.
 
+General table across all type parsing capabilities
+
+<table style="header-row">
+    <tr>
+        <td>
+            <icon src="typelang.svg" height="16"/>&nbsp;<a href="https://github.com/php-type-language">TypeLang</a>
+        </td>
+        <td>
+            <icon src="psalm.png" height="16"/>&nbsp;<a href="https://github.com/vimeo/psalm">Psalm</a>
+        </td>
+        <td>
+            <icon src="phpstan.png" height="16"/>&nbsp;<a href="https://github.com/phpstan">PHPStan</a>
+        </td>
+        <td>
+            <icon src="phan.png" height="16"/>&nbsp;<a href="https://github.com/phan">PHAN</a>
+        </td>
+        <td>
+            <icon src="phpdocumentor.png" height="16"/>&nbsp;<a href="https://github.com/phpDocumentor">phpDocumentor</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <note>
+                <format style="bold" color="DarkSeaGreen">32/32</format>
+            </note>
+        </td>
+        <td>
+            <warning>
+                <format style="bold" color="RosyBrown">19/32</format>
+            </warning>
+        </td>
+        <td>
+            <warning>
+                <format style="bold" color="RosyBrown">25/32</format>
+            </warning>
+        </td>
+        <td>
+            <tip>
+                <format style="bold" color="DarkGray">?/32</format>
+            </tip>
+        </td>
+        <td>
+            <tip>
+                <format style="bold" color="DarkGray">?/32</format>
+            </tip>
+        </td>
+    </tr>
+</table>
+
 ## Basic Types
 
 Below is a list of simple, logical and other common types.
@@ -1039,7 +1088,7 @@ Below is a list of grammar of shaped types.
         <td></td>
         <td colspan="5">
             <deflist collapsible="true">
-                <def title="1. Psalm supports only array and object types" id="ref-4-1">
+                <def title="1. Psalm does not support custom (class instances) objects" id="ref-4-1">
                     <code-block lang="typescript">
                     // OK
                     object {
@@ -1081,7 +1130,7 @@ Below is a list of grammar of shaped types.
         <td></td>
         <td colspan="5">
             <deflist collapsible="true">
-                <def title="1. Psalm supports only array and object types" id="ref-5-1">
+                <def title="1. Psalm does not support custom (class instances) objects" id="ref-5-1">
                     <code-block lang="typescript">
                     // OK
                     object {
@@ -1123,7 +1172,7 @@ Below is a list of grammar of shaped types.
         <td></td>
         <td colspan="5">
             <deflist collapsible="true">
-                <def title="1. Psalm supports only array and object types" id="ref-6-1">
+                <def title="1. Psalm does not support custom (class instances) objects" id="ref-6-1">
                     <code-block lang="typescript">
                     // OK
                     object {
@@ -1190,7 +1239,7 @@ Below is a list of grammar of shaped types.
         <td></td>
         <td colspan="5">
             <deflist collapsible="true">
-                <def title="1. Psalm supports only array and object types" id="ref-7-1">
+                <def title="1. Psalm does not support custom (class instances) objects" id="ref-7-1">
                     <code-block lang="typescript">
                     // OK
                     object {
@@ -1230,7 +1279,7 @@ Below is a list of grammar of shaped types.
         <td></td>
         <td colspan="5">
             <deflist collapsible="true">
-                <def title="1. Psalm supports only array and object types" id="ref-8-1">
+                <def title="1. Psalm does not support custom (class instances) objects" id="ref-8-1">
                     <code-block lang="typescript">
                     // OK
                     object {}
@@ -1266,7 +1315,7 @@ Below is a list of grammar of shaped types.
         <td></td>
         <td colspan="5">
             <deflist collapsible="true">
-                <def title="1. Psalm supports only array and object types" id="ref-9-1">
+                <def title="1. Psalm does not support custom (class instances) objects" id="ref-9-1">
                     <code-block lang="typescript">
                     // OK
                     object { ... }
@@ -1305,7 +1354,7 @@ Below is a list of grammar of shaped types.
         <td></td>
         <td colspan="5">
             <deflist collapsible="true">
-                <def title="1. Psalm supports only array and object types" id="ref-10-1">
+                <def title="1. Psalm does not support custom (class instances) objects" id="ref-10-1">
                     <code-block lang="typescript">
                     // OK
                     object {
@@ -1350,7 +1399,7 @@ Below is a list of grammar of shaped types.
         <td></td>
         <td colspan="5">
             <deflist collapsible="true">
-                <def title="1. Psalm supports only array and object types" id="ref-11-1">
+                <def title="1. Psalm does not support custom (class instances) objects" id="ref-11-1">
                     <code-block lang="typescript">
                     // OK
                     object {
@@ -1386,12 +1435,7 @@ Below is a list of grammar of shaped types.
         <td></td>
         <td><icon src="ok.svg"/></td>
         <td><icon src="warning.svg"/> <a anchor="ref-12-1">Works with restrictions <sup>1</sup></a></td>
-        <td>
-            <icon src="ko.svg"/>
-            <a href="https://phpstan.org/r/401619e4-36a2-4c30-94eb-16c40a62c7ad">
-                Not Supported
-            </a>
-        </td>
+        <td><icon src="warning.svg"/> <a anchor="ref-12-2">Works with restrictions <sup>1</sup></a></td>
         <td><icon src="unknown.svg"/></td>
         <td><icon src="unknown.svg"/></td>
     </tr>
@@ -1399,7 +1443,7 @@ Below is a list of grammar of shaped types.
         <td></td>
         <td colspan="5">
             <deflist collapsible="true">
-                <def title="1. Psalm supports only array and object types" id="ref-12-1">
+                <def title="1. Psalm does not support custom (class instances) objects" id="ref-12-1">
                     <code-block lang="typescript">
                     // OK
                     object {
@@ -1413,6 +1457,22 @@ Below is a list of grammar of shaped types.
                     }
                     </code-block>
                     <a href="https://psalm.dev/r/487c82502c">Open in psalm.dev</a>
+                </def>
+                <def title="2. PHPStan does not support some built-in types such as list (hardcoded in the parser)" id="ref-12-2">
+                    <code-block lang="typescript">
+                    // OK
+                    array {
+                        ...&lt;array-key, Type>
+                    }
+                    </code-block>
+                    <code-block lang="typescript">
+                    // Syntax Error
+                    list {
+                        array-key, 
+                        ...&lt;Type>
+                    }
+                    </code-block>
+                    <a href="https://phpstan.org/r/d89fdfaf-cee8-4737-b5fd-c9145458da6a">Open in phpstan.org</a>
                 </def>
             </deflist>
         </td>
@@ -1431,7 +1491,7 @@ Below is a list of grammar of shaped types.
         </td>
         <td>
             <warning>
-                <format style="bold" color="RosyBrown">9/10</format>
+                <format style="bold" color="RosyBrown">10/10</format>
             </warning>
         </td>
         <td>
