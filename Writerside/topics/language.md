@@ -5,10 +5,10 @@
 The language is defined by a syntax that is based on the grammar of popular
 static code analysis tools: [PHPStan](https://phpstan.org/) and [Psalm](https://psalm.dev/).
 
-- PHPStan: [https://phpstan.org/writing-php-code/phpdoc-types](https://phpstan.org)
-- Psalm: [https://psalm.dev/docs/annotating_code/type_syntax/atomic_types/](https://psalm.dev)
+- PHPStan: [https://phpstan.org](https://phpstan.org/writing-php-code/phpdoc-types)
+- Psalm: [https://psalm.dev](https://psalm.dev/docs/annotating_code/type_syntax/atomic_types/)
 - PHAN: [https://github.com/phan](https://github.com/phan/phan/wiki)
-- phpDocumentor: [https://docs.phpdoc.org/guide/guides/types.html](https://docs.phpdoc.org)
+- phpDocumentor: [https://docs.phpdoc.org](https://docs.phpdoc.org/guide/guides/types.html)
 
 > Below is a comparison list of all syntactic structures (grammar). The logical component 
 > (the physical existence of the type) is not taken into account.
