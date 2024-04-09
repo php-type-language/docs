@@ -81,6 +81,8 @@ array{
 ```
 </compare>
 
+### Typed Shapes
+
 In addition, such shapes can describe template arguments (types) for values or for keys and values,
 which are described after the ellipsis (`...`) char and contain
 syntax [similar to generics](generic-types.md).
