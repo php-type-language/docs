@@ -309,7 +309,7 @@ Below is a list of conditional types.
     <tr>
         <td colspan="6">
             <a href="conditional-types.md">
-                Conditional (negative) equality types
+                Conditional positive equality types
             </a>
             <code-block lang="typescript">
             T is A ? B : C
