@@ -92,7 +92,7 @@ Below is a list of simple, logical and other common types.
                 Class or type name (including <tooltip term="FQN">FQN</tooltip>)
             </a>
             <code-block lang="typescript">
-            Non\Qualified\Name
+            Fully\Qualified\Name
             </code-block>
         </td>
     </tr>
