@@ -1490,9 +1490,9 @@ Below is a list of grammar of shaped types.
             </warning>
         </td>
         <td>
-            <warning>
-                <format style="bold" color="RosyBrown">10/10</format>
-            </warning>
+            <note>
+                <format style="bold" color="DarkSeaGreen">10/10</format>
+            </note>
         </td>
         <td>
             <tip>
