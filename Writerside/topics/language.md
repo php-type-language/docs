@@ -446,6 +446,8 @@ Below is a list of conditional types.
 
 Below is a list of literal types/lexemes.
 
+<warning>This table is not yet formatted</warning>
+
 | Code Example                                  | TypeLang                                     | Psalm                                             | PHPStan                                                                       |
 |-----------------------------------------------|----------------------------------------------|---------------------------------------------------|-------------------------------------------------------------------------------|
 | `true` or `false`                             | ✔️                                           | ✔️                                                | ✔️                                                                            |
@@ -474,6 +476,8 @@ Below is a list of literal types/lexemes.
 
 Below is a list of grammar of shaped types.
 
+<warning>This table is not yet formatted</warning>
+
 | Code Example                                   | TypeLang | Psalm                                                          | PHPStan                                                                       |
 |------------------------------------------------|----------|----------------------------------------------------------------|-------------------------------------------------------------------------------|
 | Explicit Shape `Type{key:val}`                 | ✔️       | [⚠️ only `array` and `object`](https://psalm.dev/r/4ec6feecc1) | ✔️                                                                            |
@@ -489,6 +493,8 @@ Below is a list of grammar of shaped types.
 ## Callables Types
 
 Below is a list of grammar of callable (function) types.
+
+<warning>This table is not yet formatted</warning>
 
 | Code Example                                                          | TypeLang          | Psalm                                              | PHPStan    |
 |-----------------------------------------------------------------------|-------------------|----------------------------------------------------|------------|
