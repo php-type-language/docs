@@ -232,7 +232,7 @@ Below is a list of simple, logical and other common types.
     </tr>
     <tr>
         <td colspan="4">
-            <a href="const-types.md">
+            <a href="const-types.md" anchor="class-constants">
                 Class constant types
             </a>
             <code-block lang="typescript">
