@@ -6,8 +6,8 @@ Each **composite** type can be rigidly described by a structural type called a
 "shape". A shape within the PHP language can be applied to any array or object
 and contain either implicit or explicit keys.
 
-> Support for other types of **keys**, such as const mask (`Class::CONST_*)` is not
-> currently available.
+> Support for other types of **keys**, such as const mask (`Class::CONST_*)` 
+> is not currently available.
 {style="warning"}
 
 <tabs>
@@ -83,9 +83,9 @@ array{
 
 ### Typed Shapes
 
-In addition, such shapes can describe template arguments (types) for values or for keys and values,
-which are described after the ellipsis (`...`) char and contain
-syntax [similar to generics](generic-types.md).
+In addition, such shapes can describe template arguments (types) for values
+or for keys and values, which are described after the ellipsis (`...`) char
+and contain syntax [similar to generics](generic-types.md).
 
 <compare first-title="Without Arguments" second-title="With Arguments">
 

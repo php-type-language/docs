@@ -17,7 +17,8 @@ comma (`,`).
 > If the PHP language supported generic types, then the declaration
 > (in pseudo-language) of the type:
 >
-> * `interface Traversable<TKey of array-key, TValue of mixed>` would contain **parameters**
+> * `interface Traversable<TKey of array-key, TValue of mixed>` would contain
+>   **parameters**
 >
 > and the reference to the type:
 >
@@ -68,15 +69,16 @@ comma (`,`).
 
 ## Call-Site Hints
 
-Each generic argument allows you to define an additional hint, which can 
-be used, for example, in static analyzers to indicate the
+Each generic argument allows you to define an additional hint, which can be 
+used, for example, in static analyzers to indicate the
 [call-site variance](https://phpstan.org/blog/guide-to-call-site-generic-variance#call-site-variance).
 
 
 <tabs>
 <tab title="Examples">
 
-> Any identifier (in this case "`covariant`") before the template argument`s type is acceptable.
+> Any identifier (in this case "`covariant`") before the template argument`s 
+> type is acceptable.
 > ```typescript
 > HashMap<array-key, covariant Request>
 > ```

@@ -2,7 +2,8 @@
 
 <show-structure for="chapter" depth="2"/>
 
-To easily debug the structure and output of the AST, you can use the `StreamDumperVisitor` visitor.
+To easily debug the structure and output of the AST, you can use the 
+`StreamDumperVisitor` visitor.
 
 ```php
 use TypeLang\Parser\Traverser;

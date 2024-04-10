@@ -27,7 +27,7 @@ Each callable MAY have a list of parameters and/or a return type definition.
 ### Named Parameters
 
 The name after the type of the parameter defines the parameter that
-[allows passing by name](https://www.php.net/manual/en/functions.arguments.php#functions.named-arguments).&#x20;
+[allows passing by name](https://www.php.net/manual/en/functions.arguments.php#functions.named-arguments).
 
 The name must appear after the parameter type and begin with a "`$`" sign.
 Just like in the PHP language.

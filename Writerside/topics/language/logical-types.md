@@ -2,8 +2,8 @@
 
 <show-structure for="chapter" depth="2"/>
 
-The TypeLang, [like PHP](https://www.php.net/manual/en/language.types.type-system.php#language.types.type-system.composite), supports two types of composite (logical)
-types: Union and Intersection. The ability to specify a _nullable_ type using a
+The TypeLang, [like PHP](https://www.php.net/manual/en/language.types.type-system.php#language.types.type-system.composite), supports two types of composite (logical) types:
+Union and Intersection. The ability to specify a _nullable_ type using a 
 separate expression is also supported.
 
 ### Union Type
@@ -28,7 +28,8 @@ contain any other type definition.
 
 ### Nullable Type
 
-Nullable type is a shortened alias for union type `T | null` and is written as `?T.`
+Nullable type is a shortened alias for union type `T | null` 
+and is written as `?T.`
 
 <tabs>
 <tab title="Examples">

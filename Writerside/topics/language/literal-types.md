@@ -51,7 +51,8 @@ insertion of special sequences.
 
 ### Escape Sequences
 
-All control sequences are similar to the PHP language: [https://www.php.net/manual/en/language.types.string.php](https://www.php.net/manual/en/language.types.string.php)
+All control sequences are similar to the PHP language: 
+[https://www.php.net/manual/en/language.types.string.php](https://www.php.net/manual/en/language.types.string.php)
 
 * `\n` — Line break (`0x0A` code)
 * `\r` — Carriage return (`0x0D` code)
@@ -80,8 +81,8 @@ All control sequences are similar to the PHP language: [https://www.php.net/manu
 
 ### Hexadecimal Sequences
 
-The sequence of characters matching the regular expression `[0-9A-Fa-f]{1,2}` is
-a character in hexadecimal notation (e.g. `"\x41" === "A"`)
+The sequence of characters matching the regular expression `[0-9A-Fa-f]{1,2}` 
+is a character in hexadecimal notation (e.g. `"\x41" === "A"`).
 
 > `"Hello World"` string equivalent in hexadecimal sequences format.
 > ```typescript
@@ -233,8 +234,9 @@ numbers between `0` and `7` and must match the regular expression
 
 ### Hexadecimal
 
-Every hexadecimal number is prefixed with `0x` or `0X` and can only contain the
-numbers between `0` and `F` and must match the regular expression `0x[0-9a-fA-F]+`.
+Every hexadecimal number is prefixed with `0x` or `0X` and can only contain
+the numbers between `0` and `F` and must match the regular expression 
+`0x[0-9a-fA-F]+`.
 
 <tabs>
 <tab title="Examples">
@@ -330,9 +332,9 @@ trailing number may be omitted. Negative values are prefixed with a minus (`-`.
 
 ### Scientific Notation
 
-Scientific notation is a way of expressing numbers that are too large or too small to be 
-conveniently written in decimal form, since to do so would require writing out an 
-inconveniently long string of digits.
+Scientific notation is a way of expressing numbers that are too large or too
+small to be conveniently written in decimal form, since to do so would require
+writing out an inconveniently long string of digits.
 
 <tabs>
 <tab title="Examples">
