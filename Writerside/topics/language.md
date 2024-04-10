@@ -44,17 +44,17 @@ General table across all type parsing capabilities
     <tr>
         <td>
             <note>
-                <format style="bold" color="DarkSeaGreen">58/58</format>
+                <format style="bold" color="DarkSeaGreen">59/59</format>
             </note>
         </td>
         <td>
             <warning>
-                <format style="bold" color="RosyBrown">41/58</format>
+                <format style="bold" color="RosyBrown">42/59</format>
             </warning>
         </td>
         <td>
             <warning>
-                <format style="bold" color="RosyBrown">45/58</format>
+                <format style="bold" color="RosyBrown">46/59</format>
             </warning>
         </td>
     </tr>
@@ -263,20 +263,36 @@ Below is a list of simple, logical and other common types.
         <td><icon src="ok.svg"/></td>
     </tr>
     <tr>
+        <td colspan="4">
+            <a href="const-types.md" anchor="constant-masks">
+                Non-prefixed class constant mask types
+            </a>
+            <code-block lang="typescript">
+                ClassName::*
+            </code-block>
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><icon src="ok.svg"/></td>
+        <td><icon src="ok.svg"/></td>
+        <td><icon src="ok.svg"/></td>
+    </tr>
+    <tr>
         <td></td>
         <td>
             <note>
-                <format style="bold" color="DarkSeaGreen">9/9</format>
+                <format style="bold" color="DarkSeaGreen">10/10</format>
             </note>
         </td>
         <td>
             <warning>
-                <format style="bold" color="RosyBrown">8/9</format>
+                <format style="bold" color="RosyBrown">9/10</format>
             </warning>
         </td>
         <td>
             <note>
-                <format style="bold" color="DarkSeaGreen">9/9</format>
+                <format style="bold" color="DarkSeaGreen">10/10</format>
             </note>
         </td>
     </tr>
