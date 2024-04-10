@@ -44,17 +44,17 @@ General table across all type parsing capabilities
     <tr>
         <td>
             <note>
-                <format style="bold" color="DarkSeaGreen">59/59</format>
+                <format style="bold" color="DarkSeaGreen">60/60</format>
             </note>
         </td>
         <td>
             <warning>
-                <format style="bold" color="RosyBrown">42/59</format>
+                <format style="bold" color="RosyBrown">42/60</format>
             </warning>
         </td>
         <td>
             <warning>
-                <format style="bold" color="RosyBrown">46/59</format>
+                <format style="bold" color="RosyBrown">46/60</format>
             </warning>
         </td>
     </tr>
@@ -279,21 +279,47 @@ Below is a list of simple, logical and other common types.
         <td><icon src="ok.svg"/></td>
     </tr>
     <tr>
+        <td colspan="4">
+            <a href="const-types.md" anchor="constant-masks">
+                Global constant mask types
+            </a>
+            <code-block lang="typescript">
+                JSON_*
+            </code-block>
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><icon src="ok.svg"/></td>
+        <td>
+            <icon src="ko.svg"/>
+            <a href="https://psalm.dev/r/2872401a31">
+                Not Supported
+            </a>
+        </td>
+        <td>
+            <icon src="ko.svg"/>
+            <a href="https://phpstan.org/r/7705c6cc-4aad-4394-8f54-0bdae761193e">
+                Not Supported
+            </a>
+        </td>
+    </tr>
+    <tr>
         <td></td>
         <td>
             <note>
-                <format style="bold" color="DarkSeaGreen">10/10</format>
+                <format style="bold" color="DarkSeaGreen">11/11</format>
             </note>
         </td>
         <td>
             <warning>
-                <format style="bold" color="RosyBrown">9/10</format>
+                <format style="bold" color="RosyBrown">9/11</format>
             </warning>
         </td>
         <td>
-            <note>
-                <format style="bold" color="DarkSeaGreen">10/10</format>
-            </note>
+            <warning>
+                <format style="bold" color="RosyBrown">10/11</format>
+            </warning>
         </td>
     </tr>
 </table>
