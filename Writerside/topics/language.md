@@ -7,8 +7,21 @@ static code analysis tools: [PHPStan](https://phpstan.org/) and [Psalm](https://
 
 - PHPStan: [https://phpstan.org](https://phpstan.org/writing-php-code/phpdoc-types)
 - Psalm: [https://psalm.dev](https://psalm.dev/docs/annotating_code/type_syntax/atomic_types/)
-- PHAN: [https://github.com/phan](https://github.com/phan/phan/wiki)
-- phpDocumentor: [https://docs.phpdoc.org](https://docs.phpdoc.org/guide/guides/types.html)
+
+<tip>
+There are others that are not currently tested for compatibility. 
+For example:
+<list>
+    <li>PHAN: <a href="https://github.com/phan/phan/wiki">https://github.com/phan</a></li>
+    <li>phpDocumentor: <a href="https://docs.phpdoc.org/guide/guides/types.html">https://docs.phpdoc.org</a></li>
+</list>
+
+If you wish, you can add information about this software using a
+<a href="https://github.com/php-type-language/docs/blob/master/Writerside/topics/language.md">
+    pull request to the documentation
+</a>.
+</tip>
+
 
 > Below is a comparison list of all syntactic structures (grammar).
 > The logical component (the physical existence of the type) is **NOT**
@@ -70,24 +83,18 @@ Below is a list of simple, logical and other common types.
 <table style="both">
     <tr>
         <td width="1"></td>
-        <td width="150">
+        <td>
             <icon src="typelang.svg" height="16"/>&nbsp;<a href="https://github.com/php-type-language">TypeLang</a>
         </td>
-        <td width="130">
+        <td>
             <icon src="psalm.png" height="16"/>&nbsp;<a href="https://github.com/vimeo/psalm">Psalm</a>
         </td>
-        <td width="130">
+        <td>
             <icon src="phpstan.png" height="16"/>&nbsp;<a href="https://github.com/phpstan">PHPStan</a>
-        </td>
-        <td width="130">
-            <icon src="phan.png" height="16"/>&nbsp;<a href="https://github.com/phan">PHAN</a>
-        </td>
-        <td width="200">
-            <icon src="phpdocumentor.png" height="16"/>&nbsp;<a href="https://github.com/phpDocumentor">phpDocumentor</a>
         </td>
     </tr>
     <tr>
-        <td colspan="6">
+        <td colspan="4">
             <a href="basic-types.md" anchor="namespace">
                 Class or type name (including <tooltip term="FQN">FQN</tooltip>)
             </a>
@@ -101,11 +108,9 @@ Below is a list of simple, logical and other common types.
         <td><icon src="ok.svg"/></td>
         <td><icon src="ok.svg"/></td>
         <td><icon src="ok.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
     </tr>
     <tr>
-        <td colspan="6">
+        <td colspan="4">
             <a href="logical-types.md" anchor="union-type">
                 Logical union types
             </a>
@@ -119,11 +124,9 @@ Below is a list of simple, logical and other common types.
         <td><icon src="ok.svg"/></td>
         <td><icon src="ok.svg"/></td>
         <td><icon src="ok.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
     </tr>
     <tr>
-        <td colspan="6">
+        <td colspan="4">
             <a href="logical-types.md" anchor="intersection-type">
                 Logical intersection types
             </a>
@@ -137,11 +140,9 @@ Below is a list of simple, logical and other common types.
         <td><icon src="ok.svg"/></td>
         <td><icon src="ok.svg"/></td>
         <td><icon src="ok.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
     </tr>
     <tr>
-        <td colspan="6">
+        <td colspan="4">
             <a href="logical-types.md" anchor="nullable-type">
                 Logical nullable types
             </a>
@@ -155,11 +156,9 @@ Below is a list of simple, logical and other common types.
         <td><icon src="ok.svg"/></td>
         <td><icon src="ok.svg"/></td>
         <td><icon src="ok.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
     </tr>
     <tr>
-        <td colspan="6">
+        <td colspan="4">
             <a href="generic-types.md" anchor="list-syntax">
                 Legacy list types syntax
             </a>
@@ -173,11 +172,9 @@ Below is a list of simple, logical and other common types.
         <td><icon src="ok.svg"/></td>
         <td><icon src="ok.svg"/></td>
         <td><icon src="ok.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
     </tr>
     <tr>
-        <td colspan="6">
+        <td colspan="4">
             <a href="generic-types.md">
                 Template arguments (Generics)
             </a>
@@ -196,12 +193,10 @@ Below is a list of simple, logical and other common types.
             </a>
         </td>
         <td><icon src="ok.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
     </tr>
     <tr>
         <td></td>
-        <td colspan="5">
+        <td colspan="3">
             <deflist collapsible="true">
                 <def title="1. Psalm does NOT support arguments ending with a comma" id="ref-1-1">
                     <code-block lang="typescript">
@@ -213,7 +208,7 @@ Below is a list of simple, logical and other common types.
         </td>
     </tr>
     <tr>
-        <td colspan="6">
+        <td colspan="4">
             <a href="generic-types.md" anchor="call-site-hints">
                 Template argument hints
             </a>
@@ -237,12 +232,10 @@ Below is a list of simple, logical and other common types.
                 Call-site variance <sup>2</sup>
             </a>
         </td>
-        <td><icon src="unknown.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
     </tr>
     <tr>
         <td></td>
-        <td colspan="5">
+        <td colspan="3">
             <deflist collapsible="true">
                 <def title="2. PHPStan supports call-site variance" id="ref-1-2">
                     <code-block lang="typescript">
@@ -270,16 +263,6 @@ Below is a list of simple, logical and other common types.
                 <format style="bold" color="DarkSeaGreen">7/7</format>
             </note>
         </td>
-        <td>
-            <tip>
-                <format style="bold" color="DarkGray">?/7</format>
-            </tip>
-        </td>
-        <td>
-            <tip>
-                <format style="bold" color="DarkGray">?/7</format>
-            </tip>
-        </td>
     </tr>
 </table>
 
@@ -290,24 +273,18 @@ Below is a list of conditional types.
 <table style="both">
     <tr>
         <td width="1"></td>
-        <td width="150">
+        <td>
             <icon src="typelang.svg" height="16"/>&nbsp;<a href="https://github.com/php-type-language">TypeLang</a>
         </td>
-        <td width="130">
+        <td>
             <icon src="psalm.png" height="16"/>&nbsp;<a href="https://github.com/vimeo/psalm">Psalm</a>
         </td>
-        <td width="130">
+        <td>
             <icon src="phpstan.png" height="16"/>&nbsp;<a href="https://github.com/phpstan">PHPStan</a>
-        </td>
-        <td width="130">
-            <icon src="phan.png" height="16"/>&nbsp;<a href="https://github.com/phan">PHAN</a>
-        </td>
-        <td width="200">
-            <icon src="phpdocumentor.png" height="16"/>&nbsp;<a href="https://github.com/phpDocumentor">phpDocumentor</a>
         </td>
     </tr>
     <tr>
-        <td colspan="6">
+        <td colspan="4">
             <a href="conditional-types.md">
                 Conditional positive equality types
             </a>
@@ -321,11 +298,9 @@ Below is a list of conditional types.
         <td><icon src="ok.svg"/></td>
         <td><icon src="ok.svg"/></td>
         <td><icon src="ok.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
     </tr>
     <tr>
-        <td colspan="6">
+        <td colspan="4">
             <a href="conditional-types.md">
                 Conditional negative equality types
             </a>
@@ -339,11 +314,9 @@ Below is a list of conditional types.
         <td><icon src="ok.svg"/></td>
         <td><icon src="ok.svg"/></td>
         <td><icon src="ok.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
     </tr>
     <tr>
-        <td colspan="6">
+        <td colspan="4">
             <a href="conditional-types.md">
                 Conditional referenced types
             </a>
@@ -358,11 +331,9 @@ Below is a list of conditional types.
         <td><icon src="ok.svg"/></td>
         <td><icon src="ok.svg"/></td>
         <td><icon src="ok.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
     </tr>
     <tr>
-        <td colspan="6">
+        <td colspan="4">
             <a href="conditional-types.md">
                 Conditional referenced types 
             </a>
@@ -390,11 +361,9 @@ Below is a list of conditional types.
                 Not Supported
             </a>
         </td>
-        <td><icon src="unknown.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
     </tr>
     <tr>
-        <td colspan="6">
+        <td colspan="4">
             <a href="conditional-types.md">
                 Functions in conditional types
             </a>
@@ -409,12 +378,10 @@ Below is a list of conditional types.
         <td><icon src="ok.svg"/></td>
         <td><icon src="ok.svg"/> <a anchor="ref-2-1">List of supported functions <sup>1</sup></a></td>
         <td><icon src="ok.svg"/> <a anchor="ref-2-2">List of supported functions <sup>2</sup></a></td>
-        <td><icon src="unknown.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
     </tr>
     <tr>
         <td></td>
-        <td colspan="5">
+        <td colspan="3">
             <deflist collapsible="true">
                 <def title="1. Psalm supports the following functions" id="ref-2-1">
                     <list>
@@ -440,7 +407,7 @@ Below is a list of conditional types.
         </td>
     </tr>
     <tr>
-        <td colspan="6">
+        <td colspan="4">
             <a href="conditional-types.md">
                 Functions in conditional types
             </a>
@@ -468,8 +435,6 @@ Below is a list of conditional types.
                 Not Supported
             </a>
         </td>
-        <td><icon src="unknown.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
     </tr>
     <tr>
         <td></td>
@@ -488,16 +453,6 @@ Below is a list of conditional types.
                 <format style="bold" color="RosyBrown">4/6</format>
             </warning>
         </td>
-        <td>
-            <tip>
-                <format style="bold" color="DarkGray">?/7</format>
-            </tip>
-        </td>
-        <td>
-            <tip>
-                <format style="bold" color="DarkGray">?/7</format>
-            </tip>
-        </td>
     </tr>
 </table>
 
@@ -508,24 +463,18 @@ Below is a list of literal types/lexemes.
 <table style="both">
     <tr>
         <td width="1"></td>
-        <td width="150">
+        <td>
             <icon src="typelang.svg" height="16"/>&nbsp;<a href="https://github.com/php-type-language">TypeLang</a>
         </td>
-        <td width="130">
+        <td>
             <icon src="psalm.png" height="16"/>&nbsp;<a href="https://github.com/vimeo/psalm">Psalm</a>
         </td>
-        <td width="130">
+        <td>
             <icon src="phpstan.png" height="16"/>&nbsp;<a href="https://github.com/phpstan">PHPStan</a>
-        </td>
-        <td width="130">
-            <icon src="phan.png" height="16"/>&nbsp;<a href="https://github.com/phan">PHAN</a>
-        </td>
-        <td width="200">
-            <icon src="phpdocumentor.png" height="16"/>&nbsp;<a href="https://github.com/phpDocumentor">phpDocumentor</a>
         </td>
     </tr>
     <tr>
-        <td colspan="6">
+        <td colspan="4">
             <a href="literal-types.md" anchor="boolean-and-null">
                 Boolean <code>true</code> and <code>false</code> literals
             </a>
@@ -540,11 +489,9 @@ Below is a list of literal types/lexemes.
         <td><icon src="ok.svg"/></td>
         <td><icon src="ok.svg"/></td>
         <td><icon src="ok.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
     </tr>
     <tr>
-        <td colspan="6">
+        <td colspan="4">
             <a href="literal-types.md" anchor="boolean-and-null">
                 The <code>null</code> literals
             </a>
@@ -558,11 +505,9 @@ Below is a list of literal types/lexemes.
         <td><icon src="ok.svg"/></td>
         <td><icon src="ok.svg"/></td>
         <td><icon src="ok.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
     </tr>
     <tr>
-        <td colspan="6">
+        <td colspan="4">
             <a href="literal-types.md" anchor="strings">
                 Single-quoted string literals
             </a>
@@ -576,11 +521,9 @@ Below is a list of literal types/lexemes.
         <td><icon src="ok.svg"/></td>
         <td><icon src="ok.svg"/></td>
         <td><icon src="ok.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
     </tr>
     <tr>
-        <td colspan="6">
+        <td colspan="4">
             <a href="literal-types.md" anchor="strings">
                 Double-quoted string literals
             </a>
@@ -594,11 +537,9 @@ Below is a list of literal types/lexemes.
         <td><icon src="ok.svg"/></td>
         <td><icon src="ok.svg"/></td>
         <td><icon src="ok.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
     </tr>
     <tr>
-        <td colspan="6">
+        <td colspan="4">
             <a href="literal-types.md" anchor="escape-sequences">
                 Escape sequences in a double-quoted string literals
             </a>
@@ -622,11 +563,9 @@ Below is a list of literal types/lexemes.
                 Not Supported
             </a>
         </td>
-        <td><icon src="unknown.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
     </tr>
     <tr>
-        <td colspan="6">
+        <td colspan="4">
             <a href="literal-types.md" anchor="hexadecimal-sequences">
                 Hexadecimal sequences in a double-quoted string literals
             </a>
@@ -650,11 +589,9 @@ Below is a list of literal types/lexemes.
                 Not Supported
             </a>
         </td>
-        <td><icon src="unknown.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
     </tr>
     <tr>
-        <td colspan="6">
+        <td colspan="4">
             <a href="literal-types.md" anchor="unicode-sequences">
                 Unicode sequences in a double-quoted string literals
             </a>
@@ -678,11 +615,9 @@ Below is a list of literal types/lexemes.
                 Not Supported
             </a>
         </td>
-        <td><icon src="unknown.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
     </tr>
     <tr>
-        <td colspan="6">
+        <td colspan="4">
             <a href="literal-types.md" anchor="integer">
                 Integer literals
             </a>
@@ -696,11 +631,9 @@ Below is a list of literal types/lexemes.
         <td><icon src="ok.svg"/></td>
         <td><icon src="ok.svg"/></td>
         <td><icon src="ok.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
     </tr>
     <tr>
-        <td colspan="6">
+        <td colspan="4">
             <a href="literal-types.md" anchor="integer">
                 BigInteger (<code>PHP_INT_MAX + 1</code> or <code>PHP_INT_MIN - 1</code>) literals
             </a>
@@ -714,12 +647,10 @@ Below is a list of literal types/lexemes.
         <td><icon src="warning.svg"/> <a anchor="ref-3-1">Works with restrictions <sup>1</sup></a></td>
         <td><icon src="warning.svg"/> <a anchor="ref-3-2">Works with restrictions <sup>2</sup></a></td>
         <td><icon src="warning.svg"/> <a anchor="ref-3-3">Works with restrictions <sup>3</sup></a></td>
-        <td><icon src="unknown.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
     </tr>
     <tr>
         <td></td>
-        <td colspan="5">
+        <td colspan="3">
             <deflist collapsible="true">
                 <def title="1. TypeLang limits value to min/max int and store literal value as string" id="ref-3-1">
                     <code-block lang="typescript">
@@ -761,7 +692,7 @@ Below is a list of literal types/lexemes.
         </td>
     </tr>
     <tr>
-        <td colspan="6">
+        <td colspan="4">
             <a href="literal-types.md" anchor="binary">
                 Integer literals in binary format
             </a>
@@ -785,11 +716,9 @@ Below is a list of literal types/lexemes.
                 Not Supported
             </a>
         </td>
-        <td><icon src="unknown.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
     </tr>
     <tr>
-        <td colspan="6">
+        <td colspan="4">
             <a href="literal-types.md" anchor="octal">
                 Integer literals in octal format
             </a>
@@ -813,11 +742,9 @@ Below is a list of literal types/lexemes.
                 Not Supported
             </a>
         </td>
-        <td><icon src="unknown.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
     </tr>
     <tr>
-        <td colspan="6">
+        <td colspan="4">
             <a href="literal-types.md" anchor="octal">
                 Integer literals in legacy octal format
             </a>
@@ -841,11 +768,9 @@ Below is a list of literal types/lexemes.
                 Not Supported
             </a>
         </td>
-        <td><icon src="unknown.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
     </tr>
     <tr>
-        <td colspan="6">
+        <td colspan="4">
             <a href="literal-types.md" anchor="hexadecimal">
                 Integer literals in hexadecimal format
             </a>
@@ -869,11 +794,9 @@ Below is a list of literal types/lexemes.
                 Not Supported
             </a>
         </td>
-        <td><icon src="unknown.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
     </tr>
     <tr>
-        <td colspan="6">
+        <td colspan="4">
             <a href="literal-types.md" anchor="float">
                 Float literals
             </a>
@@ -887,11 +810,9 @@ Below is a list of literal types/lexemes.
         <td><icon src="ok.svg"/></td>
         <td><icon src="ok.svg"/></td>
         <td><icon src="ok.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
     </tr>
     <tr>
-        <td colspan="6">
+        <td colspan="4">
             <a href="literal-types.md" anchor="float">
                 Float literals without leading zero
             </a>
@@ -910,11 +831,9 @@ Below is a list of literal types/lexemes.
             </a>
         </td>
         <td><icon src="ok.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
     </tr>
     <tr>
-        <td colspan="6">
+        <td colspan="4">
             <a href="literal-types.md" anchor="float">
                 Float literals without trailing zero
             </a>
@@ -933,11 +852,9 @@ Below is a list of literal types/lexemes.
             </a>
         </td>
         <td><icon src="ok.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
     </tr>
     <tr>
-        <td colspan="6">
+        <td colspan="4">
             <a href="literal-types.md" anchor="scientific-notation">
                 Float literals in scientific notation
             </a>
@@ -956,11 +873,9 @@ Below is a list of literal types/lexemes.
             </a>
         </td>
         <td><icon src="ok.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
     </tr>
     <tr>
-        <td colspan="6">
+        <td colspan="4">
             <a href="literal-types.md" anchor="scientific-notation">
                 Float literals in scientific notation
             </a>
@@ -979,11 +894,9 @@ Below is a list of literal types/lexemes.
             </a>
         </td>
         <td><icon src="ok.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
     </tr>
     <tr>
-        <td colspan="6">
+        <td colspan="4">
             <a href="literal-types.md" anchor="scientific-notation">
                 Float hexadecimal literals in scientific notation
             </a>
@@ -1007,8 +920,6 @@ Below is a list of literal types/lexemes.
                 Not Supported
             </a>
         </td>
-        <td><icon src="unknown.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
     </tr>
     <tr>
         <td></td>
@@ -1027,16 +938,6 @@ Below is a list of literal types/lexemes.
                 <format style="bold" color="RosyBrown">11/19</format>
             </warning>
         </td>
-        <td>
-            <tip>
-                <format style="bold" color="DarkGray">?/19</format>
-            </tip>
-        </td>
-        <td>
-            <tip>
-                <format style="bold" color="DarkGray">?/19</format>
-            </tip>
-        </td>
     </tr>
 </table>
 
@@ -1048,24 +949,18 @@ Below is a list of grammar of shaped types.
 <table style="both">
     <tr>
         <td width="1"></td>
-        <td width="150">
+        <td>
             <icon src="typelang.svg" height="16"/>&nbsp;<a href="https://github.com/php-type-language">TypeLang</a>
         </td>
-        <td width="130">
+        <td>
             <icon src="psalm.png" height="16"/>&nbsp;<a href="https://github.com/vimeo/psalm">Psalm</a>
         </td>
-        <td width="130">
+        <td>
             <icon src="phpstan.png" height="16"/>&nbsp;<a href="https://github.com/phpstan">PHPStan</a>
-        </td>
-        <td width="130">
-            <icon src="phan.png" height="16"/>&nbsp;<a href="https://github.com/phan">PHAN</a>
-        </td>
-        <td width="200">
-            <icon src="phpdocumentor.png" height="16"/>&nbsp;<a href="https://github.com/phpDocumentor">phpDocumentor</a>
         </td>
     </tr>
     <tr>
-        <td colspan="6">
+        <td colspan="4">
             <a href="shape-types.md">
                 Explicit shape types
             </a>
@@ -1081,12 +976,10 @@ Below is a list of grammar of shaped types.
         <td><icon src="ok.svg"/></td>
         <td><icon src="warning.svg"/> <a anchor="ref-4-1">Works with restrictions <sup>1</sup></a></td>
         <td><icon src="ok.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
     </tr>
     <tr>
         <td></td>
-        <td colspan="5">
+        <td colspan="3">
             <deflist collapsible="true">
                 <def title="1. Psalm does not support custom (class instances) objects" id="ref-4-1">
                     <code-block lang="typescript">
@@ -1107,7 +1000,7 @@ Below is a list of grammar of shaped types.
         </td>
     </tr>
     <tr>
-        <td colspan="6">
+        <td colspan="4">
             <a href="shape-types.md">
                 Trailing comma in explicit shape types
             </a>
@@ -1123,12 +1016,10 @@ Below is a list of grammar of shaped types.
         <td><icon src="ok.svg"/></td>
         <td><icon src="warning.svg"/> <a anchor="ref-5-1">Works with restrictions <sup>1</sup></a></td>
         <td><icon src="ok.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
     </tr>
     <tr>
         <td></td>
-        <td colspan="5">
+        <td colspan="3">
             <deflist collapsible="true">
                 <def title="1. Psalm does not support custom (class instances) objects" id="ref-5-1">
                     <code-block lang="typescript">
@@ -1149,7 +1040,7 @@ Below is a list of grammar of shaped types.
         </td>
     </tr>
     <tr>
-        <td colspan="6">
+        <td colspan="4">
             <a href="shape-types.md">
                 Implicit shape types
             </a>
@@ -1165,12 +1056,10 @@ Below is a list of grammar of shaped types.
         <td><icon src="ok.svg"/></td>
         <td><icon src="warning.svg"/> <a anchor="ref-6-1">Works with restrictions <sup>1</sup></a></td>
         <td><icon src="ok.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
     </tr>
     <tr>
         <td></td>
-        <td colspan="5">
+        <td colspan="3">
             <deflist collapsible="true">
                 <def title="1. Psalm does not support custom (class instances) objects" id="ref-6-1">
                     <code-block lang="typescript">
@@ -1191,7 +1080,7 @@ Below is a list of grammar of shaped types.
         </td>
     </tr>
     <tr>
-        <td colspan="6">
+        <td colspan="4">
             <a href="shape-types.md">
                 Trailing comma in implicit shape types
             </a>
@@ -1212,11 +1101,9 @@ Below is a list of grammar of shaped types.
             </a>
         </td>
         <td><icon src="ok.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
     </tr>
     <tr>
-        <td colspan="6">
+        <td colspan="4">
             <a href="shape-types.md">
                 Optional keys in explicit shape types
             </a>
@@ -1232,12 +1119,10 @@ Below is a list of grammar of shaped types.
         <td><icon src="ok.svg"/></td>
         <td><icon src="warning.svg"/> <a anchor="ref-7-1">Works with restrictions <sup>1</sup></a></td>
         <td><icon src="ok.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
     </tr>
     <tr>
         <td></td>
-        <td colspan="5">
+        <td colspan="3">
             <deflist collapsible="true">
                 <def title="1. Psalm does not support custom (class instances) objects" id="ref-7-1">
                     <code-block lang="typescript">
@@ -1258,7 +1143,7 @@ Below is a list of grammar of shaped types.
         </td>
     </tr>
     <tr>
-        <td colspan="6">
+        <td colspan="4">
             <a href="shape-types.md">
                 Empty (closed) shape types
             </a>
@@ -1272,12 +1157,10 @@ Below is a list of grammar of shaped types.
         <td><icon src="ok.svg"/></td>
         <td><icon src="warning.svg"/> <a anchor="ref-8-1">Works with restrictions <sup>1</sup></a></td>
         <td><icon src="ok.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
     </tr>
     <tr>
         <td></td>
-        <td colspan="5">
+        <td colspan="3">
             <deflist collapsible="true">
                 <def title="1. Psalm does not support custom (class instances) objects" id="ref-8-1">
                     <code-block lang="typescript">
@@ -1294,7 +1177,7 @@ Below is a list of grammar of shaped types.
         </td>
     </tr>
     <tr>
-        <td colspan="6">
+        <td colspan="4">
             <a href="shape-types.md" anchor="unsealed-shapes">
                 Unsealed shape types
             </a>
@@ -1308,12 +1191,10 @@ Below is a list of grammar of shaped types.
         <td><icon src="ok.svg"/></td>
         <td><icon src="warning.svg"/> <a anchor="ref-9-1">Works with restrictions <sup>1</sup></a></td>
         <td><icon src="ok.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
     </tr>
     <tr>
         <td></td>
-        <td colspan="5">
+        <td colspan="3">
             <deflist collapsible="true">
                 <def title="1. Psalm does not support custom (class instances) objects" id="ref-9-1">
                     <code-block lang="typescript">
@@ -1330,7 +1211,7 @@ Below is a list of grammar of shaped types.
         </td>
     </tr>
     <tr>
-        <td colspan="6">
+        <td colspan="4">
             <a href="shape-types.md" anchor="unsealed-shapes">
                 Explicit unsealed shape types
             </a>
@@ -1347,12 +1228,10 @@ Below is a list of grammar of shaped types.
         <td><icon src="ok.svg"/></td>
         <td><icon src="warning.svg"/> <a anchor="ref-10-1">Works with restrictions <sup>1</sup></a></td>
         <td><icon src="ok.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
     </tr>
     <tr>
         <td></td>
-        <td colspan="5">
+        <td colspan="3">
             <deflist collapsible="true">
                 <def title="1. Psalm does not support custom (class instances) objects" id="ref-10-1">
                     <code-block lang="typescript">
@@ -1375,7 +1254,7 @@ Below is a list of grammar of shaped types.
         </td>
     </tr>
     <tr>
-        <td colspan="6">
+        <td colspan="4">
             <a href="shape-types.md" anchor="unsealed-shapes">
                 Implicit unsealed shape types
             </a>
@@ -1392,12 +1271,10 @@ Below is a list of grammar of shaped types.
         <td><icon src="ok.svg"/></td>
         <td><icon src="warning.svg"/> <a anchor="ref-11-1">Works with restrictions <sup>1</sup></a></td>
         <td><icon src="ok.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
     </tr>
     <tr>
         <td></td>
-        <td colspan="5">
+        <td colspan="3">
             <deflist collapsible="true">
                 <def title="1. Psalm does not support custom (class instances) objects" id="ref-11-1">
                     <code-block lang="typescript">
@@ -1420,7 +1297,7 @@ Below is a list of grammar of shaped types.
         </td>
     </tr>
     <tr>
-        <td colspan="6">
+        <td colspan="4">
             <a href="shape-types.md" anchor="typed-shapes">
                 Typed unsealed shape types
             </a>
@@ -1436,12 +1313,10 @@ Below is a list of grammar of shaped types.
         <td><icon src="ok.svg"/></td>
         <td><icon src="warning.svg"/> <a anchor="ref-12-1">Works with restrictions <sup>1</sup></a></td>
         <td><icon src="warning.svg"/> <a anchor="ref-12-2">Works with restrictions <sup>1</sup></a></td>
-        <td><icon src="unknown.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
     </tr>
     <tr>
         <td></td>
-        <td colspan="5">
+        <td colspan="3">
             <deflist collapsible="true">
                 <def title="1. Psalm does not support custom (class instances) objects" id="ref-12-1">
                     <code-block lang="typescript">
@@ -1494,16 +1369,6 @@ Below is a list of grammar of shaped types.
                 <format style="bold" color="DarkSeaGreen">10/10</format>
             </note>
         </td>
-        <td>
-            <tip>
-                <format style="bold" color="DarkGray">?/10</format>
-            </tip>
-        </td>
-        <td>
-            <tip>
-                <format style="bold" color="DarkGray">?/10</format>
-            </tip>
-        </td>
     </tr>
 </table>
 
@@ -1514,24 +1379,18 @@ Below is a list of grammar of callable (function) types.
 <table style="both">
     <tr>
         <td width="1"></td>
-        <td width="150">
+        <td>
             <icon src="typelang.svg" height="16"/>&nbsp;<a href="https://github.com/php-type-language">TypeLang</a>
         </td>
-        <td width="130">
+        <td>
             <icon src="psalm.png" height="16"/>&nbsp;<a href="https://github.com/vimeo/psalm">Psalm</a>
         </td>
-        <td width="130">
+        <td>
             <icon src="phpstan.png" height="16"/>&nbsp;<a href="https://github.com/phpstan">PHPStan</a>
-        </td>
-        <td width="130">
-            <icon src="phan.png" height="16"/>&nbsp;<a href="https://github.com/phan">PHAN</a>
-        </td>
-        <td width="200">
-            <icon src="phpdocumentor.png" height="16"/>&nbsp;<a href="https://github.com/phpDocumentor">phpDocumentor</a>
         </td>
     </tr>
     <tr>
-        <td colspan="6">
+        <td colspan="4">
             <a href="callable-types.md">
                 Non-typed callable types
             </a>
@@ -1550,11 +1409,9 @@ Below is a list of grammar of callable (function) types.
                 Not Supported
             </a>
         </td>
-        <td><icon src="unknown.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
     </tr>
     <tr>
-        <td colspan="6">
+        <td colspan="4">
             <a href="callable-types.md">
                 Typed callable types
             </a>
@@ -1568,11 +1425,9 @@ Below is a list of grammar of callable (function) types.
         <td><icon src="ok.svg"/></td>
         <td><icon src="ok.svg"/></td>
         <td><icon src="ok.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
     </tr>
     <tr>
-        <td colspan="6">
+        <td colspan="4">
             <a href="callable-types.md">
                 Callable with typed parameters
             </a>
@@ -1586,11 +1441,9 @@ Below is a list of grammar of callable (function) types.
         <td><icon src="ok.svg"/></td>
         <td><icon src="ok.svg"/></td>
         <td><icon src="ok.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
     </tr>
     <tr>
-        <td colspan="6">
+        <td colspan="4">
             <a href="callable-types.md" anchor="optional-parameters">
                 Callable with optional parameters
             </a>
@@ -1604,11 +1457,9 @@ Below is a list of grammar of callable (function) types.
         <td><icon src="ok.svg"/></td>
         <td><icon src="ok.svg"/></td>
         <td><icon src="ok.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
     </tr>
     <tr>
-        <td colspan="6">
+        <td colspan="4">
             <a href="callable-types.md" anchor="named-parameters">
                 Callable with named parameters
             </a>
@@ -1622,11 +1473,9 @@ Below is a list of grammar of callable (function) types.
         <td><icon src="ok.svg"/></td>
         <td><icon src="ok.svg"/></td>
         <td><icon src="ok.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
     </tr>
     <tr>
-        <td colspan="6">
+        <td colspan="4">
             <a href="callable-types.md">
                 Callable with optional named parameters
             </a>
@@ -1645,11 +1494,9 @@ Below is a list of grammar of callable (function) types.
             </a>
         </td>
         <td><icon src="ok.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
     </tr>
     <tr>
-        <td colspan="6">
+        <td colspan="4">
             <a href="callable-types.md" anchor="output-parameters">
                 Callable with output parameters
             </a>
@@ -1663,12 +1510,10 @@ Below is a list of grammar of callable (function) types.
         <td><icon src="ok.svg"/></td>
         <td><icon src="warning.svg"/> <a anchor="ref-13-1">Works with restrictions <sup>1</sup></a></td>
         <td><icon src="ok.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
     </tr>
     <tr>
         <td></td>
-        <td colspan="5">
+        <td colspan="3">
             <deflist collapsible="true">
                 <def title="1. Psalm does NOT support literal types" id="ref-13-1">
                     <code-block lang="typescript">
@@ -1686,7 +1531,7 @@ Below is a list of grammar of callable (function) types.
         </td>
     </tr>
     <tr>
-        <td colspan="6">
+        <td colspan="4">
             <a href="callable-types.md">
                 Callable with output optional parameters
             </a>
@@ -1700,12 +1545,10 @@ Below is a list of grammar of callable (function) types.
         <td><icon src="ok.svg"/></td>
         <td><icon src="warning.svg"/> <a anchor="ref-14-1">Works with restrictions <sup>1</sup></a></td>
         <td><icon src="ok.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
     </tr>
     <tr>
         <td></td>
-        <td colspan="5">
+        <td colspan="3">
             <deflist collapsible="true">
                 <def title="1. Psalm does NOT support literal types" id="ref-14-1">
                     <code-block lang="typescript">
@@ -1723,7 +1566,7 @@ Below is a list of grammar of callable (function) types.
         </td>
     </tr>
     <tr>
-        <td colspan="6">
+        <td colspan="4">
             <a href="callable-types.md">
                 Callable with output optional named parameters
             </a>
@@ -1742,11 +1585,9 @@ Below is a list of grammar of callable (function) types.
             </a>
         </td>
         <td><icon src="ok.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
     </tr>
     <tr>
-        <td colspan="6">
+        <td colspan="4">
             <a href="callable-types.md" anchor="variadic-parameters">
                 Callable with suffixed variadic parameters
             </a>
@@ -1760,11 +1601,9 @@ Below is a list of grammar of callable (function) types.
         <td><icon src="ok.svg"/></td>
         <td><icon src="ok.svg"/></td>
         <td><icon src="ok.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
     </tr>
     <tr>
-        <td colspan="6">
+        <td colspan="4">
             <a href="callable-types.md" anchor="variadic-parameters">
                 Callable with prefixed variadic parameters
             </a>
@@ -1783,11 +1622,9 @@ Below is a list of grammar of callable (function) types.
                 Not Supported
             </a>
         </td>
-        <td><icon src="unknown.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
     </tr>
     <tr>
-        <td colspan="6">
+        <td colspan="4">
             <a href="callable-types.md" anchor="variadic-parameters">
                 Callable with prefixed and suffixed variadic parameters
             </a>
@@ -1801,12 +1638,10 @@ Below is a list of grammar of callable (function) types.
         <td><icon src="ok.svg"/></td>
         <td><icon src="warning.svg"/> <a anchor="ref-15-1">Works with restrictions <sup>1</sup></a></td>
         <td><icon src="warning.svg"/> <a anchor="ref-15-2">Works with restrictions <sup>2</sup></a></td>
-        <td><icon src="unknown.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
     </tr>
     <tr>
         <td></td>
-        <td colspan="5">
+        <td colspan="3">
             <tip>
                 This expression is incorrect because the "variadic" 
                 lexeme <code>...</code> must be present in the parameter 
@@ -1834,7 +1669,7 @@ Below is a list of grammar of callable (function) types.
         </td>
     </tr>
     <tr>
-        <td colspan="6">
+        <td colspan="4">
             <a href="callable-types.md" anchor="variadic-parameters">
                 Callable with optional variadic parameters
             </a>
@@ -1854,12 +1689,10 @@ Below is a list of grammar of callable (function) types.
                 No Error
             </a>
         </td>
-        <td><icon src="unknown.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
     </tr>
     <tr>
         <td></td>
-        <td colspan="5">
+        <td colspan="3">
             <tip>
                 This expression is incorrect because any variadic 
                 parameter is already optional. The parser must 
@@ -1881,7 +1714,7 @@ Below is a list of grammar of callable (function) types.
         </td>
     </tr>
     <tr>
-        <td colspan="6">
+        <td colspan="4">
             <a href="callable-types.md" anchor="variadic-parameters">
                 Callable with named variadic parameters
             </a>
@@ -1896,12 +1729,10 @@ Below is a list of grammar of callable (function) types.
         <td><icon src="ok.svg"/></td>
         <td><icon src="warning.svg"/> <a anchor="ref-17-1">Works with restrictions <sup>1</sup></a></td>
         <td><icon src="warning.svg"/> <a anchor="ref-17-2">Works with restrictions <sup>2</sup></a></td>
-        <td><icon src="unknown.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
     </tr>
     <tr>
         <td></td>
-        <td colspan="5">
+        <td colspan="3">
             <deflist collapsible="true">
                 <def title="1. Psalm throws an internal error if using prefix syntax" id="ref-17-1">
                     <code-block lang="typescript">
@@ -1923,7 +1754,7 @@ Below is a list of grammar of callable (function) types.
         </td>
     </tr>
     <tr>
-        <td colspan="6">
+        <td colspan="4">
             <a href="callable-types.md" anchor="variadic-parameters">
                 Callable with output named variadic parameters
             </a>
@@ -1938,12 +1769,10 @@ Below is a list of grammar of callable (function) types.
         <td><icon src="ok.svg"/></td>
         <td><icon src="warning.svg"/> <a anchor="ref-18-1">Works with restrictions <sup>1</sup></a></td>
         <td><icon src="warning.svg"/> <a anchor="ref-18-2">Works with restrictions <sup>2</sup></a></td>
-        <td><icon src="unknown.svg"/></td>
-        <td><icon src="unknown.svg"/></td>
     </tr>
     <tr>
         <td></td>
-        <td colspan="5">
+        <td colspan="3">
             <deflist collapsible="true">
                 <def title="1. Psalm does NOT support literal types" id="ref-18-1">
                     <code-block lang="typescript">
@@ -1984,16 +1813,6 @@ Below is a list of grammar of callable (function) types.
             <warning>
                 <format style="bold" color="RosyBrown">12/15</format>
             </warning>
-        </td>
-        <td>
-            <tip>
-                <format style="bold" color="DarkGray">?/15</format>
-            </tip>
-        </td>
-        <td>
-            <tip>
-                <format style="bold" color="DarkGray">?/10</format>
-            </tip>
         </td>
     </tr>
 </table>
