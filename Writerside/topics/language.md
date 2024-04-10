@@ -44,17 +44,17 @@ General table across all type parsing capabilities
     <tr>
         <td>
             <note>
-                <format style="bold" color="DarkSeaGreen">57/57</format>
+                <format style="bold" color="DarkSeaGreen">58/58</format>
             </note>
         </td>
         <td>
             <warning>
-                <format style="bold" color="RosyBrown">40/57</format>
+                <format style="bold" color="RosyBrown">41/58</format>
             </warning>
         </td>
         <td>
             <warning>
-                <format style="bold" color="RosyBrown">44/57</format>
+                <format style="bold" color="RosyBrown">45/58</format>
             </warning>
         </td>
     </tr>
@@ -233,7 +233,7 @@ Below is a list of simple, logical and other common types.
     <tr>
         <td colspan="4">
             <a href="const-types.md">
-                Class constants
+                Class constant types
             </a>
             <code-block lang="typescript">
                 ClassName::CONSTANT_NAME
@@ -247,20 +247,36 @@ Below is a list of simple, logical and other common types.
         <td><icon src="ok.svg"/></td>
     </tr>
     <tr>
+        <td colspan="4">
+            <a href="const-types.md" anchor="constant-masks">
+                Prefixed class constant mask types
+            </a>
+            <code-block lang="typescript">
+                ClassName::CONSTANT_*
+            </code-block>
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><icon src="ok.svg"/></td>
+        <td><icon src="ok.svg"/></td>
+        <td><icon src="ok.svg"/></td>
+    </tr>
+    <tr>
         <td></td>
         <td>
             <note>
-                <format style="bold" color="DarkSeaGreen">8/8</format>
+                <format style="bold" color="DarkSeaGreen">9/9</format>
             </note>
         </td>
         <td>
             <warning>
-                <format style="bold" color="RosyBrown">7/8</format>
+                <format style="bold" color="RosyBrown">8/9</format>
             </warning>
         </td>
         <td>
             <note>
-                <format style="bold" color="DarkSeaGreen">8/8</format>
+                <format style="bold" color="DarkSeaGreen">9/9</format>
             </note>
         </td>
     </tr>
