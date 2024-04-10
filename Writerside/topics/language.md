@@ -40,38 +40,22 @@ General table across all type parsing capabilities
         <td>
             <icon src="phpstan.png" height="16"/>&nbsp;<a href="https://github.com/phpstan">PHPStan</a>
         </td>
-        <td>
-            <icon src="phan.png" height="16"/>&nbsp;<a href="https://github.com/phan">PHAN</a>
-        </td>
-        <td>
-            <icon src="phpdocumentor.png" height="16"/>&nbsp;<a href="https://github.com/phpDocumentor">phpDocumentor</a>
-        </td>
     </tr>
     <tr>
         <td>
             <note>
-                <format style="bold" color="DarkSeaGreen">56/56</format>
+                <format style="bold" color="DarkSeaGreen">57/57</format>
             </note>
         </td>
         <td>
             <warning>
-                <format style="bold" color="RosyBrown">39/56</format>
+                <format style="bold" color="RosyBrown">40/57</format>
             </warning>
         </td>
         <td>
             <warning>
-                <format style="bold" color="RosyBrown">43/56</format>
+                <format style="bold" color="RosyBrown">44/57</format>
             </warning>
-        </td>
-        <td>
-            <tip>
-                <format style="bold" color="DarkGray">?/56</format>
-            </tip>
-        </td>
-        <td>
-            <tip>
-                <format style="bold" color="DarkGray">?/56</format>
-            </tip>
         </td>
     </tr>
 </table>
@@ -247,20 +231,36 @@ Below is a list of simple, logical and other common types.
         </td>
     </tr>
     <tr>
+        <td colspan="4">
+            <a href="const-types.md">
+                Class constants
+            </a>
+            <code-block lang="typescript">
+                ClassName::CONSTANT_NAME
+            </code-block>
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><icon src="ok.svg"/></td>
+        <td><icon src="ok.svg"/></td>
+        <td><icon src="ok.svg"/></td>
+    </tr>
+    <tr>
         <td></td>
         <td>
             <note>
-                <format style="bold" color="DarkSeaGreen">7/7</format>
+                <format style="bold" color="DarkSeaGreen">8/8</format>
             </note>
         </td>
         <td>
             <warning>
-                <format style="bold" color="RosyBrown">6/7</format>
+                <format style="bold" color="RosyBrown">7/8</format>
             </warning>
         </td>
         <td>
             <note>
-                <format style="bold" color="DarkSeaGreen">7/7</format>
+                <format style="bold" color="DarkSeaGreen">8/8</format>
             </note>
         </td>
     </tr>
