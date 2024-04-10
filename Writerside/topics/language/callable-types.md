@@ -61,7 +61,7 @@ Just like in the PHP language.
 </tab>
 </tabs>
 
-### References
+### Output Parameters
 
 Passing a parameter by reference means that the function can change the passed
 variable while it is running.
@@ -98,7 +98,7 @@ the type and before the name.
 </tab>
 </tabs>
 
-### Optional
+### Optional Parameters
 
 An optional parameter means that the argument may not be passed when such a
 function is called.
@@ -147,7 +147,7 @@ parameter description.
 </tab>
 </tabs>
 
-### Variadic
+### Variadic Parameters
 
 Variadic parameters are indicated by the "`...`" and can be placed either
 _before the type_ or _before the parameter name._
