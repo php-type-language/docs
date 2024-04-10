@@ -55,7 +55,7 @@
                     <a href="https://github.com/php-type-language/mapper"
                        summary="GitHub Type Mapper Repository">Mapper</a>
                     <a href="https://github.com/php-type-language/reader"
-                       summary="GitHub Reader Repository">Reflection Reader</a>
+                       summary="GitHub Reader Repository">Reader</a>
                 </group>
                 <group>
                     <title>PHPDoc</title>
