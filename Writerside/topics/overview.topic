@@ -49,7 +49,7 @@
                 <group>
                     <title>Language Components</title>
                     <a href="https://github.com/php-type-language/parser"
-                       summary="GirHub TypeLang Parser Repository">Parser</a>
+                       summary="GitHub TypeLang Parser Repository">Parser</a>
                     <a href="https://github.com/php-type-language/printer"
                         summary="GitHub TypeLang Printer Repository">Printer</a>
                     <a href="https://github.com/php-type-language/mapper"
