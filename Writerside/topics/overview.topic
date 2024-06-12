@@ -52,8 +52,6 @@
                        summary="GirHub TypeLang Parser Repository">Parser</a>
                     <a href="https://github.com/php-type-language/printer"
                         summary="GitHub TypeLang Printer Repository">Printer</a>
-                    <a href="https://github.com/php-type-language/mapper"
-                       summary="GitHub Type Mapper Repository">Mapper</a>
                     <a href="https://github.com/php-type-language/reader"
                        summary="GitHub Reader Repository">Reader</a>
                 </group>
