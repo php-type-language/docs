@@ -13,6 +13,7 @@ also allowed.
 
 > With this in mind, note that any constant is interpreted as a
 > [named type](basic-types.md).
+> {style="note"}
 
 Given the complete identity of the grammar of constants with
 [named type](basic-types.md), they cannot contain case-insensitive names
@@ -25,35 +26,40 @@ Given the complete identity of the grammar of constants with
 > ```typescript
 > JSON_THROW_ON_ERROR
 > ```
-> {style="note"}
 
 > Example of namespaced constant (or type name)
 > ```typescript
 > pcov\version
 > ```
-> {style="note"}
 
 </tab>
 <tab title="Counterexamples">
 
 > The standalone keywords (`true`) is NOT available as an <tooltip
 > term="Identifier">Identifier</tooltip> regardless of case and is parsed as a
-> literal value rather than an <tooltip term="Identifier">Identifier</tooltip>.
+> <a href="literal-types.md" anchor="boolean-and-null">literal value</a> rather 
+> than an <tooltip term="Identifier">Identifier</tooltip>.
 > ```typescript
 > TrUe
-> 
-> // TypeLang\Parser\Node\Literal\BoolLiteralNode {
-> //    +offset: 0
-> //    +raw: "TrUe"
-> //    +value: true
-> // }
 > ```
+> ```php
+> TypeLang\Parser\Node\Literal\BoolLiteralNode {
+>    +offset: 0
+>    +raw: "TrUe"
+>    +value: true
+> }
+> ```
+> {collapsible="true" collapsed-title="TypeLang\Parser\Node\Literal\BoolLiteralNode"}
 > {style="warning"}
 
 </tab>
 </tabs>
 
 ## Class Constants
+
+<secondary-label ref="phpstan"/>
+<secondary-label ref="psalm"/>
+<secondary-label ref="storm"/>
 
 Class constants begin with any [type name](basic-types.md), then contain 
 a double colon (`::`) character, and then the constant name.
@@ -65,13 +71,11 @@ a double colon (`::`) character, and then the constant name.
 > ```typescript
 > ClassName::CONSTANT_NAME
 > ```
-> {style="note"}
 
 > Reference a constant in a class that is located in some namespace.
 > ```typescript
 > Path\To\ClassName::ANOTHER_CONSTANT_NAME
 > ```
-> {style="note"}
 
 </tab>
 <tab title="Counterexamples">
@@ -81,12 +85,20 @@ a double colon (`::`) character, and then the constant name.
 > ```typescript
 > ClassName::SOME\ANY
 > ```
+> ```
+> Syntax error, unexpected "\"
+> ```
+> {collapsible="true" collapsed-title="TypeLang\Parser\Exception\ParseException"}
 > {style="warning"}
 
 </tab>
 </tabs>
 
 ## Constant Masks
+
+<secondary-label ref="phpstan"/>
+<secondary-label ref="psalm"/>
+<secondary-label ref="storm"/>
 
 A reference to a certain set of constants can be defined using a mask. The
 use of masks is identical to regular constants, but must be terminated with
@@ -102,19 +114,16 @@ Prefixes on class constants can be omitted, so type will mean any class constant
 > ```typescript
 > JSON_*
 > ```
-> {style="note"}
 
 > Reference to any class constant with the `PREFIX_` prefix.
 > ```typescript
 > Path\To\ClassName::PREFIX_*
 > ```
-> {style="note"}
 
 > Reference to any class constant
 > ```typescript
 > Path\To\ClassName::*
 > ```
-> {style="note"}
 
 </tab>
 <tab title="Counterexamples">
@@ -123,12 +132,20 @@ Prefixes on class constants can be omitted, so type will mean any class constant
 > ```typescript
 > *
 > ```
+> ```
+> Syntax error, unexpected "*"
+> ```
+> {collapsible="true" collapsed-title="TypeLang\Parser\Exception\ParseException"}
 > {style="warning"}
 
 > The asterisk (`*`) must be the final character.
 > ```typescript
 > Path\To\ClassName::PREFIX_*_SUFFIX
 > ```
+> ```
+> Syntax error, unexpected "_SUFFIX"
+> ```
+> {collapsible="true" collapsed-title="TypeLang\Parser\Exception\ParseException"}
 > {style="warning"}
 
 </tab>

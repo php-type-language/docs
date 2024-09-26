@@ -44,17 +44,17 @@ General table across all type parsing capabilities
     <tr>
         <td>
             <note>
-                <format style="bold" color="DarkSeaGreen">60/60</format>
+                <format style="bold" color="DarkSeaGreen">62/62</format>
             </note>
         </td>
         <td>
             <warning>
-                <format style="bold" color="RosyBrown">42/60</format>
+                <format style="bold" color="RosyBrown">42/62</format>
             </warning>
         </td>
         <td>
             <warning>
-                <format style="bold" color="RosyBrown">46/60</format>
+                <format style="bold" color="RosyBrown">46/62</format>
             </warning>
         </td>
     </tr>
@@ -218,6 +218,28 @@ Below is a list of simple, logical and other common types.
         </td>
     </tr>
     <tr>
+        <td colspan="4">
+            <a href="generic-types.md" anchor="attributes">
+                Template argument attributes
+            </a>
+            <code-block lang="typescript">
+                ExampleCollection&lt;#[assert(not&lt;"0">)] array-key>
+            </code-block>
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><icon src="ok.svg"/></td>
+        <td>
+            <icon src="ko.svg"/>
+            Not Supported
+        </td>
+        <td>
+            <icon src="ko.svg"/>
+            Not Supported
+        </td>
+    </tr>
+    <tr>
         <td></td>
         <td colspan="3">
             <deflist collapsible="true">
@@ -308,17 +330,17 @@ Below is a list of simple, logical and other common types.
         <td></td>
         <td>
             <note>
-                <format style="bold" color="DarkSeaGreen">11/11</format>
+                <format style="bold" color="DarkSeaGreen">11/12</format>
             </note>
         </td>
         <td>
             <warning>
-                <format style="bold" color="RosyBrown">9/11</format>
+                <format style="bold" color="RosyBrown">9/12</format>
             </warning>
         </td>
         <td>
             <warning>
-                <format style="bold" color="RosyBrown">10/11</format>
+                <format style="bold" color="RosyBrown">10/12</format>
             </warning>
         </td>
     </tr>
@@ -1411,21 +1433,40 @@ Below is a list of grammar of shaped types.
         </td>
     </tr>
     <tr>
+        <td colspan="4">
+            <a href="shape-types.md" anchor="attributes">
+                Shape field attributes
+            </a>
+            <code-block lang="typescript">
+            object {
+                #[inline, assert(not&lt;"">)]
+                name: string
+            }
+            </code-block>
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><icon src="ok.svg"/></td>
+        <td><icon src="ko.svg"/></td>
+        <td><icon src="ko.svg"/></td>
+    </tr>
+    <tr>
         <td></td>
         <td>
             <note>
-                <format style="bold" color="DarkSeaGreen">10/10</format>
+                <format style="bold" color="DarkSeaGreen">11/11</format>
             </note>
         </td>
         <td>
             <warning>
-                <format style="bold" color="RosyBrown">9/10</format>
+                <format style="bold" color="RosyBrown">9/11</format>
             </warning>
         </td>
         <td>
-            <note>
-                <format style="bold" color="DarkSeaGreen">10/10</format>
-            </note>
+            <warning>
+                <format style="bold" color="RosyBrown">10/11</format>
+            </warning>
         </td>
     </tr>
 </table>

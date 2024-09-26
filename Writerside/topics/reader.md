@@ -1,5 +1,6 @@
-# Reader Component
+# The Reader Component
 
+<primary-label ref="component"/>
 <show-structure for="chapter" depth="2"/>
 
 This package provides a set of methods for reading PHP metadata and 
@@ -47,14 +48,12 @@ class Example
 
 $reader = new \TypeLang\Reader\ReflectionReader();
 
-$node = $reader->findConstantType(
+$result = $reader->findConstantType(
     constant: new \ReflectionClassConstant(
         class: Example::class,
         constant: 'EXAMPLE',
     ),
 );
-
-var_dump($node);
 ```
 
 ```php
@@ -73,7 +72,7 @@ TypeLang\Parser\Node\Stmt\NamedTypeNode {
   +fields: null
 }
 ```
-{collapsible="true" collapsed-title="Result"}
+{collapsible="true" collapsed-title="TypeLang\Parser\Node\Stmt\NamedTypeNode"}
 
 ### Properties
 
@@ -87,14 +86,12 @@ class Example
 
 $reader = new \TypeLang\Reader\ReflectionReader();
 
-$node = $reader->findPropertyType(
+$result = $reader->findPropertyType(
     property: new \ReflectionProperty(
         class: Example::class,
         property: 'test',
     ),
 );
-
-var_dump($node);
 ```
 
 ```php
@@ -113,7 +110,7 @@ TypeLang\Parser\Node\Stmt\NamedTypeNode {
   +fields: null
 }
 ```
-{collapsible="true" collapsed-title="Result"}
+{collapsible="true" collapsed-title="TypeLang\Parser\Node\Stmt\NamedTypeNode"}
 
 ### Functions
 
@@ -125,11 +122,9 @@ $example = function(): void {};
 
 $reader = new \TypeLang\Reader\ReflectionReader();
 
-$node = $reader->findFunctionType(
+$result = $reader->findFunctionType(
     function: new \ReflectionFunction($example),
 );
-
-var_dump($node);
 ```
 
 ```php
@@ -148,7 +143,7 @@ TypeLang\Parser\Node\Stmt\NamedTypeNode {
   +fields: null
 }
 ```
-{collapsible="true" collapsed-title="Result"}
+{collapsible="true" collapsed-title="TypeLang\Parser\Node\Stmt\NamedTypeNode"}
 
 ### Parameters
 
@@ -160,14 +155,12 @@ $example = function(bool $param) {};
 
 $reader = new \TypeLang\Reader\ReflectionReader();
 
-$node = $reader->findParameterType(
+$result = $reader->findParameterType(
     parameter: new \ReflectionParameter(
         function: $example,
         param: 'param',
     ),
 );
-
-var_dump($node);
 ```
 
 ```php
@@ -186,7 +179,7 @@ TypeLang\Parser\Node\Stmt\NamedTypeNode {
   +fields: null
 }
 ```
-{collapsible="true" collapsed-title="Result"}
+{collapsible="true" collapsed-title="TypeLang\Parser\Node\Stmt\NamedTypeNode"}
 
 ## Complex Example
 

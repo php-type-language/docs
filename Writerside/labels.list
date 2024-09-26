@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE labels SYSTEM "https://resources.jetbrains.com/writerside/1.0/labels-list.dtd">
+<labels xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/labels.xsd">
+    <primary-label id="component" name="Component" short-name="C" color="purple">
+        The implementation of the functionality available for installation
+    </primary-label>
+
+    <secondary-label id="psalm" name="Psalm" color="blue">
+        Also partially or fully supported by Psalm Linter.
+        Check out Psalm documentation for more details.
+    </secondary-label>
+    <secondary-label id="phpstan" name="PHPStan" color="blue">
+        Also partially or fully supported by PHPStan Linter.
+        Check out PHPStan documentation for more details.
+    </secondary-label>
+    <secondary-label id="storm" name="PhpStorm" color="blue">
+        Also partially or fully supported by PhpStorm IDE.
+        Check out PhpStorm documentation for more details.
+    </secondary-label>
+
+    <secondary-label id="wip" name="WIP" color="red">Work in progress</secondary-label>
+    <secondary-label id="beta" name="β" color="tangerine">Beta</secondary-label>
+    <secondary-label id="1.1" name="TypeLang 1.1" color="strawberry">Since type-lang/parser v1.1</secondary-label>
+</labels>

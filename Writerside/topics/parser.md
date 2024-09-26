@@ -1,5 +1,6 @@
-# Parser Component
+# The Parser Component
 
+<primary-label ref="component"/>
 <show-structure for="chapter" depth="2"/>
 
 A parser component is used to analyze and construct types AST with their
@@ -47,6 +48,23 @@ TypeLang\Parser\Node\Stmt\NamedTypeNode {
 }
 ```
 {collapsible="true" collapsed-title="Result"}
+
+### Feature Toggling
+
+You can enable or disable a set of parser features if your task requires only
+partial support of the functionality. Such a feature allows you to conveniently 
+implement more strict functionality.
+
+```php
+$parser = new TypeLang\Parser\Parser(
+    literals: false,
+);
+
+$result = $parser->parse('42');
+
+// Uncaught TypeLang\Parser\Exception\ParseException:
+//   Literal values not allowed in "42" at column 1
+```
 
 ### Parser Arguments
 

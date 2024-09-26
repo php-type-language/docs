@@ -1,5 +1,8 @@
 # Basic Types
 
+<secondary-label ref="phpstan"/>
+<secondary-label ref="psalm"/>
+<secondary-label ref="storm"/>
 <show-structure for="chapter" depth="2"/>
 
 The parser does not impose restrictions on type naming. The type name must begin
@@ -24,21 +27,18 @@ is **unacceptable**.
 > ```typescript
 > ExampleTypeName
 > ```
-> {style="note"}
 
 > Dashes (`-`) in <tooltip term="Identifier">Identifier</tooltip> are also 
 > acceptable.
 > ```typescript
 > example-type
 > ```
-> {style="note"}
 
 > The reserved keyword (`true`) is allowed as part of the <tooltip
 > term="Identifier">Identifier</tooltip>.
 > ```typescript
 > true-type
 > ```
-> {style="note"}
 
 </tab>
 <tab title="Counterexamples">
@@ -48,28 +48,37 @@ is **unacceptable**.
 > literal value rather than an <tooltip term="Identifier">Identifier</tooltip>.
 > ```typescript
 > TrUe
-> 
-> // TypeLang\Parser\Node\Literal\BoolLiteralNode {
-> //    +offset: 0
-> //    +raw: "TrUe"
-> //    +value: true
-> // }
 > ```
+> ```php
+> TypeLang\Parser\Node\Literal\BoolLiteralNode {
+>     +offset: 0
+>     +raw: "TrUe"
+>     +value: true
+> }
+> ```
+> {collapsible="true" collapsed-title="TypeLang\Parser\Node\Literal\BoolLiteralNode"}
+> 
 > {style="warning"}
 
 > <tooltip term="Identifier">Identifiers</tooltip> cannot begin with digits
 > (`0-9`) or a dash (`-`) symbol.
 > ```typescript
 > 42type
-> 
-> // Syntax error, unexpected "type"
 > ```
+> ```
+> Syntax error, unexpected "type"
+> ```
+> {collapsible="true" collapsed-title="TypeLang\Parser\Exception\ParseException"}
 > {style="warning"}
 
 </tab>
 </tabs>
 
 ## Namespace
+
+<secondary-label ref="phpstan"/>
+<secondary-label ref="psalm"/>
+<secondary-label ref="storm"/>
 
 Each name can contain a namespace symbol (`\` — backslash), which is 
 [similar to that in PHP](https://www.php.net/manual/en/language.namespaces.rationale.php). The separator can be located either in the middle
@@ -86,13 +95,11 @@ The namespace delimiter can be used in conjunction with keywords such as `true`,
 > ```typescript
 > Example\Name
 > ```
-> {style="note"}
 
 > Absolute class <tooltip term="FQN">FQN</tooltip> reference.
 > ```typescript
 > \Absolute\Type\Name
 > ```
-> {style="note"}
 
 </tab>
 <tab title="Counterexamples">
@@ -101,17 +108,21 @@ The namespace delimiter can be used in conjunction with keywords such as `true`,
 > reserved for literal values.
 > ```typescript
 > true\null
-> 
-> // Syntax error, unexpected "\"
 > ```
+> ```
+> Syntax error, unexpected "\"
+> ```
+> {collapsible="true" collapsed-title="TypeLang\Parser\Exception\ParseException"}
 > {style="warning"}
 
 > <tooltip term="FQN">FQN</tooltip> type names cannot end in `\` delimiter.
 > ```typescript
 > example\name\
->
-> // Syntax error, unexpected end of input
 > ```
+> ```
+> Syntax error, unexpected end of input
+> ```
+> {collapsible="true" collapsed-title="TypeLang\Parser\Exception\ParseException"}
 > {style="warning"}
 
 </tab>

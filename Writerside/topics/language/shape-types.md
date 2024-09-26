@@ -1,5 +1,8 @@
 # Shape Types
 
+<secondary-label ref="phpstan"/>
+<secondary-label ref="psalm"/>
+<secondary-label ref="storm"/>
 <show-structure for="chapter" depth="2"/>
 
 Each **composite** type can be rigidly described by a structural type called a
@@ -54,12 +57,21 @@ array{
 > ```php
 > array{
 >     named: first,
->     second // Error: Cannot mix numeric and named keys.
+>     second
 > }
 > ```
+> ```
+> Cannot mix numeric and named keys.
+> ```
+> {collapsible="true" collapsed-title="TypeLang\Parser\Exception\ParseException"}
 {style="warning"}
 
+
 ### Unsealed Shapes
+
+<secondary-label ref="phpstan"/>
+<secondary-label ref="psalm"/>
+<secondary-label ref="storm"/>
 
 Unsealed (unclosed) shapes mean that the composite type can contain additional
 fields beyond those described in the shape. Such types must be terminated with
@@ -81,7 +93,12 @@ array{
 ```
 </compare>
 
+
 ### Typed Shapes
+
+<secondary-label ref="phpstan"/>
+<secondary-label ref="psalm"/>
+<secondary-label ref="storm"/>
 
 In addition, such shapes can describe template arguments (types) for values
 or for keys and values, which are described after the ellipsis (`...`) char
@@ -104,3 +121,60 @@ array{
 ```
 </compare>
 
+
+## Attributes
+
+<secondary-label ref="1.1"/>
+
+Each shape field allows you to define list of additional attributes.
+An attribute is additional metadata for a field.
+
+<tabs>
+<tab title="Examples">
+
+> Simple attribute with one argument for each shape field.
+> ```typescript
+> App\Domain\User{
+>     #[name("user_name")]
+>     userName: non-empty-string,
+>     #[skip_when_empty]
+>     friends: list<App\Domain\User>,
+>     ...
+> }
+> ```
+
+> Multiple attributes in one group.
+> ```typescript
+> App\Domain\User{
+>     #[complexity(100), skip_when_empty]
+>     friends: list<App\Domain\User>,
+> }
+> ```
+
+> Multiple attribute groups.
+> ```typescript
+> array{
+>     #[serialize("onSerialize")]
+>     #[deserialize("onDeserialize")]
+>     test?: App\Domain\User,
+> }
+> ```
+
+</tab>
+<tab title="Counterexamples">
+
+> Only valid identifiers are allowed.
+> ```typescript
+> Collection{
+>     #[42]
+>     test?: App\Domain\User,
+> } 
+> ```
+> ```
+> Syntax error, unexpected "42"
+> ```
+> {collapsible="true" collapsed-title="TypeLang\Parser\Exception\ParseException"}
+> {style="warning"}
+
+</tab>
+</tabs>

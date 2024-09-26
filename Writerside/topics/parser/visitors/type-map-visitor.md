@@ -1,5 +1,6 @@
 # TypeMapVisitor
 
+<primary-label ref="component"/>
 <show-structure for="chapter" depth="2"/>
 
 To convert short names to their <tooltip term="FQN">FQN</tooltip> alternatives,

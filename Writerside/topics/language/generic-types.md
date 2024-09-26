@@ -1,5 +1,8 @@
 # Generic Types
 
+<secondary-label ref="phpstan"/>
+<secondary-label ref="psalm"/>
+<secondary-label ref="storm"/>
 <show-structure for="chapter" depth="2"/>
 
 Each type can take arguments containing other type declarations. Validation of
@@ -23,6 +26,8 @@ comma (`,`).
 > and the reference to the type:
 >
 > * `Traversable<int<0, max>, string>` would contain **arguments**.
+>
+> {style="note"}
 
 <tabs>
 <tab title="Examples">
@@ -31,19 +36,16 @@ comma (`,`).
 > ```typescript
 > Path\To\ExampleClass<T, U>
 > ```
-> {style="note"}
 
 > Reference to builtin type with template arguments containing other generics.
 >  ```typescript
 >  iterable<int<0, max>, Collection<User>>
 >  ```
-> {style="note"}
 
 > Trailing comma is allowed.
 >  ```typescript
 >  HashMap<Request, User,>
 >  ```
-> {style="note"}
 
 </tab>
 <tab title="Counterexamples">
@@ -51,17 +53,21 @@ comma (`,`).
 > Missing template argument.
 > ```typescript
 > example<>
-> 
-> // Syntax error, unexpected ">"
 > ```
+> ```
+> Syntax error, unexpected ">"
+> ```
+> {collapsible="true" collapsed-title="TypeLang\Parser\Exception\ParseException"}
 > {style="warning"}
 
 > Leading comma is NOT allowed.
 > ```typescript
 > example<,T>
-> 
-> // Syntax error, unexpected ","
 > ```
+> ```
+> Syntax error, unexpected ","
+> ```
+> {collapsible="true" collapsed-title="TypeLang\Parser\Exception\ParseException"}
 > {style="warning"}
 
 </tab>
@@ -69,10 +75,14 @@ comma (`,`).
 
 ## Call-Site Hints
 
-Each generic argument allows you to define an additional hint, which can be 
+<secondary-label ref="phpstan"/>
+
+Each template argument allows you to define an additional hint, which can be 
 used, for example, in static analyzers to indicate the
 [call-site variance](https://phpstan.org/blog/guide-to-call-site-generic-variance#call-site-variance).
 
+> One template argument can contain only one hint.
+> {style="warning"}
 
 <tabs>
 <tab title="Examples">
@@ -82,7 +92,6 @@ used, for example, in static analyzers to indicate the
 > ```typescript
 > HashMap<array-key, covariant Request>
 > ```
-> {style="note"}
 
 </tab>
 <tab title="Counterexamples">
@@ -90,23 +99,32 @@ used, for example, in static analyzers to indicate the
 > Only valid identifiers are allowed.
 > ```typescript
 > Collection<42 User>
-> 
-> // Syntax error, unexpected "User"
 > ```
+> ```php
+> Syntax error, unexpected "User"
+> ```
+> {collapsible="true" collapsed-title="TypeLang\Parser\Exception\ParseException"}
 > {style="warning"}
 
 > Multiple hints are not allowed.
 > ```typescript
 >  HashMap<array-key, some covariant Request>
-> 
-> // Syntax error, unexpected "Request"
 > ```
+> ```
+> Syntax error, unexpected "Request"
+> ```
+> {collapsible="true" collapsed-title="TypeLang\Parser\Exception\ParseException"}
 > {style="warning"}
 
 </tab>
 </tabs>
 
+
 ## List Syntax
+
+<secondary-label ref="phpstan"/>
+<secondary-label ref="psalm"/>
+<secondary-label ref="storm"/>
 
 In addition to modern list declarations such as `list<int>` or
 `array<array-key, int>`, the legacy `int[]` syntax is allowed.
@@ -118,13 +136,11 @@ In addition to modern list declarations such as `list<int>` or
 > ```typescript
 > User[]
 > ```
-> {style="note"}
 
 > List of list (nested array) of `User` objects.
 > ```typescript
 > User[][]
 > ```
-> {style="note"}
 
 </tab>
 <tab title="Counterexamples">
@@ -132,9 +148,53 @@ In addition to modern list declarations such as `list<int>` or
 > Incorrect syntax (was [used in the PSR](https://github.com/php-fig/event-dispatcher/blob/1.0.0/src/ListenerProviderInterface.php#L14) by mistake).
 > ```typescript
 > User[int]
-> 
-> // Syntax error, unexpected "int"
 > ```
+> ```
+> Syntax error, unexpected "int"
+> ```
+> {collapsible="true" collapsed-title="TypeLang\Parser\Exception\ParseException"}
+> {style="warning"}
+
+</tab>
+</tabs>
+
+
+## Attributes
+
+<secondary-label ref="1.1"/>
+
+Each template argument allows you to define list of additional attributes. 
+An attribute is additional metadata for an argument.
+
+<tabs>
+<tab title="Examples">
+
+> Simple attribute with one argument for each template argument.
+> ```typescript
+> HashMap<#[name("key")] T, #[name("value")] U>
+> ```
+
+> Multiple attributes in one group.
+> ```typescript
+> HashMap<#[name("key"), out] T>
+> ```
+
+> Multiple attribute groups.
+> ```typescript
+> HashMap<#[name("key")] #[out] T>
+> ```
+
+</tab>
+<tab title="Counterexamples">
+
+> Only valid identifiers are allowed.
+> ```typescript
+> Collection<#[42] User>
+> ```
+> ```
+> Syntax error, unexpected "42"
+> ```
+> {collapsible="true" collapsed-title="TypeLang\Parser\Exception\ParseException"}
 > {style="warning"}
 
 </tab>

@@ -8,6 +8,10 @@ separate expression is also supported.
 
 ### Union Type
 
+<secondary-label ref="phpstan"/>
+<secondary-label ref="psalm"/>
+<secondary-label ref="storm"/>
+
 Each union type is separated by a pipe character (`|`) and may contain any other
 type definition.
 
@@ -17,6 +21,10 @@ type definition.
 > ```
 
 ### Intersection Type
+
+<secondary-label ref="phpstan"/>
+<secondary-label ref="psalm"/>
+<secondary-label ref="storm"/>
 
 Each intersection type is separated by an ampersand character (`&`) and may
 contain any other type definition.
@@ -28,6 +36,10 @@ contain any other type definition.
 
 ### Nullable Type
 
+<secondary-label ref="phpstan"/>
+<secondary-label ref="psalm"/>
+<secondary-label ref="storm"/>
+
 Nullable type is a shortened alias for union type `T | null` 
 and is written as `?T.`
 
@@ -38,7 +50,6 @@ and is written as `?T.`
 > ```typescript
 > ?Example
 > ```
-> {style="note"}
 
 </tab>
 <tab title="Counterexamples">
@@ -46,9 +57,11 @@ and is written as `?T.`
 > The question mark must be placed before the type name.
 > ```typescript
 > Example?
-> 
-> // Syntax error, unexpected "?"
 > ```
+> ```
+> Syntax error, unexpected "?"
+> ```
+> {collapsible="true" collapsed-title="TypeLang\Parser\Exception\ParseException"}
 > {style="warning"}
 </tab>
 </tabs>

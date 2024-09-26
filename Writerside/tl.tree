@@ -2,12 +2,7 @@
 <!DOCTYPE instance-profile
         SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
 
-<instance-profile id="tl"
-                  name="PHP TypeLang"
-                  status="eap"
-                  is-library="true"
-                  start-page="overview.topic">
-
+<instance-profile id="tl" name="PHP TypeLang" is-library="true" start-page="overview.topic">
     <toc-element topic="overview.topic" />
 
     <toc-element topic="language.md" toc-title="Syntax">
@@ -18,10 +13,12 @@
         <toc-element topic="const-types.md" toc-title="Constants"/>
         <toc-element topic="shape-types.md" toc-title="Shapes"/>
         <toc-element topic="callable-types.md" toc-title="Callables"/>
-        <toc-element topic="conditional-types.md" toc-title="Conditions" hidden="true"/>
+        <toc-element topic="conditional-types.md" toc-title="Conditions"/>
     </toc-element>
 
     <toc-element topic="parser.md" toc-title="Parser">
+        <toc-element topic="features.md"/>
+        <toc-element topic="tolerant-mode.md"/>
         <toc-element topic="visitors.md">
             <toc-element topic="class-name-matcher-visitor.md"/>
             <toc-element topic="stream-dumper-visitor.md"/>

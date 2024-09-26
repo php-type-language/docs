@@ -1,5 +1,6 @@
 # Visitors
 
+<primary-label ref="component"/>
 <show-structure for="chapter" depth="2"/>
 
 To completely traverse a graph of all types, you can use the
@@ -33,26 +34,26 @@ $traverser->traverse([$result]);
 You can see the following text as the output result:
 
 ```yaml
- - TypeLang\Parser\Node\Stmt\NamedTypeNode
- - TypeLang\Parser\Node\Name
- - TypeLang\Parser\Node\Stmt\Template\ArgumentsListNode
- - TypeLang\Parser\Node\Stmt\Template\ArgumentNode
- - TypeLang\Parser\Node\Stmt\NamedTypeNode
- - TypeLang\Parser\Node\Name
- - TypeLang\Parser\Node\Stmt\Template\ArgumentNode
- - TypeLang\Parser\Node\Stmt\NamedTypeNode
- - TypeLang\Parser\Node\Name
- - TypeLang\Parser\Node\Stmt\Shape\FieldsListNode
- - TypeLang\Parser\Node\Stmt\Shape\NamedFieldNode
- - TypeLang\Parser\Node\Stmt\NamedTypeNode
- - TypeLang\Parser\Node\Name
- - TypeLang\Parser\Node\Stmt\Template\ArgumentsListNode
- - TypeLang\Parser\Node\Stmt\Template\ArgumentNode
- - TypeLang\Parser\Node\Literal\IntLiteralNode
- - TypeLang\Parser\Node\Stmt\Template\ArgumentNode
- - TypeLang\Parser\Node\Stmt\NamedTypeNode
- - TypeLang\Parser\Node\Name
- - TypeLang\Parser\Node\Identifier
+- TypeLang\Parser\Node\Stmt\NamedTypeNode
+- TypeLang\Parser\Node\Name
+- TypeLang\Parser\Node\Stmt\Template\ArgumentsListNode
+- TypeLang\Parser\Node\Stmt\Template\ArgumentNode
+- TypeLang\Parser\Node\Stmt\NamedTypeNode
+- TypeLang\Parser\Node\Name
+- TypeLang\Parser\Node\Stmt\Template\ArgumentNode
+- TypeLang\Parser\Node\Stmt\NamedTypeNode
+- TypeLang\Parser\Node\Name
+- TypeLang\Parser\Node\Stmt\Shape\FieldsListNode
+- TypeLang\Parser\Node\Stmt\Shape\NamedFieldNode
+- TypeLang\Parser\Node\Stmt\NamedTypeNode
+- TypeLang\Parser\Node\Name
+- TypeLang\Parser\Node\Stmt\Template\ArgumentsListNode
+- TypeLang\Parser\Node\Stmt\Template\ArgumentNode
+- TypeLang\Parser\Node\Literal\IntLiteralNode
+- TypeLang\Parser\Node\Stmt\Template\ArgumentNode
+- TypeLang\Parser\Node\Stmt\NamedTypeNode
+- TypeLang\Parser\Node\Name
+- TypeLang\Parser\Node\Identifier
 ```
 {collapsible="true" collapsed-title="Result"}
 
@@ -65,7 +66,7 @@ command `TypeLang\Parser\Traverser\Command::SKIP_CHILDREN`.
 
 ```php
 use TypeLang\Parser\Node\Node;
-use TypeLang\Parser\Node\Stmt\Template\ArgumentNode;
+use TypeLang\Parser\Node\Stmt\Template\TemplateArgumentNode;
 use TypeLang\Parser\Traverser;
 use TypeLang\Parser\Traverser\Command;
 use TypeLang\Parser\Traverser\Visitor;
@@ -74,7 +75,7 @@ $traverser = new Traverser([
     new class extends Visitor {
         public function enter(Node $node): ?Command
         {
-            if ($node instanceof ArgumentNode) {
+            if ($node instanceof TemplateArgumentNode) {
                 return Command::SKIP_CHILDREN;
             }
 

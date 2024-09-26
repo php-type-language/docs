@@ -1,0 +1,24 @@
+.article > .prompt {
+    max-width: auto !important;
+}
+
+.prompt__wrapper {
+    display: flex;
+}
+
+.prompt__content {
+    overflow: visible;
+}
+
+.prompt__wrapper > .prompt__content {
+    flex: 1;
+}
+
+.article__list + .code-block__wrapper,
+.article__list + .code-collapse__wrapper,
+p + .code-block__wrapper,
+p + .code-collapse__wrapper,
+.code-block__wrapper + .code-collapse__wrapper,
+.code-block__wrapper + .code-block__wrapper {
+    margin-top: 12px !important;
+}

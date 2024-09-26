@@ -1,12 +1,13 @@
 # Callable Types
 
+<secondary-label ref="phpstan"/>
+<secondary-label ref="psalm"/>
+<secondary-label ref="storm"/>
 <show-structure for="chapter" depth="2"/>
 
 Callable types describe an arbitrary type that describes a function.
 
 Each callable MAY have a list of parameters and/or a return type definition.
-
-<procedure title="Examples" collapsible="true">
 
 > Callable type without parameters and return type.
 > ```typescript
@@ -22,9 +23,13 @@ Each callable MAY have a list of parameters and/or a return type definition.
 > ```typescript
 > a(int<0, max>, c(?C): mixed): void
 > ```
-</procedure>
+
 
 ### Named Parameters
+
+<secondary-label ref="phpstan"/>
+<secondary-label ref="psalm"/>
+<secondary-label ref="storm"/>
 
 The name after the type of the parameter defines the parameter that
 [allows passing by name](https://www.php.net/manual/en/functions.arguments.php#functions.named-arguments).
@@ -39,13 +44,11 @@ Just like in the PHP language.
 > ```typescript
 > foo(T $name)
 > ```
-> {style="note"}
 
 > Callable type with `$name` named and anonymous parameters.
 > ```typescript
 > foo(A $a, B, C)
-> ```
-> {style="note"} 
+> ``` 
 
 </tab>
 <tab title="Counterexamples">
@@ -53,15 +56,21 @@ Just like in the PHP language.
 > Callable type without parameter's type.
 > ```typescript
 > foo($name)
-> 
-> // Syntax error, unexpected ")"
 > ```
+> ```
+> Syntax error, unexpected ")"
+> ```
+> {collapsible="true" collapsed-title="TypeLang\Parser\Exception\ParseException"}
 > {style="warning"}
 
 </tab>
 </tabs>
 
 ### Output Parameters
+
+<secondary-label ref="phpstan"/>
+<secondary-label ref="psalm"/>
+<secondary-label ref="storm"/>
 
 Passing a parameter by reference means that the function can change the passed
 variable while it is running.
@@ -76,13 +85,11 @@ the type and before the name.
 > ```typescript
 > foo(T&)
 > ```
-> {style="note"}
 
 > Callable type with one output (referenced) named parameter.
 > ```typescript
 > foo(T &$name)
 > ```
-> {style="note"}
 
 </tab>
 <tab title="Counterexamples">
@@ -90,15 +97,21 @@ the type and before the name.
 > The ampersand (`&`) must be placed after the parameter's type.
 > ```typescript
 > foo(&T)
-> 
-> // Syntax error, unexpected "&"
 > ```
+> ```
+> Syntax error, unexpected "&"
+> ```
+> {collapsible="true" collapsed-title="TypeLang\Parser\Exception\ParseException"}
 > {style="warning"}
 
 </tab>
 </tabs>
 
 ### Optional Parameters
+
+<secondary-label ref="phpstan"/>
+<secondary-label ref="psalm"/>
+<secondary-label ref="storm"/>
 
 An optional parameter means that the argument may not be passed when such a
 function is called.
@@ -113,25 +126,21 @@ parameter description.
 > ```typescript
 > foo(T=)
 > ```
-> {style="note"}
 
 > Callable type with one optional named parameter.
 > ```typescript
 > foo(T $name=)
 > ```
-> {style="note"}
 
 > Callable type with one optional output parameter.
 > ```typescript
 > foo(T&=)
 > ```
-> {style="note"}
 
 > Callable type with one optional output named parameter.
 > ```typescript
 > foo(T &$name=)
 > ```
-> {style="note"}
 
 </tab>
 <tab title="Counterexamples">
@@ -139,15 +148,21 @@ parameter description.
 > The optionality char (`=`) must be placed at the end.
 > ```typescript
 > foo(T= $name)
-> 
-> // Syntax error, unexpected "$name"
 > ```
+> ```
+> Syntax error, unexpected "$name"
+> ```
+> {collapsible="true" collapsed-title="TypeLang\Parser\Exception\ParseException"}
 > {style="warning"}
 
 </tab>
 </tabs>
 
 ### Variadic Parameters
+
+<secondary-label ref="phpstan"/>
+<secondary-label ref="psalm"/>
+<secondary-label ref="storm"/>
 
 Variadic parameters are indicated by the "`...`" and can be placed either
 _before the type_ or _before the parameter name._
@@ -162,19 +177,16 @@ _before the type_ or _before the parameter name._
 > ```typescript
 > foo(...T)
 > ```
-> {style="note"}
 
 > Callable type with one variadic named parameter.
 > ```typescript
 > foo(...T $name)
 > ```
-> {style="note"}
 
 > Callable type with one variadic output named parameter.
 > ```typescript
 > foo(...T &$name)
 > ```
-> {style="note"}
 
 </tab>
 <tab title="Alternative Syntax">
@@ -183,19 +195,16 @@ _before the type_ or _before the parameter name._
 > ```typescript
 > foo(T...)
 > ```
-> {style="note"}
 
 > Callable type with one variadic named parameter.
 > ```typescript
 > foo(T ...$name)
 > ```
-> {style="note"}
 
 > Callable type with one variadic output named parameter.
 > ```typescript
 > foo(T &...$name)
 > ```
-> {style="note"}
 
 </tab>
 <tab title="Counterexamples">
@@ -203,17 +212,21 @@ _before the type_ or _before the parameter name._
 > The ellipses (`...`) must come before or after the type.
 > ```typescript
 > foo(...T...)
-> 
-> // Syntax error, unexpected "..."
 > ```
+> ```
+> Syntax error, unexpected "..."
+> ```
+> {collapsible="true" collapsed-title="TypeLang\Parser\Exception\ParseException"}
 > {style="warning"}
 
 > Variadic parameter cannot be optional.
 > ```typescript
 > foo(T ...$name=)
-> 
-> // Cannot have variadic param with a default
 > ```
+> ```
+> Cannot have variadic param with a default
+> ```
+> {collapsible="true" collapsed-title="TypeLang\Parser\Exception\ParseException"}
 > {style="warning"}
 
 </tab>

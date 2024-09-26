@@ -1,5 +1,6 @@
 # ClassNameMatcherVisitor
 
+<primary-label ref="component"/>
 <show-structure for="chapter" depth="2"/>
 
 To search for the first suitable node for an instance of a class, you can
@@ -17,16 +18,16 @@ Traverser::new([
 var_dump($finder->getFoundNode());
 ```
 
-You can see the following text as the output result:
-
-```php
-TypeLang\Parser\Node\Name {
-  +offset: 0
-  -parts: array:1 [
-    0 => TypeLang\Parser\Node\Identifier {
-      +offset: 0
-      +value: "array"
-    }
-  ]
-}
-```
+> You can see the following text as the output result:
+> 
+> ```php
+> TypeLang\Parser\Node\Name {
+>   +offset: 0
+>   -parts: array:1 [
+>     0 => TypeLang\Parser\Node\Identifier {
+>       +offset: 0
+>       +value: "array"
+>     }
+>   ]
+> }
+> ```
