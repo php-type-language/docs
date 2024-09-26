@@ -18,9 +18,6 @@ env:
   ARTIFACT: webHelpTL2-all.zip
   # Writerside docker image version
   DOCKER_VERSION: 242.21870
-  # Add the variable below to upload Algolia indexes
-  # Replace HI with the ID of the instance in capital letters
-  ALGOLIA_ARTIFACT: algolia-indexes-TL.zip
 
 jobs:
   build:
@@ -29,6 +26,8 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Build Docs
         uses: JetBrains/writerside-github-action@v4
@@ -41,17 +40,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: docs
-          path: |
-            artifacts/${{ env.ARTIFACT }}
-            artifacts/report.json
-          retention-days: 7
-
-      # Add the step below to upload Algolia indexes
-      - name: Upload Search Indexes
-        uses: actions/upload-artifact@v4
-        with:
-          name: algolia-indexes
-          path: artifacts/${{ env.ALGOLIA_ARTIFACT }}
+          path: artifacts/${{ env.ARTIFACT }}
           retention-days: 7
 
   # Add the job below and artifacts/report.json on Upload documentation step
@@ -87,9 +76,7 @@ jobs:
           name: docs
 
       - name: Unzip Artifact
-        uses: montudor/action-zip@v1
-        with:
-          args: unzip -qq ${{ env.ARTIFACT }} -d dir
+        run: unzip -O UTF-8 -qq ${{ env.ARTIFACT }} -d dir
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
