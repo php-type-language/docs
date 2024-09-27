@@ -231,3 +231,49 @@ _before the type_ or _before the parameter name._
 
 </tab>
 </tabs>
+
+
+## Attributes
+
+<secondary-label ref="1.2"/>
+
+Each callable parameter allows you to define list of additional attributes.
+An attribute is additional metadata for a parameter.
+
+<tabs>
+<tab title="Examples">
+
+> Simple attribute with one argument for each callable parameter.
+> ```typescript
+> Example\Functor(#[type<int8>] int $a): void
+> ```
+
+> Multiple attributes in one group.
+> ```typescript
+> Example\Functor(#[type<int8>, const] int&): void
+> ```
+
+> Multiple attribute groups.
+> ```typescript
+> Example\OnCreate(
+>     #[deprecated]
+>     #[inline]
+>     (callback(T): void) $callback=,
+> ): void
+> ```
+
+</tab>
+<tab title="Counterexamples">
+
+> Only valid identifiers are allowed.
+> ```typescript
+> Example\Functor(#[42] int $a): void
+> ```
+> ```
+> Syntax error, unexpected "42"
+> ```
+> {collapsible="true" collapsed-title="TypeLang\Parser\Exception\ParseException"}
+> {style="warning"}
+
+</tab>
+</tabs>
