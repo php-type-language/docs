@@ -22,7 +22,7 @@ a declaration.
 If the PHP language supported generic types, then the declaration
 (in pseudo-language) of the type:
 
-* `interface Traversable&lt;node of array-key, TValue of mixed>` would contain
+* `interface Traversable<node of array-key, TValue of mixed>` would contain
   **parameters**
 
 and the reference to the type:
