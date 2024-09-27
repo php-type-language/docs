@@ -13,11 +13,11 @@
         </description>
 
         <spotlight>
-            <a href="language.md" type="container"
-                summary="Language for describing more precise and strict PHP types.">Language</a>
+            <a href="basic-types.md" type="container"
+               summary="Language for describing more precise and strict PHP types.">Language</a>
             <a href="parser.md" type="mixed"
                 summary="Reference implementation of a TypeLang parser providing functionality
-                    for analysis, recognition and construction of AST.">Parser</a>
+                    for analysis, recognition and construction of AST.">Reference Parser Implementation</a>
         </spotlight>
 
         <primary>
