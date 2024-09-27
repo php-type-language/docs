@@ -163,7 +163,7 @@ In addition to modern list declarations such as `list<int>` or
 
 ## Attributes
 
-<secondary-label ref="1.1"/>
+<secondary-label ref="tl1.1"/>
 
 Each template argument allows you to define list of additional attributes. 
 An attribute is additional metadata for an argument.

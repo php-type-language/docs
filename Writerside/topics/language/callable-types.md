@@ -235,7 +235,7 @@ _before the type_ or _before the parameter name._
 
 ## Attributes
 
-<secondary-label ref="1.2"/>
+<secondary-label ref="tl1.2"/>
 
 Each callable parameter allows you to define list of additional attributes.
 An attribute is additional metadata for a parameter.

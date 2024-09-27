@@ -21,6 +21,7 @@
 
     <secondary-label id="wip" name="WIP" color="red">Work in progress</secondary-label>
     <secondary-label id="beta" name="β" color="tangerine">Beta</secondary-label>
-    <secondary-label id="1.1" name="TypeLang 1.1" color="strawberry">Since type-lang/parser v1.1</secondary-label>
-    <secondary-label id="1.2" name="TypeLang 1.2" color="strawberry">Since type-lang/parser v1.2</secondary-label>
+    <secondary-label id="tl1.1" name="TypeLang 1.1" color="strawberry">Since type-lang/parser v1.1</secondary-label>
+    <secondary-label id="tl1.2" name="TypeLang 1.2" color="strawberry">Since type-lang/parser v1.2</secondary-label>
+    <secondary-label id="r1.1" name="Reader Component 1.1" color="strawberry">Since type-lang/reader v1.1</secondary-label>
 </labels>
