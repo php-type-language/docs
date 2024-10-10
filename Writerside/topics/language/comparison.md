@@ -59,3 +59,7 @@ General table across all type parsing capabilities
         </td>
     </tr>
 </table>
+
+## Tables By Category
+
+<toc />
