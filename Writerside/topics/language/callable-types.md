@@ -235,6 +235,7 @@ _before the type_ or _before the parameter name._
 
 ## Attributes
 
+<primary-label ref="experimental"/>
 <secondary-label ref="tl1.2"/>
 
 Each callable parameter allows you to define list of additional attributes.

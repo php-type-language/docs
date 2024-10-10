@@ -17,6 +17,10 @@
         The implementation of the functionality available for installation
         of "type-lang/reader" component
     </primary-label>
+    <primary-label id="experimental" name="Special Feature" short-name="Extra" color="tangerine">
+        This is a unique functionality that is not supported by other popular
+        third-party tools (e.g. PHPStan or Psalm) and has no alternatives.
+    </primary-label>
 
     <secondary-label id="psalm" name="Psalm" color="blue">
         Also partially or fully supported by Psalm Linter.
