@@ -1,6 +1,6 @@
 # The Reader Component
 
-<primary-label ref="component"/>
+<primary-label ref="reader-component"/>
 <show-structure for="chapter" depth="2"/>
 
 This package provides a set of methods for reading PHP metadata and 

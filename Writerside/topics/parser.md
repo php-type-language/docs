@@ -1,6 +1,6 @@
 # The Parser Component
 
-<primary-label ref="component"/>
+<primary-label ref="parser-component"/>
 <show-structure for="chapter" depth="2"/>
 
 A parser component is used to analyze and construct types AST with their

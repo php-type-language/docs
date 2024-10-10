@@ -1,6 +1,6 @@
 # ClassNameMatcherVisitor
 
-<primary-label ref="component"/>
+<primary-label ref="parser-component"/>
 <show-structure for="chapter" depth="2"/>
 
 To search for the first suitable node for an instance of a class, you can

@@ -17,7 +17,7 @@
                summary="Language for describing more precise and strict PHP types.">Language</a>
             <a href="parser.md" type="mixed"
                 summary="Reference implementation of a TypeLang parser providing functionality
-                    for analysis, recognition and construction of AST.">Reference Parser Implementation</a>
+                    for analysis, recognition and construction of AST.">Parser</a>
         </spotlight>
 
         <primary>
@@ -47,22 +47,22 @@
         <misc>
             <links narrow="true">
                 <group>
-                    <title>Language Components</title>
+                    <title>Components</title>
                     <a href="https://github.com/php-type-language/parser"
-                       summary="GitHub TypeLang Parser Repository">Parser</a>
+                       summary="GitHub TypeLang Parser Repository">Parser Component</a>
                     <a href="https://github.com/php-type-language/printer"
-                        summary="GitHub TypeLang Printer Repository">Printer</a>
+                        summary="GitHub TypeLang Printer Repository">Printer Component</a>
                     <a href="https://github.com/php-type-language/reader"
-                       summary="GitHub Reader Repository">Reader</a>
+                       summary="GitHub Reader Repository">Reader Component</a>
                 </group>
                 <group>
                     <title>PHPDoc</title>
                     <a href="https://github.com/php-type-language/phpdoc"
-                       summary="GitHub PHPDoc Parser Repository">Parser</a>
+                       summary="GitHub PHPDoc Parser Repository">Parser Component</a>
                     <a href="https://github.com/php-type-language/phpdoc-standard-tags"
-                       summary="GitHub PHPDoc Standard Tags Repository">Standard Tags Extension</a>
+                       summary="GitHub PHPDoc Standard Tags Repository">PHPDoc Standard Tags Extension</a>
                     <a href="https://github.com/php-type-language/phpdoc-template-tags"
-                       summary="GitHub PHPDoc Template Tags Repository">Template Tags Extension</a>
+                       summary="GitHub PHPDoc Template Tags Repository">PHPDoc Template Tags Extension</a>
                 </group>
                 <group>
                     <title>Other Tools</title>

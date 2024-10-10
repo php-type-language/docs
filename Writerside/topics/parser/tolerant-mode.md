@@ -1,6 +1,6 @@
 # Tolerant Mode
 
-<primary-label ref="component"/>
+<primary-label ref="parser-component"/>
 
 The "tolerant" analysis mode allows parsing a type grammar containing other
 arbitrary data.

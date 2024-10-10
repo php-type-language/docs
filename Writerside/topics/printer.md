@@ -1,6 +1,6 @@
 # The Printer Component
 
-<primary-label ref="component"/>
+<primary-label ref="printer-component"/>
 <show-structure for="chapter" depth="2"/>
 
 The printer package is responsible for visualizing the AST as string 

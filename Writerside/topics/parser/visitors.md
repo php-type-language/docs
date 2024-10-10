@@ -1,6 +1,6 @@
 # Visitors
 
-<primary-label ref="component"/>
+<primary-label ref="parser-component"/>
 <show-structure for="chapter" depth="2"/>
 
 To completely traverse a graph of all types, you can use the

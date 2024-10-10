@@ -4,8 +4,8 @@
     <sitemap priority="0.35" change-frequency="monthly"/>
 
     <variables>
-        <primary-color>#2e44b2</primary-color>
-        <link-color>#1f55be</link-color>
+        <primary-color>#585c85</primary-color>
+        <link-color>#5975aa</link-color>
         <color-preset>contrast</color-preset>
         <custom-favicons>logo.svg</custom-favicons>
         <header-logo>logo.svg</header-logo>

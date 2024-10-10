@@ -2,8 +2,20 @@
 <!DOCTYPE labels SYSTEM "https://resources.jetbrains.com/writerside/1.0/labels-list.dtd">
 <labels xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/labels.xsd">
-    <primary-label id="component" name="Component" short-name="C" color="purple">
+    <primary-label href="https://packagist.org/packages/type-lang/parser"
+        id="parser-component" name="type-lang/parser" short-name="c" color="purple">
         The implementation of the functionality available for installation
+        of "type-lang/parser" component
+    </primary-label>
+    <primary-label href="https://packagist.org/packages/type-lang/printer"
+        id="printer-component" name="type-lang/printer" short-name="c" color="purple">
+        The implementation of the functionality available for installation
+        of "type-lang/printer" component
+    </primary-label>
+    <primary-label href="https://packagist.org/packages/type-lang/reader"
+        id="reader-component" name="type-lang/reader" short-name="c" color="purple">
+        The implementation of the functionality available for installation
+        of "type-lang/reader" component
     </primary-label>
 
     <secondary-label id="psalm" name="Psalm" color="blue">
@@ -21,7 +33,7 @@
 
     <secondary-label id="wip" name="WIP" color="red">Work in progress</secondary-label>
     <secondary-label id="beta" name="β" color="tangerine">Beta</secondary-label>
-    <secondary-label id="tl1.1" name="TypeLang 1.1" color="strawberry">Since type-lang/parser v1.1</secondary-label>
-    <secondary-label id="tl1.2" name="TypeLang 1.2" color="strawberry">Since type-lang/parser v1.2</secondary-label>
-    <secondary-label id="r1.1" name="Reader Component 1.1" color="strawberry">Since type-lang/reader v1.1</secondary-label>
+    <secondary-label id="tl1.1" name="TypeLang Parser 1.1+" color="strawberry">Supported since type-lang/parser v1.1</secondary-label>
+    <secondary-label id="tl1.2" name="TypeLang Parser 1.2+" color="strawberry">Supported since type-lang/parser v1.2</secondary-label>
+    <secondary-label id="r1.1" name="Reader 1.1+" color="strawberry">Supported since type-lang/reader v1.1</secondary-label>
 </labels>

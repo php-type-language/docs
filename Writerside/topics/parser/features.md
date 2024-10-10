@@ -1,6 +1,6 @@
-# Features
+# Feature Toggling
 
-<primary-label ref="component"/>
+<primary-label ref="parser-component"/>
 <show-structure for="chapter" depth="2"/>
 
 You can enable or disable a set of parser features if your task requires only
