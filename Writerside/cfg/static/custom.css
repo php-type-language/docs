@@ -22,3 +22,7 @@ p + .code-collapse__wrapper,
 .code-block__wrapper + .code-block__wrapper {
     margin-top: 12px !important;
 }
+
+.starting-page-card {
+    border-radius: 7px;
+}

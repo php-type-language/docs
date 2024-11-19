@@ -17,7 +17,7 @@ env:
   # Replace HI with the ID of the instance in capital letters
   ARTIFACT: webHelpTL2-all.zip
   # Writerside docker image version
-  DOCKER_VERSION: '242.21870'
+  DOCKER_VERSION: '243.21565'
   ALGOLIA_ARTIFACT: 'algolia-indexes-TL.zip'
   ALGOLIA_APP_NAME: 'CZXH99BXN1'
   ALGOLIA_INDEX_NAME: 'Writerside'

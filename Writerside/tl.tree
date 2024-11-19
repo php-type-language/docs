@@ -43,28 +43,53 @@
         </toc-element>
     </toc-element>
 
-    <toc-element topic="parser.md" toc-title="Parser">
-        <toc-element topic="features.md"
-                     toc-title="Feature toggling"/>
-        <toc-element topic="tolerant-mode.md"
-                     toc-title="Tolerant mode"/>
-        <toc-element topic="visitors.md">
-            <toc-element topic="class-name-matcher-visitor.md"/>
-            <toc-element topic="stream-dumper-visitor.md"/>
-            <toc-element topic="string-dumper-visitor.md"/>
-            <toc-element topic="type-map-visitor.md"/>
+    <toc-element toc-title="Components">
+        <toc-element topic="parser.md" toc-title="Parser">
+            <toc-element topic="features.md"
+                         toc-title="Feature toggling"/>
+            <toc-element topic="tolerant-mode.md"
+                         toc-title="Tolerant mode"/>
+            <toc-element topic="visitors.md">
+                <toc-element topic="class-name-matcher-visitor.md"/>
+                <toc-element topic="stream-dumper-visitor.md"/>
+                <toc-element topic="string-dumper-visitor.md"/>
+                <toc-element topic="type-map-visitor.md"/>
+            </toc-element>
+            <toc-element toc-title="GitHub" href="https://github.com/php-type-language/parser" />
+            <toc-element toc-title="Packagist" href="https://packagist.org/packages/type-lang/parser" />
         </toc-element>
-        <toc-element toc-title="GitHub" href="https://github.com/php-type-language/parser" />
-        <toc-element toc-title="Packagist" href="https://packagist.org/packages/type-lang/parser" />
+
+        <toc-element topic="phpdoc.md" toc-title="PHPDoc" hidden="true">
+            <toc-element toc-title="Extensions">
+                <toc-element topic="phpdoc-standard-tags.md"
+                             toc-title="Standard tags">
+                    <toc-element toc-title="GitHub" href="https://github.com/php-type-language/phpdoc-standard-tags" />
+                    <toc-element toc-title="Packagist" href="https://packagist.org/packages/type-lang/phpdoc-standard-tags" />
+                </toc-element>
+                <toc-element topic="phpdoc-template-tags.md"
+                             toc-title="Template (generic) tags">
+                    <toc-element toc-title="GitHub" href="https://github.com/php-type-language/phpdoc-template-tags" />
+                    <toc-element toc-title="Packagist" href="https://packagist.org/packages/type-lang/phpdoc-template-tags" />
+                </toc-element>
+            </toc-element>
+            <toc-element toc-title="GitHub" href="https://github.com/php-type-language/phpdoc" />
+            <toc-element toc-title="Packagist" href="https://packagist.org/packages/type-lang/phpdoc" />
+        </toc-element>
+
+        <toc-element topic="printer.md" toc-title="Printer">
+            <toc-element toc-title="GitHub" href="https://github.com/php-type-language/printer" />
+            <toc-element toc-title="Packagist" href="https://packagist.org/packages/type-lang/printer" />
+        </toc-element>
+
+        <toc-element topic="reader.md" toc-title="Reader">
+            <toc-element toc-title="GitHub" href="https://github.com/php-type-language/reader" />
+            <toc-element toc-title="Packagist" href="https://packagist.org/packages/type-lang/reader" />
+        </toc-element>
     </toc-element>
 
-    <toc-element topic="printer.md" toc-title="Printer">
-        <toc-element toc-title="GitHub" href="https://github.com/php-type-language/printer" />
-        <toc-element toc-title="Packagist" href="https://packagist.org/packages/type-lang/printer" />
-    </toc-element>
+    <toc-element topic="release-notes.md" />
+    <toc-element topic="contribution.md" />
+    <toc-element topic="license.md"
+        toc-title="License" />
 
-    <toc-element topic="reader.md" toc-title="Reader">
-        <toc-element toc-title="GitHub" href="https://github.com/php-type-language/reader" />
-        <toc-element toc-title="Packagist" href="https://packagist.org/packages/type-lang/reader" />
-    </toc-element>
 </instance-profile>
