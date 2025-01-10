@@ -22,18 +22,8 @@
                      toc-title="Callables"/>
         <!-- TODO -->
         <toc-element topic="conditional-types.md" toc-title="Conditions" hidden="true"/>
-        <toc-element topic="comparison.md" toc-title="Comparison of syntax between different tools">
-            <toc-element topic="basic-types-comparison.md"
-                         toc-title="Basic types"/>
-            <toc-element topic="conditional-types-comparison.md"
-                         toc-title="Conditional types"/>
-            <toc-element topic="literal-types-comparison.md"
-                         toc-title="Literal types"/>
-            <toc-element topic="shape-types-comparison.md"
-                         toc-title="Shape types"/>
-            <toc-element topic="callable-types-comparison.md"
-                         toc-title="Callable types"/>
-        </toc-element>
+        <toc-element topic="comparison.md"
+                     toc-title="Comparison of syntax between different tools" />
 
         <toc-element toc-title="Other tools">
             <toc-element toc-title="PHPStan" href="https://phpstan.org/writing-php-code/phpdoc-types" />
@@ -89,7 +79,6 @@
 
     <toc-element topic="release-notes.md" />
     <toc-element topic="contribution.md" />
-    <toc-element topic="license.md"
-        toc-title="License" />
+    <toc-element topic="license.md" />
 
 </instance-profile>
