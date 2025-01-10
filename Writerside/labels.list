@@ -36,27 +36,15 @@
         The implementation of the functionality available for installation
         of "type-lang/reader" component.
     </primary-label>
-    <primary-label id="experimental" name="Special Feature" short-name="Extra" color="tangerine">
+    <primary-label id="experimental" name="Experimental" short-name="Experimental" color="tangerine">
         This is a unique functionality that is not supported by other popular
         third-party tools (e.g. PHPStan or Psalm) and has no alternatives.
     </primary-label>
 
-    <secondary-label id="psalm" name="Psalm" color="blue">
-        Also partially or fully supported by Psalm Linter.
-        Check out Psalm documentation for more details.
-    </secondary-label>
-    <secondary-label id="phpstan" name="PHPStan" color="blue">
-        Also partially or fully supported by PHPStan Linter.
-        Check out PHPStan documentation for more details.
-    </secondary-label>
-    <secondary-label id="storm" name="PhpStorm" color="blue">
-        Also partially or fully supported by PhpStorm IDE.
-        Check out PhpStorm documentation for more details.
-    </secondary-label>
-
     <secondary-label id="wip" name="WIP" color="red">Work in progress</secondary-label>
     <secondary-label id="beta" name="β" color="tangerine">Beta</secondary-label>
-    <secondary-label id="tl1.1" name="TypeLang Parser 1.1+" color="strawberry">Supported since type-lang/parser v1.1</secondary-label>
-    <secondary-label id="tl1.2" name="TypeLang Parser 1.2+" color="strawberry">Supported since type-lang/parser v1.2</secondary-label>
-    <secondary-label id="r1.1" name="Reader 1.1+" color="strawberry">Supported since type-lang/reader v1.1</secondary-label>
+    <secondary-label id="tl1.1" name="Available in Parser v1.1" color="strawberry">Available in type-lang/parser 1.1+</secondary-label>
+    <secondary-label id="tl1.2" name="Available in Parser v1.2" color="strawberry">Available in type-lang/parser 1.2+</secondary-label>
+    <secondary-label id="tl1.4" name="Available in Parser v1.4" color="strawberry">Available in type-lang/parser 1.4+</secondary-label>
+    <secondary-label id="r1.1" name="Available in Reader v1.1" color="strawberry">Available in type-lang/reader 1.1+</secondary-label>
 </labels>

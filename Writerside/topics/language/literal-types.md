@@ -13,10 +13,6 @@ allowed:
 
 ## Boolean And Null
 
-<secondary-label ref="phpstan"/>
-<secondary-label ref="psalm"/>
-<secondary-label ref="storm"/>
-
 The literals `true` and `false` are used as the value of the PHP `bool` type.
 
 > Note: `true` and `false` values are not case sensitive.
@@ -34,10 +30,6 @@ For PHP `null` types, the `null` literal is used.
 For other types the logic is more complicated.
 
 ## Strings
-
-<secondary-label ref="phpstan"/>
-<secondary-label ref="psalm"/>
-<secondary-label ref="storm"/>
 
 The syntax of string types is similar to that in PHP: The string allows single
 (`'`) and double (`"`) quotes, which can be escaped using a backslash (`\`).
@@ -129,10 +121,6 @@ representation. The braces are required in the sequence. E.g. `"\u{41}" === "A"`
 > ```
 
 ## Integer
-
-<secondary-label ref="phpstan"/>
-<secondary-label ref="psalm"/>
-<secondary-label ref="storm"/>
 
 The syntax of integer numbers is similar to the PHP language. Binary, octal,
 decimal and hexadecimal number systems are supported.
@@ -279,10 +267,6 @@ the numbers between `0` and `F` and must match the regular expression
 
 ## Float
 
-<secondary-label ref="phpstan"/>
-<secondary-label ref="psalm"/>
-<secondary-label ref="storm"/>
-
 The syntax of float numbers is similar to the PHP language. Basic floating point
 syntax and scientific notation are supported.
 
@@ -340,7 +324,6 @@ trailing number may be omitted. Negative values are prefixed with a minus (`-`.
 
 ### Scientific Notation
 
-<secondary-label ref="phpstan"/>
 
 Scientific notation is a way of expressing numbers that are too large or too
 small to be conveniently written in decimal form, since to do so would require

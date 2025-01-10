@@ -11,15 +11,15 @@
         <toc-element topic="logical-types.md"
             toc-title="Logical types"/>
         <toc-element topic="generic-types.md"
-                     toc-title="Template types (Generics)"/>
+                     toc-title="Generics"/>
         <toc-element topic="literal-types.md"
-                     toc-title="Literal values"/>
+                     toc-title="Literals"/>
         <toc-element topic="const-types.md"
-                     toc-title="Constant references"/>
+                     toc-title="Constants"/>
         <toc-element topic="shape-types.md"
-                     toc-title="Shape types"/>
+                     toc-title="Shapes"/>
         <toc-element topic="callable-types.md"
-                     toc-title="Callable types (Delegates)"/>
+                     toc-title="Callables"/>
         <!-- TODO -->
         <toc-element topic="conditional-types.md" toc-title="Conditions" hidden="true"/>
         <toc-element topic="comparison.md" toc-title="Comparison of syntax between different tools">

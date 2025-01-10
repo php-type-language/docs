@@ -1,8 +1,4 @@
 # Callable Types
-
-<secondary-label ref="phpstan"/>
-<secondary-label ref="psalm"/>
-<secondary-label ref="storm"/>
 <show-structure for="chapter" depth="2"/>
 
 Callable types describe an arbitrary type that describes a function.
@@ -26,10 +22,6 @@ Each callable MAY have a list of parameters and/or a return type definition.
 
 
 ### Named Parameters
-
-<secondary-label ref="phpstan"/>
-<secondary-label ref="psalm"/>
-<secondary-label ref="storm"/>
 
 The name after the type of the parameter defines the parameter that
 [allows passing by name](https://www.php.net/manual/en/functions.arguments.php#functions.named-arguments).
@@ -68,10 +60,6 @@ Just like in the PHP language.
 
 ### Output Parameters
 
-<secondary-label ref="phpstan"/>
-<secondary-label ref="psalm"/>
-<secondary-label ref="storm"/>
-
 Passing a parameter by reference means that the function can change the passed
 variable while it is running.
 
@@ -108,10 +96,6 @@ the type and before the name.
 </tabs>
 
 ### Optional Parameters
-
-<secondary-label ref="phpstan"/>
-<secondary-label ref="psalm"/>
-<secondary-label ref="storm"/>
 
 An optional parameter means that the argument may not be passed when such a
 function is called.
@@ -159,10 +143,6 @@ parameter description.
 </tabs>
 
 ### Variadic Parameters
-
-<secondary-label ref="phpstan"/>
-<secondary-label ref="psalm"/>
-<secondary-label ref="storm"/>
 
 Variadic parameters are indicated by the "`...`" and can be placed either
 _before the type_ or _before the parameter name._

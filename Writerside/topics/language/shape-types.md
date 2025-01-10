@@ -1,8 +1,4 @@
 # Shape Types
-
-<secondary-label ref="phpstan"/>
-<secondary-label ref="psalm"/>
-<secondary-label ref="storm"/>
 <show-structure for="chapter" depth="2"/>
 
 Each **composite** type can be rigidly described by a structural type called a
@@ -69,10 +65,6 @@ array{
 
 ### Unsealed Shapes
 
-<secondary-label ref="phpstan"/>
-<secondary-label ref="psalm"/>
-<secondary-label ref="storm"/>
-
 Unsealed (unclosed) shapes mean that the composite type can contain additional
 fields beyond those described in the shape. Such types must be terminated with
 the "`...`".
@@ -95,10 +87,6 @@ array{
 
 
 ### Typed Shapes
-
-<secondary-label ref="phpstan"/>
-<secondary-label ref="psalm"/>
-<secondary-label ref="storm"/>
 
 In addition, such shapes can describe template arguments (types) for values
 or for keys and values, which are described after the ellipsis (`...`) char

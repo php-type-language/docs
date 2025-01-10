@@ -1,8 +1,4 @@
 # Basic Types
-
-<secondary-label ref="phpstan"/>
-<secondary-label ref="psalm"/>
-<secondary-label ref="storm"/>
 <show-structure for="chapter" depth="2"/>
 
 The parser does not impose restrictions on type naming. The type name must begin
@@ -75,10 +71,6 @@ is **unacceptable**.
 </tabs>
 
 ## Namespace
-
-<secondary-label ref="phpstan"/>
-<secondary-label ref="psalm"/>
-<secondary-label ref="storm"/>
 
 Each name can contain a namespace symbol (`\` — backslash), which is 
 [similar to that in PHP](https://www.php.net/manual/en/language.namespaces.rationale.php). The separator can be located either in the middle

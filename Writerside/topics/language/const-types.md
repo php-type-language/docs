@@ -57,10 +57,6 @@ Given the complete identity of the grammar of constants with
 
 ## Class Constants
 
-<secondary-label ref="phpstan"/>
-<secondary-label ref="psalm"/>
-<secondary-label ref="storm"/>
-
 Class constants begin with any [type name](basic-types.md), then contain 
 a double colon (`::`) character, and then the constant name.
 
@@ -95,10 +91,6 @@ a double colon (`::`) character, and then the constant name.
 </tabs>
 
 ## Constant Masks
-
-<secondary-label ref="phpstan"/>
-<secondary-label ref="psalm"/>
-<secondary-label ref="storm"/>
 
 A reference to a certain set of constants can be defined using a mask. The
 use of masks is identical to regular constants, but must be terminated with

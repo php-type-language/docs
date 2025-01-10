@@ -1,8 +1,4 @@
 # Generic Types
-
-<secondary-label ref="phpstan"/>
-<secondary-label ref="psalm"/>
-<secondary-label ref="storm"/>
 <show-structure for="chapter" depth="2"/>
 
 Each type can take arguments containing other type declarations. Validation of
@@ -77,7 +73,6 @@ and the reference to the type:
 
 ## Call-Site Hints
 
-<secondary-label ref="phpstan"/>
 
 Each template argument allows you to define an additional hint, which can be 
 used, for example, in static analyzers to indicate the
@@ -123,10 +118,6 @@ used, for example, in static analyzers to indicate the
 
 
 ## List Syntax
-
-<secondary-label ref="phpstan"/>
-<secondary-label ref="psalm"/>
-<secondary-label ref="storm"/>
 
 In addition to modern list declarations such as `list<int>` or
 `array<array-key, int>`, the legacy `int[]` syntax is allowed.

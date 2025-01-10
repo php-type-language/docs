@@ -6,39 +6,27 @@ The TypeLang, [like PHP](https://www.php.net/manual/en/language.types.type-syste
 Union and Intersection. The ability to specify a _nullable_ type using a 
 separate expression is also supported.
 
-### Union Type
-
-<secondary-label ref="phpstan"/>
-<secondary-label ref="psalm"/>
-<secondary-label ref="storm"/>
+### Union Types
 
 Each union type is separated by a pipe character (`|`) and may contain any other
 type definition.
 
-> One of `A` **OR** `B` **OR** `C`.
+> `A` **OR** `B` **OR** `C`.
 > ```typescript
 > A | B | C
 > ```
 
-### Intersection Type
-
-<secondary-label ref="phpstan"/>
-<secondary-label ref="psalm"/>
-<secondary-label ref="storm"/>
+### Intersection Types
 
 Each intersection type is separated by an ampersand character (`&`) and may
 contain any other type definition.
 
-> All of `A` **AND** `B` **AND** `C`.
+> `A` **AND** `B` **AND** `C`.
 > ```typescript
 > A & B & C
 > ```
 
-### Nullable Type
-
-<secondary-label ref="phpstan"/>
-<secondary-label ref="psalm"/>
-<secondary-label ref="storm"/>
+### Nullable Types
 
 Nullable type is a shortened alias for union type `T | null` 
 and is written as `?T.`
@@ -66,3 +54,16 @@ and is written as `?T.`
 </tab>
 </tabs>
 
+### Parentheses
+
+Parentheses can be used to disambiguate types.
+
+> `A` **AND** `B` _or_ `C`
+> ```typescript
+> (A & B) | C
+> ```
+>
+> `A` **AND** `C` _or_ `B` **AND** `C`
+> ```typescript
+> (A | B) & C
+> ```
