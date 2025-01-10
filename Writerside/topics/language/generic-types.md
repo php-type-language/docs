@@ -1,4 +1,5 @@
 # Generic Types
+
 <show-structure for="chapter" depth="2"/>
 
 Each type can take arguments containing other type declarations. Validation of

@@ -1,13 +1,10 @@
 # Shape Types
+
 <show-structure for="chapter" depth="2"/>
 
 Each **composite** type can be rigidly described by a structural type called a
 "shape". A shape within the PHP language can be applied to any array or object
 and contain either implicit or explicit keys.
-
-> Support for other types of **keys**, such as const mask (`Class::CONST_*)` 
-> is not currently available.
-{style="warning"}
 
 <tabs>
 <tab title="named explicit keys">
@@ -62,6 +59,19 @@ array{
 > {collapsible="true" collapsed-title="TypeLang\Parser\Exception\ParseException"}
 {style="warning"}
 
+> Support for other types of **keys**, such as const mask (`Class::CONST_*`)
+> is not currently available.
+> ```php
+> array{
+>     Class::CONST_*: string,
+>     ...
+> }
+> ```
+> ```
+> Syntax error, unexpected ":"
+> ```
+> {collapsible="true" collapsed-title="TypeLang\Parser\Exception\ParseException"}
+{style="warning"}
 
 ### Unsealed Shapes
 

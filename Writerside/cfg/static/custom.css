@@ -1,3 +1,7 @@
+:root {
+    --wh-color-accent-substrate-bg: #222330 !important;
+}
+
 .article > .prompt {
     max-width: auto !important;
 }

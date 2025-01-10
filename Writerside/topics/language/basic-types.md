@@ -1,4 +1,5 @@
 # Basic Types
+
 <show-structure for="chapter" depth="2"/>
 
 The parser does not impose restrictions on type naming. The type name must begin

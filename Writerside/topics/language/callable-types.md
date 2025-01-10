@@ -1,4 +1,5 @@
 # Callable Types
+
 <show-structure for="chapter" depth="2"/>
 
 Callable types describe an arbitrary type that describes a function.
