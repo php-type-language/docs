@@ -154,7 +154,6 @@ In addition to modern list declarations such as `list<int>` or
 
 ## Attributes
 
-<primary-label ref="experimental"/>
 <secondary-label ref="tl1.1"/>
 
 Each template argument allows you to define list of additional attributes. 

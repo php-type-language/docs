@@ -112,7 +112,6 @@ array{
 
 ## Attributes
 
-<primary-label ref="experimental"/>
 <secondary-label ref="tl1.1"/>
 
 Each shape field allows you to define list of additional attributes.

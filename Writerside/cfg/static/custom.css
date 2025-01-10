@@ -26,3 +26,7 @@ p + .code-collapse__wrapper,
 .starting-page-card {
     border-radius: 7px;
 }
+
+#mermaid .flowchart-link {
+    stroke: #59595c6b !important;
+}
