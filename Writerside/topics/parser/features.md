@@ -86,6 +86,26 @@ Square bracket list types not allowed in "Example[]"
 ```
 {collapsible="true" collapsed-title="TypeLang\Parser\Exception\ParseException"}
 
+## Offsets
+
+<secondary-label ref="tl1.4"/>
+
+To enable or disable type offsets, use the `offsets: bool` flag.
+
+```php
+$parser = new TypeLang\Parser\Parser(
+    offsets: false,
+);
+
+$result = $parser->parse('Example[Type]');
+```
+
+```
+Type offsets not allowed in "Example[Type]"
+```
+{collapsible="true" collapsed-title="TypeLang\Parser\Exception\ParseException"}
+
+
 ## Callables
 
 To enable or disable callables (delegates), use the `callables: bool` flag.
