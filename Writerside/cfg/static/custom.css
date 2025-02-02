@@ -1,5 +1,6 @@
 :root {
     --wh-color-accent-substrate-bg: #222330 !important;
+    --wh-color-border-hover: #4f57a7 !important;
 }
 
 .article > .prompt {
@@ -41,6 +42,9 @@ p + .code-collapse__wrapper,
 
 .starting-page-card {
     border-radius: 7px;
+}
+
+.starting-page-card:hover {
 }
 
 #mermaid .flowchart-link {
