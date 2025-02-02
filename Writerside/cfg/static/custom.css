@@ -1,6 +1,7 @@
 :root {
     --wh-color-accent-substrate-bg: #222330 !important;
     --wh-color-border-hover: #4f57a7 !important;
+    --wh-color-backlight-pale: none;
 }
 
 .article > .prompt {
@@ -27,8 +28,16 @@
     border: none;
 }
 
+.app__toc li {
+    margin: 6px 0;
+}
+
 .toc-item {
     border-radius: 5px;
+}
+
+.toc-item--highlighted {
+    // background: none;
 }
 
 .article__list + .code-block__wrapper,
