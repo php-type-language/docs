@@ -50,10 +50,11 @@ Just like in the PHP language.
 > ```typescript
 > foo($name)
 > ```
+> 
+> An error similar to the one below should occur
 > ```
-> Syntax error, unexpected ")"
+> ParseException: Syntax error, unexpected ")"
 > ```
-> {collapsible="true" collapsed-title="TypeLang\Parser\Exception\ParseException"}
 > {style="warning"}
 
 </tab>
@@ -87,10 +88,11 @@ the type and before the name.
 > ```typescript
 > foo(&T)
 > ```
+>
+> An error similar to the one below should occur
 > ```
-> Syntax error, unexpected "&"
+> ParseException: Syntax error, unexpected "&"
 > ```
-> {collapsible="true" collapsed-title="TypeLang\Parser\Exception\ParseException"}
 > {style="warning"}
 
 </tab>
@@ -134,10 +136,11 @@ parameter description.
 > ```typescript
 > foo(T= $name)
 > ```
+>
+> An error similar to the one below should occur
 > ```
-> Syntax error, unexpected "$name"
+> ParseException: Syntax error, unexpected "$name"
 > ```
-> {collapsible="true" collapsed-title="TypeLang\Parser\Exception\ParseException"}
 > {style="warning"}
 
 </tab>
@@ -194,20 +197,22 @@ _before the type_ or _before the parameter name._
 > ```typescript
 > foo(...T...)
 > ```
+>
+> An error similar to the one below should occur
 > ```
-> Syntax error, unexpected "..."
+> ParseException: Syntax error, unexpected "..."
 > ```
-> {collapsible="true" collapsed-title="TypeLang\Parser\Exception\ParseException"}
 > {style="warning"}
 
 > Variadic parameter cannot be optional.
 > ```typescript
 > foo(T ...$name=)
 > ```
+> 
+> An error similar to the one below should occur
 > ```
-> Cannot have variadic param with a default
+> ParseException: Cannot have variadic param with a default
 > ```
-> {collapsible="true" collapsed-title="TypeLang\Parser\Exception\ParseException"}
 > {style="warning"}
 
 </tab>
@@ -250,10 +255,11 @@ An attribute is additional metadata for a parameter.
 > ```typescript
 > Example\Functor(#[42] int $a): void
 > ```
+>
+> An error similar to the one below should occur
 > ```
-> Syntax error, unexpected "42"
+> ParseException: Syntax error, unexpected "42"
 > ```
-> {collapsible="true" collapsed-title="TypeLang\Parser\Exception\ParseException"}
 > {style="warning"}
 
 </tab>

@@ -40,10 +40,11 @@ The type of specific element, enclosed in square `[]` brackets.
 > ```typescript
 > Collection[[Some]]
 > ```
+>
+> An error similar to the one below should occur
 > ```
-> Syntax error, unexpected "["
+> ParseException: Syntax error, unexpected "["
 > ```
-> {collapsible="true" collapsed-title="TypeLang\Parser\Exception\ParseException"}
 > {style="warning"}
 
 > There must be a type description first, followed 
@@ -51,10 +52,11 @@ The type of specific element, enclosed in square `[]` brackets.
 > ```typescript
 > Collection['key']{key: string}
 > ```
+>
+> An error similar to the one below should occur
 > ```
-> Syntax error, unexpected "{"
+> ParseException: Syntax error, unexpected "{"
 > ```
-> {collapsible="true" collapsed-title="TypeLang\Parser\Exception\ParseException"}
 > {style="warning"}
 
 </tab>

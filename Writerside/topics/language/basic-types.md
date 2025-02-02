@@ -46,14 +46,6 @@ is **unacceptable**.
 > ```typescript
 > TrUe
 > ```
-> ```php
-> TypeLang\Parser\Node\Literal\BoolLiteralNode {
->     +offset: 0
->     +raw: "TrUe"
->     +value: true
-> }
-> ```
-> {collapsible="true" collapsed-title="TypeLang\Parser\Node\Literal\BoolLiteralNode"}
 > 
 > {style="warning"}
 
@@ -62,10 +54,11 @@ is **unacceptable**.
 > ```typescript
 > 42type
 > ```
+>
+> An error similar to the one below should occur
 > ```
-> Syntax error, unexpected "type"
+> ParseException: Syntax error, unexpected "type"
 > ```
-> {collapsible="true" collapsed-title="TypeLang\Parser\Exception\ParseException"}
 > {style="warning"}
 
 </tab>
@@ -102,20 +95,22 @@ The namespace delimiter can be used in conjunction with keywords such as `true`,
 > ```typescript
 > true\null
 > ```
+>
+> An error similar to the one below should occur
 > ```
-> Syntax error, unexpected "\"
+> ParseException: Syntax error, unexpected "\"
 > ```
-> {collapsible="true" collapsed-title="TypeLang\Parser\Exception\ParseException"}
 > {style="warning"}
 
 > <tooltip term="FQN">FQN</tooltip> type names cannot end in `\` delimiter.
 > ```typescript
 > example\name\
 > ```
+>
+> An error similar to the one below should occur
 > ```
-> Syntax error, unexpected end of input
+> ParseException: Syntax error, unexpected end of input
 > ```
-> {collapsible="true" collapsed-title="TypeLang\Parser\Exception\ParseException"}
 > {style="warning"}
 
 </tab>

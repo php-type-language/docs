@@ -169,10 +169,11 @@ numbers `1` and `0` and must match the regular expression `0b[0-1]+`.
 > ```typescript
 > 0b101042
 > ```
+>
+> An error similar to the one below should occur
 > ```
-> Syntax error, unexpected "42"
+> ParseException: Syntax error, unexpected "42"
 > ```
-> {collapsible="true" collapsed-title="TypeLang\Parser\Exception\ParseException"}
 > {style="warning"}
 
 </tab>
@@ -218,10 +219,11 @@ numbers between `0` and `7` and must match the regular expression
 > ```typescript
 > 0o4281
 > ```
+>
+> An error similar to the one below should occur
 > ```
-> Syntax error, unexpected "81"
+> ParseException: Syntax error, unexpected "81"
 > ```
-> {collapsible="true" collapsed-title="TypeLang\Parser\Exception\ParseException"}
 > {style="warning"}
 
 </tab>
@@ -303,20 +305,22 @@ trailing number may be omitted. Negative values are prefixed with a minus (`-`.
 > ```typescript
 > .
 > ```
+>
+> An error similar to the one below should occur
 > ```
-> Syntax error, unexpected "."
+> ParseException: Syntax error, unexpected "."
 > ```
-> {collapsible="true" collapsed-title="TypeLang\Parser\Exception\ParseException"}
 > {style="warning"}
 
 > Only number between `0` and `9` are allowed.
 > ```typescript
 > 0.0A
 > ```
+>
+> An error similar to the one below should occur
 > ```
-> Syntax error, unexpected "A"
+> ParseException: Syntax error, unexpected "A"
 > ```
-> {collapsible="true" collapsed-title="TypeLang\Parser\Exception\ParseException"}
 > {style="warning"}
 
 </tab>
@@ -355,10 +359,11 @@ writing out an inconveniently long string of digits.
 > ```typescript
 > 10e-F
 > ```
+>
+> An error similar to the one below should occur
 > ```
-> Syntax error, unexpected "e-F"
+> ParseException: Syntax error, unexpected "e-F"
 > ```
-> {collapsible="true" collapsed-title="TypeLang\Parser\Exception\ParseException"}
 > {style="warning"}
 
 </tab>

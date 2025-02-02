@@ -68,10 +68,11 @@ and is written as `?T.`
 > ```typescript
 > Example?
 > ```
+>
+> An error similar to the one below should occur
 > ```
-> Syntax error, unexpected "?"
+> ParseException: Syntax error, unexpected "?"
 > ```
-> {collapsible="true" collapsed-title="TypeLang\Parser\Exception\ParseException"}
 > {style="warning"}
 </tab>
 </tabs>

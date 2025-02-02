@@ -53,20 +53,22 @@ and the reference to the type:
 > ```typescript
 > example<>
 > ```
+>
+> An error similar to the one below should occur
 > ```
-> Syntax error, unexpected ">"
+> ParseException: Syntax error, unexpected ">"
 > ```
-> {collapsible="true" collapsed-title="TypeLang\Parser\Exception\ParseException"}
 > {style="warning"}
 
 > Leading comma is NOT allowed.
 > ```typescript
 > example<,T>
 > ```
+>
+> An error similar to the one below should occur
 > ```
-> Syntax error, unexpected ","
+> ParseException: Syntax error, unexpected ","
 > ```
-> {collapsible="true" collapsed-title="TypeLang\Parser\Exception\ParseException"}
 > {style="warning"}
 
 </tab>
@@ -98,20 +100,22 @@ used, for example, in static analyzers to indicate the
 > ```typescript
 > Collection<42 User>
 > ```
-> ```php
-> Syntax error, unexpected "User"
+> 
+> An error similar to the one below should occur
 > ```
-> {collapsible="true" collapsed-title="TypeLang\Parser\Exception\ParseException"}
+> ParseException: Syntax error, unexpected "User"
+> ```
 > {style="warning"}
 
 > Multiple hints are not allowed.
 > ```typescript
 >  HashMap<array-key, some covariant Request>
 > ```
+>
+> An error similar to the one below should occur
 > ```
-> Syntax error, unexpected "Request"
+> ParseException: Syntax error, unexpected "Request"
 > ```
-> {collapsible="true" collapsed-title="TypeLang\Parser\Exception\ParseException"}
 > {style="warning"}
 
 </tab>
@@ -143,10 +147,11 @@ In addition to modern list declarations such as `list<int>` or
 > ```typescript
 > User[int]
 > ```
+>
+> An error similar to the one below should occur
 > ```
-> Syntax error, unexpected "int"
+> ParseException: Syntax error, unexpected "int"
 > ```
-> {collapsible="true" collapsed-title="TypeLang\Parser\Exception\ParseException"}
 > {style="warning"}
 
 </tab>
@@ -185,10 +190,11 @@ An attribute is additional metadata for an argument.
 > ```typescript
 > Collection<#[42] User>
 > ```
+>
+> An error similar to the one below should occur
 > ```
-> Syntax error, unexpected "42"
+> ParseException: Syntax error, unexpected "42"
 > ```
-> {collapsible="true" collapsed-title="TypeLang\Parser\Exception\ParseException"}
 > {style="warning"}
 
 </tab>

@@ -55,7 +55,6 @@ You can see the following text as the output result:
 - TypeLang\Parser\Node\Name
 - TypeLang\Parser\Node\Identifier
 ```
-{collapsible="true" collapsed-title="Result"}
 
 ## Commands
 

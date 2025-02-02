@@ -42,14 +42,6 @@ Given the complete identity of the grammar of constants with
 > ```typescript
 > TrUe
 > ```
-> ```php
-> TypeLang\Parser\Node\Literal\BoolLiteralNode {
->    +offset: 0
->    +raw: "TrUe"
->    +value: true
-> }
-> ```
-> {collapsible="true" collapsed-title="TypeLang\Parser\Node\Literal\BoolLiteralNode"}
 > {style="warning"}
 
 </tab>
@@ -81,10 +73,11 @@ a double colon (`::`) character, and then the constant name.
 > ```typescript
 > ClassName::SOME\ANY
 > ```
+>
+> An error similar to the one below should occur
 > ```
-> Syntax error, unexpected "\"
+> ParseException: Syntax error, unexpected "\"
 > ```
-> {collapsible="true" collapsed-title="TypeLang\Parser\Exception\ParseException"}
 > {style="warning"}
 
 </tab>
@@ -124,20 +117,22 @@ Prefixes on class constants can be omitted, so type will mean any class constant
 > ```typescript
 > *
 > ```
+>
+> An error similar to the one below should occur
 > ```
-> Syntax error, unexpected "*"
+> ParseException: Syntax error, unexpected "*"
 > ```
-> {collapsible="true" collapsed-title="TypeLang\Parser\Exception\ParseException"}
 > {style="warning"}
 
 > The asterisk (`*`) must be the final character.
 > ```typescript
 > Path\To\ClassName::PREFIX_*_SUFFIX
 > ```
+>
+> An error similar to the one below should occur
 > ```
-> Syntax error, unexpected "_SUFFIX"
+> ParseException: Syntax error, unexpected "_SUFFIX"
 > ```
-> {collapsible="true" collapsed-title="TypeLang\Parser\Exception\ParseException"}
 > {style="warning"}
 
 </tab>

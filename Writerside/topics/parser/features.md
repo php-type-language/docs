@@ -28,9 +28,9 @@ $result = $parser->parse('42');
 ```
 
 ```
+TypeLang\Parser\Exception\ParseException:
 Literal values not allowed in "42"
 ```
-{collapsible="true" collapsed-title="TypeLang\Parser\Exception\ParseException"}
 
 ## Generics
 
@@ -46,9 +46,9 @@ $result = $parser->parse('Example<T>');
 ```
 
 ```
+TypeLang\Parser\Exception\ParseException:
 Template arguments not allowed in "Example<T>"
 ```
-{collapsible="true" collapsed-title="TypeLang\Parser\Exception\ParseException"}
 
 ## Hints
 
@@ -64,9 +64,9 @@ $result = $parser->parse('Example<out T, in U>');
 ```
 
 ```
+TypeLang\Parser\Exception\ParseException:
 Template argument hints not allowed in "Example<out T, in U>"
 ```
-{collapsible="true" collapsed-title="TypeLang\Parser\Exception\ParseException"}
 
 ## Lists
 
@@ -82,9 +82,9 @@ $result = $parser->parse('Example[]');
 ```
 
 ```
+TypeLang\Parser\Exception\ParseException:
 Square bracket list types not allowed in "Example[]"
 ```
-{collapsible="true" collapsed-title="TypeLang\Parser\Exception\ParseException"}
 
 ## Offsets
 
@@ -101,9 +101,9 @@ $result = $parser->parse('Example[Type]');
 ```
 
 ```
+TypeLang\Parser\Exception\ParseException:
 Type offsets not allowed in "Example[Type]"
 ```
-{collapsible="true" collapsed-title="TypeLang\Parser\Exception\ParseException"}
 
 
 ## Callables
@@ -119,9 +119,9 @@ $result = $parser->parse('fn()');
 ```
 
 ```
+TypeLang\Parser\Exception\ParseException:
 Callable types not allowed in "fn()"
 ```
-{collapsible="true" collapsed-title="TypeLang\Parser\Exception\ParseException"}
 
 ## Shapes
 
@@ -141,9 +141,9 @@ $result = $parser->parse(<<<'PHP'
 ```
 
 ```
+TypeLang\Parser\Exception\ParseException:
 Shape fields not allowed in "array{\n foo: T,\n ...\n}"
 ```
-{collapsible="true" collapsed-title="TypeLang\Parser\Exception\ParseException"}
 
 ## Unions
 
@@ -158,9 +158,9 @@ $result = $parser->parse('T|U');
 ```
 
 ```
+TypeLang\Parser\Exception\ParseException:
 Union types not allowed in "T|U"
 ```
-{collapsible="true" collapsed-title="TypeLang\Parser\Exception\ParseException"}
 
 ## Intersections
 
@@ -175,9 +175,9 @@ $result = $parser->parse('T&U');
 ```
 
 ```
+TypeLang\Parser\Exception\ParseException:
 Intersection types not allowed in "T&U"
 ```
-{collapsible="true" collapsed-title="TypeLang\Parser\Exception\ParseException"}
 
 ## Conditional
 
@@ -192,9 +192,9 @@ $result = $parser->parse('T is U ? 23 : 42');
 ```
 
 ```
+TypeLang\Parser\Exception\ParseException:
 Conditional expressions not allowed in "T is U ? 23 : 42"
 ```
-{collapsible="true" collapsed-title="TypeLang\Parser\Exception\ParseException"}
 
 ## Attributes
 
@@ -214,7 +214,7 @@ $result = $parser->parse(<<<'PHP'
 ```
 
 ```
-Shape field attributes not allowed in "array{\n #[name("new_name"),
-skip_when_empt…" (19+) on line 2 at column 5
+TypeLang\Parser\Exception\ParseException:
+Shape field attributes not allowed in "array{\n #[name("new_name"), 
+skip_when_empt…" (19+)
 ```
-{collapsible="true" collapsed-title="TypeLang\Parser\Exception\ParseException"}

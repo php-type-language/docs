@@ -87,7 +87,8 @@ of "`@return`" annotation).
 $description = substr($content, $parser->lastProcessedTokenOffset);
 ```
 
+The `$description` will contain:
+
 ```
 string("Returns something very interesting!")
 ```
-{collapsible="true" collapsed-title="Result"}
