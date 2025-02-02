@@ -18,6 +18,18 @@
     flex: 1;
 }
 
+.app__nav {
+    padding: 0 10px;
+}
+
+.app__sidebar {
+    border: none;
+}
+
+.toc-item {
+    border-radius: 5px;
+}
+
 .article__list + .code-block__wrapper,
 .article__list + .code-collapse__wrapper,
 p + .code-block__wrapper,
