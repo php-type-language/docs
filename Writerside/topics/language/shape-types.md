@@ -53,10 +53,11 @@ array{
 >     second
 > }
 > ```
+> 
+> An error similar to the one below should occur.
 > ```
-> Cannot mix numeric and named keys.
+> ParseException: Cannot mix numeric and named keys.
 > ```
-> {collapsible="true" collapsed-title="TypeLang\Parser\Exception\ParseException"}
 {style="warning"}
 
 > Support for other types of **keys**, such as const mask (`Class::CONST_*`)
@@ -67,11 +68,33 @@ array{
 >     ...
 > }
 > ```
+> 
+> An error similar to the one below should occur.
 > ```
-> Syntax error, unexpected ":"
+> ParseException: Syntax error, unexpected ":"
 > ```
-> {collapsible="true" collapsed-title="TypeLang\Parser\Exception\ParseException"}
 {style="warning"}
+
+### Optional Fields
+
+Specifying fields (keys) allows the optionality of the presence of a field.
+Such fields are indicated by a question mark (`?`) **before** the colon (`:`) 
+symbol: `key?: Type`.
+
+<compare first-title="Optional Key" second-title="Optional Value">
+
+```php
+array{
+    key?: Type,
+}
+```
+
+```php
+array{
+    key: Type?,
+}
+```
+</compare>
 
 ### Unsealed Shapes
 
@@ -168,10 +191,11 @@ An attribute is additional metadata for a field.
 >     test?: App\Domain\User,
 > } 
 > ```
+> 
+> An error similar to the one below should occur
 > ```
-> Syntax error, unexpected "42"
+> ParseException: Syntax error, unexpected "42"
 > ```
-> {collapsible="true" collapsed-title="TypeLang\Parser\Exception\ParseException"}
 > {style="warning"}
 
 </tab>
