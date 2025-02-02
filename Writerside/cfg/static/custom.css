@@ -2,6 +2,12 @@
     --wh-color-accent-substrate-bg: #222330 !important;
     --wh-color-border-hover: #4f57a7 !important;
     --wh-color-backlight-pale: none;
+    --wh-color-backlight-pale-dark: none;
+}
+
+.wh-header__product-logo {
+    width: 32px;
+    height: 32px;
 }
 
 .article > .prompt {
