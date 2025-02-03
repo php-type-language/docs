@@ -1,7 +1,5 @@
 # Basic Types
 
-<show-structure for="chapter" depth="2"/>
-
 The parser does not impose restrictions on type naming. The type name must begin
 with the characters `[a-zA-Z\x80-\xff]` (any letter) and `_` (underscore) and 
 can contain any characters within the limit `[a-zA-Z0-9\x80-\xff]` (any letter), 
@@ -16,6 +14,13 @@ is that a **dash** (`-`) symbol is allowed in the middle of the name.
 In addition, it is worth noting that the case-insensitive names `true`, `false`
 and `null` are registered PHP literals, so their use as a custom type name 
 is **unacceptable**.
+
+:::tabs
+== tab1
+casdasd
+== tab2
+asdasd
+:::
 
 <tabs>
 <tab title="Examples">

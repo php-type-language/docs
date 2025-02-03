@@ -1,0 +1,24 @@
+x-environment: &environment
+  env_file:
+    - path: ./.env
+      required: false
+
+services:
+  node:
+    <<: *environment
+    build:
+      context: .
+      dockerfile: docker/node/Dockerfile
+    container_name: typelang-node
+    restart: on-failure
+    ports:
+      - '${APP_PUBLIC_PORT:-3000}:3000'
+    volumes:
+      - ./:/home/typelang/typelang.dev:rw
+    networks:
+      - frontend
+
+networks:
+  frontend:
+    name: typelang_dev
+    driver: bridge
