@@ -36,7 +36,7 @@
     </icons>
 
     <footer>
-        <social href="https://github.com/php-type-language" type="blog">GitHub</social>
+        <social href="https://github.com/php-type-language" type="github">GitHub</social>
         <link href="https://packagist.org/packages/type-lang/parser">Packagist</link>
         <link href="https://github.com/php-type-language/parser/issues">Issue tracker</link>
         <link href="https://github.com/php-type-language/parser/pulls">Submit request</link>

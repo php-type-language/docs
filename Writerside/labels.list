@@ -7,6 +7,11 @@
         The implementation of the functionality available for installation
         of "type-lang/parser" component.
     </primary-label>
+    <primary-label href="https://packagist.org/packages/type-lang/mapper"
+                   id="mapper-component" name="type-lang/mapper" short-name="m" color="red">
+        The implementation of the functionality available for installation
+        of "type-lang/mapper" component.
+    </primary-label>
     <primary-label href="https://packagist.org/packages/type-lang/printer"
         id="printer-component" name="type-lang/printer" short-name="c" color="purple">
         The implementation of the functionality available for installation
