@@ -1,25 +1,67 @@
 # Configuration
 
-Configuration is a `TypeLang\Mapper\Runtime\Configuration` DTO passed to the
+Configuration is a `TypeLang\Mapper\Configuration` DTO passed to the
 `TypeLang\Mapper\Mapper` constructor, containing a list of general mapper
 settings.
 
 ```php
+use Psr\Log\LoggerInterface;
+use TypeLang\Mapper\Runtime\Tracing\TracerInterface;
+
 $mapper = new TypeLang\Mapper\Mapper(
-    config: new TypeLang\Mapper\Runtime\Configuration(
-        // true|false|null
-        isObjectsAsArrays: null,
-        // true|false|null
-        isStrictTypes: null,
-        // Psr\Log\LoggerInterface|null
+    config: new TypeLang\Mapper\Configuration(
+        // options = true|false|null
+        // default = null
+        objectAsArray: null,
+
+        // options = true|false|null
+        // default = null
+        strictTypes: null,
+
+        // options = true|false
+        // default = false
+        logTypeParse: false,
+
+        // options = true|false
+        // default = false
+        logTypeFind: false,
+
+        // options = true|false
+        // default = true
+        logTypeMatch: true,
+
+        // options = true|false
+        // default = true
+        logTypeCast: true,
+
+        // options = LoggerInterface|null
+        // default = null
         logger: null,
-        // TypeLang\Mapper\Runtime\Tracing\TracerInterface|null
+
+        // options = true|false
+        // default = false
+        traceTypeParse: false,
+
+        // options = true|false
+        // default = false
+        traceTypeFind: false,
+
+        // options = true|false
+        // default = true
+        traceTypeMatch: true,
+
+        // options = true|false
+        // default = true
+        traceTypeCast: true,
+
+        // options = TracerInterface|null
+        // default = null
         tracer: null,
     ),
 );
 ```
 
-## Objects As Arrays
+## Object As Array
 
 This option is responsible for converting user defined objects 
 PHP into associative arrays.
@@ -31,14 +73,17 @@ For example, in the <a href="standard-platform.md">standard platform</a>.
 
 <warning>
 If the configuration value is not set, the option will
-be <b>enabled</b> (<code>isObjectsAsArrays: true</code>).
+be <b>enabled</b>:
+<list>
+<li><code>objectAsArray: true</code></li>
+</list>
 </warning>
 
 <tabs>
-<tab title="isObjectsAsArrays: null">
+<tab title="default (null)">
 <code-block lang="php">
 <![CDATA[
-$config = new Configuration(isObjectsAsArrays: null);
+$config = new Configuration(objectAsArray: null);
 
 $result = new Mapper(config: $config)
     ->normalize((object)['key' => 'value']);
@@ -49,10 +94,10 @@ $result = new Mapper(config: $config)
 ]]>
 </code-block>
 </tab>
-<tab title="isObjectsAsArrays: true">
+<tab title="enabled (true)">
 <code-block lang="php">
 <![CDATA[
-$config = new Configuration(isObjectsAsArrays: true);
+$config = new Configuration(objectAsArray: true);
 
 $result = new Mapper(config: $config)
     ->normalize((object)['key' => 'value']);
@@ -63,10 +108,10 @@ $result = new Mapper(config: $config)
 ]]>
 </code-block>
 </tab>
-<tab title="isObjectsAsArrays: false">
+<tab title="disabled (false)">
 <code-block lang="php">
 <![CDATA[
-$config = new Configuration(isObjectsAsArrays: false);
+$config = new Configuration(objectAsArray: false);
 
 $result = new Mapper(config: $config)
     ->normalize((object)['key' => 'value']);
@@ -82,29 +127,36 @@ $result = new Mapper(config: $config)
 ## Strict Types
 
 This option is responsible for disabling the strict comparison 
-mode and attempts to adapt the values.
+mode and attempts to coerce (cast) the values.
+
+<tip>
+When this option is enabled, the corresponding cast rules 
+defined in the <a href="type-coercers.md">type coercers</a> are enabled.
+</tip>
 
 <warning>
 If the configuration value is not set, the option will
 be will depend on which direction is used:
 <list>
 <li>
-    <b>Normalization</b>: 
-    <code>isStrictTypes: false</code>
+    <b>Normalization</b>:
+
+<code>strictTypes: false</code>
 </li>
 <li>
-    <b>Denormalization</b>: 
-    <code>isStrictTypes: true</code>
+    <b>Denormalization</b>:
+
+<code>strictTypes: true</code>
 </li>
 </list>
 </warning>
 
 
 <tabs>
-<tab title="isStrictTypes: null">
+<tab title="default (null)">
 <code-block lang="php">
 <![CDATA[
-$config = new Configuration(isStrictTypes: null);
+$config = new Configuration(strictTypes: null);
 
 $result = new Mapper(config: $config)
     ->normalize(['k' => 42], 'list<string>');
@@ -122,10 +174,10 @@ $result = new Mapper(config: $config)
 ]]>
 </code-block>
 </tab>
-<tab title="isStrictTypes: true">
+<tab title="enabled (true)">
 <code-block lang="php">
 <![CDATA[
-$config = new Configuration(isStrictTypes: true);
+$config = new Configuration(strictTypes: true);
 
 $result = new Mapper(config: $config)
     ->normalize(['k' => 42], 'list<string>');
@@ -143,10 +195,10 @@ $result = new Mapper(config: $config)
 ]]>
 </code-block>
 </tab>
-<tab title="isStrictTypes: false">
+<tab title="disabled (false)">
 <code-block lang="php">
 <![CDATA[
-$config = new Configuration(isStrictTypes: false);
+$config = new Configuration(strictTypes: false);
 
 $result = new Mapper(config: $config)
     ->normalize(['k' => 42], 'list<string>');
