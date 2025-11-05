@@ -119,7 +119,7 @@ Cast passed value into a PHP int type.
         The float value must satisfy the following rules:
         <list>
             <li>
-                <p>Must not be more than <code>PHP_INT_MAX</code>
+                Must not be more than <code>PHP_INT_MAX</code>
             </li>
             <li>
                 Must not be less than <code>PHP_INT_MIN</code>
