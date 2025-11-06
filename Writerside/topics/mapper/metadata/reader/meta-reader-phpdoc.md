@@ -9,25 +9,6 @@ Reads metadata using PHPDoc annotations
         Class:
         <code>TypeLang\Mapper\Mapping\Reader\PhpDocReader</code>
     </p>
-    Arguments:
-    <list>
-        <li>
-            (optional) <code>$paramTagName</code>:
-            <code>non-empty-string</code>
-        </li>
-        <li>
-            (optional) <code>$varTagName</code>:
-            <code>non-empty-string</code>
-        </li>
-        <li>
-            (optional) <code>$returnTagName</code>:
-            <code>non-empty-string</code>
-        </li>
-        <li>
-            (optional) <code>$delegate</code>:
-            <code>TypeLang\Mapper\Mapping\Reader\ReaderInterface</code>
-        </li>
-    </list>
 </tldr>
 
 This reader is used to read PHPDoc annotations to construct metadata.
@@ -39,23 +20,47 @@ ability to read docblocks:
 composer require type-lang/phpdoc type-lang/phpdoc-standard-tags
 ```
 
-By default, it supports the following annotations, which directly or 
-indirectly describe types for properties:
-
-- `@param` - The annotation name can be overridden by specifying the
-  `$paramTagName` constructor argument explicitly
-- `@var` - The annotation name can be overridden by specifying the 
-  `$varTagName` constructor argument explicitly
-- `@return` - The annotation name can be overridden by specifying the
-  `$returnTagName` constructor argument explicitly
-
 To create this reader, it is enough to instantiate `PhpDocReader` class:
 
 ```php
+use TypeLang\Mapper\Mapper;
+use TypeLang\Mapper\Platform\StandardPlatform;
 use TypeLang\Mapper\Mapping\Reader\PhpDocReader;
 
 $reader = new PhpDocReader();
+
+$mapper = new Mapper(
+    [[[platform: new StandardPlatform(|standard-platform.md]]]
+        meta: $reader,
+        // ...
+    ),
+);
 ```
+
+After this, you will have access to the description of the types 
+in the PHPDoc tags:
+
+```php
+final class UserInfo
+{
+    public function __construct(
+        /**
+         * @var non-empty-string
+         */
+        public mixed $name,
+    ) {}
+}
+```
+
+By default, this reader supports the following annotations, which directly 
+or indirectly describe types for properties:
+
+- `@param` - The annotation name can be overridden by specifying the
+  `$paramTagName` constructor argument explicitly
+- `@var` - The annotation name can be overridden by specifying the
+  `$varTagName` constructor argument explicitly
+- `@return` - The annotation name can be overridden by specifying the
+  `$returnTagName` constructor argument explicitly
 
 <tip>
 You can find more information about <b>metadata configuration</b> rules
@@ -94,4 +99,23 @@ $reader = new PhpDocReader(
         delegate: ...
     ),
 );
+```
+
+In this case you can use override for types, for example:
+
+```php
+final class UserInfo
+{
+    public function __construct(
+        /**
+         * Psalm, PHPStan, PHPStorm and others will read the type
+         * defined in "var" annotation. However, for the mapper
+         * we override it to another using "map-var" tag
+         *
+         * @var non-empty-string
+         * @map-var string 
+         */
+        public string $name,
+    ) {}
+}
 ```

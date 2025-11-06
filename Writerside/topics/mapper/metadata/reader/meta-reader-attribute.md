@@ -9,16 +9,41 @@ Reads metadata using PHP attributes
         Class:
         <code>TypeLang\Mapper\Mapping\Reader\AttributeReader</code>
     </p>
-    Arguments:
-    <list>
-        <li>
-            (optional) <code>$delegate</code>:
-            <code>TypeLang\Mapper\Mapping\Reader\ReaderInterface</code>
-        </li>
-    </list>
 </tldr>
 
 This reader is used to read PHP attributes to construct metadata.
+
+To create it, it is enough to instantiate `AttributeReader` class:
+
+```php
+use TypeLang\Mapper\Mapper;
+use TypeLang\Mapper\Platform\StandardPlatform;
+use TypeLang\Mapper\Mapping\Reader\AttributeReader;
+
+$reader = new AttributeReader();
+
+$mapper = new Mapper(
+    [[[platform: new StandardPlatform(|standard-platform.md]]]
+        meta: $reader,
+        // ...
+    ),
+);
+```
+
+After this, you will have access to the description of the types
+in the PHP Attributes:
+
+```php
+use TypeLang\Mapper\Mapping\MapType;
+
+final class UserInfo
+{
+    public function __construct(
+        #[MapType('non-empty-string')]
+        public mixed $name,
+    ) {}
+}
+```
 
 By default, it supports the following attributes:
 - `#[DiscriminatorMap]` - Allows to specify [a discriminator map](meta-configuration.md#discriminator-map) 
@@ -39,14 +64,6 @@ By default, it supports the following attributes:
   that will exclude a property during normalization
 - `#[SkipWhenNull]` - Allows to specify a ["when null" rule](meta-configuration.md#when-null)
   that will exclude a property during normalization
-
-To create this reader, it is enough to instantiate `AttributeReader` class:
-
-```php
-use TypeLang\Mapper\Mapping\Reader\AttributeReader;
-
-$reader = new AttributeReader();
-```
 
 <tip>
 You can find more information about <b>metadata configuration</b> rules

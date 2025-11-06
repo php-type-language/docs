@@ -9,9 +9,6 @@ Checks for a boolean value and returns a boolean value.
         Class:
         <code>TypeLang\Mapper\Type\BoolType</code>
     </p>
-    <p>
-        Arguments: <kbd>~</kbd>
-    </p>
 </tldr>
 
 Checks for a boolean value and returns a boolean value.

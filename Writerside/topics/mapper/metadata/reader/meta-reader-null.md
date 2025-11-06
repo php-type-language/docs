@@ -9,10 +9,6 @@ Reads only the minimum required data (class name) from the class definition.
         Class:
         <code>TypeLang\Mapper\Mapping\Reader\NullReader</code>
     </p>
-    <p>
-        Arguments:
-        <code>~</code>
-    </p>
 </tldr>
 
 This reader returns an empty metadata object containing only 
@@ -20,8 +16,8 @@ the required class name.
 
 ```php
 use TypeLang\Mapper\Mapper;
-use TypeLang\Mapper\Mapping\Reader\NullReader;
 use TypeLang\Mapper\Platform\StandardPlatform;
+use TypeLang\Mapper\Mapping\Reader\NullReader;
 
 $mapper = new Mapper(
     [[[platform: new StandardPlatform(|standard-platform.md]]]

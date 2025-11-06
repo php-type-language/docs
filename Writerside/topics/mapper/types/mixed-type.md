@@ -10,9 +10,6 @@ rules according to the inferred type.
         Class:
         <code>TypeLang\Mapper\Type\MixedType</code>
     </p>
-    <p>
-        Arguments: <kbd>~</kbd>
-    </p>
 </tldr>
 
 Infers the type of the passed value and applies the appropriate conversion

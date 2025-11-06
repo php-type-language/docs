@@ -9,17 +9,6 @@ Reads metadata using passed PHP array
         Class:
         <code>TypeLang\Mapper\Mapping\Reader\ArrayReader</code>
     </p>
-    Arguments:
-    <list>
-        <li>
-            (optional) <code>$config</code>: 
-            <code>array&lt;array-key, mixed></code>
-        </li>
-        <li>
-            (optional) <code>$delegate</code>: 
-            <code>TypeLang\Mapper\Mapping\Reader\ReaderInterface</code>
-        </li>
-    </list>
 </tldr>
 
 The PHP Array reader allows you to specify metadata declaratively using simple 
@@ -39,6 +28,8 @@ create a new `ArrayReader` instance, passing the settings in the `$config`
 property.
 
 ```php
+use TypeLang\Mapper\Mapper;
+use TypeLang\Mapper\Platform\StandardPlatform;
 use TypeLang\Mapper\Mapping\Reader\ArrayReader;
 
 $reader = new ArrayReader(config: [
@@ -50,6 +41,13 @@ $reader = new ArrayReader(config: [
         ],
     ],
 ]);
+
+$mapper = new Mapper(
+    [[[platform: new StandardPlatform(|standard-platform.md]]]
+        meta: $reader,
+        // ...
+    ),
+);
 ```
 
 <tip>

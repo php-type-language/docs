@@ -9,13 +9,6 @@ Reads metadata from the PHP class definition.
         Class:
         <code>TypeLang\Mapper\Mapping\Reader\ReflectionReader</code>
     </p>
-    Arguments:
-    <list>
-        <li>
-            (optional) <code>$delegate</code>: 
-            <code>TypeLang\Mapper\Mapping\Reader\ReaderInterface</code>
-        </li>
-    </list>
 </tldr>
 
 This reader reads **native** class information, specifically:

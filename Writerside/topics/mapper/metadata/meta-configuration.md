@@ -845,8 +845,11 @@ specific runtime values:
 - `{{line}}` - The line in the PHP code where the error occurred
 - `{{code}}` - An error code
 
-Let's specify an error message for property `string $name`, like 
-`The {{field}} is invalid`.
+Let's specify an error message for property `string $name`, like:
+
+```text
+The {{field}} is invalid
+```
 
 Thus, if you pass an empty array (`[]`) to `"name"` property, the following 
 error should occur:
