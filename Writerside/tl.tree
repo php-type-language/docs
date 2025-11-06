@@ -62,8 +62,41 @@
             <toc-element topic="custom-type-coercer.md" />
         </toc-element>
         <toc-element topic="type-metadata.md">
-            <toc-element topic="meta-reader.md" />
-            <toc-element topic="meta-provider.md" />
+            <toc-element topic="meta-configuration.md"
+                toc-title="Writing Metadata"/>
+            <toc-element topic="meta-reader.md">
+                <toc-element topic="meta-reader-reflection.md"
+                    toc-title="Reflection" />
+                <toc-element topic="meta-reader-attribute.md"
+                    toc-title="Attributes" />
+                <toc-element topic="meta-reader-phpdoc.md"
+                    toc-title="PHPDoc" />
+                <toc-element topic="meta-reader-array.md"
+                    toc-title="PHP Array" />
+                <toc-element topic="meta-reader-php-config.md"
+                    toc-title="PHP Config Files" />
+                <toc-element topic="meta-reader-json-config.md"
+                    toc-title="JSON Config Files" />
+                <toc-element topic="meta-reader-neon-config.md"
+                    toc-title="NEON Config Files" />
+                <toc-element topic="meta-reader-yaml-config.md"
+                    toc-title="YAML Config Files"/>
+                <toc-element topic="meta-reader-null.md"
+                    toc-title="Null" />
+            </toc-element>
+            <toc-element topic="meta-provider.md">
+                <toc-element topic="meta-provider-in-memory.md"
+                     toc-title="InMemory" />
+                <toc-element topic="meta-provider-psr6-cache.md"
+                     toc-title="PSR-6 Cache" />
+                <toc-element topic="meta-provider-psr16-cache.md"
+                     toc-title="PSR-16 Cache" />
+                <toc-element topic="meta-provider-null.md"
+                     toc-title="Null" />
+            </toc-element>
+            <toc-element topic="meta-expressions.md" />
+            <toc-element topic="meta-clock.md" />
+            <toc-element topic="meta-references.md" />
         </toc-element>
         <toc-element topic="type-extractors.md">
             <toc-element topic="native-type-extractor.md" />
@@ -77,6 +110,9 @@
                          toc-title="Feature toggling"/>
             <toc-element topic="tolerant-mode.md"
                          toc-title="Tolerant mode"/>
+            <toc-element toc-title="AST">
+                <toc-element topic="ast-type-statements.md" />
+            </toc-element>
             <toc-element topic="visitors.md">
                 <toc-element topic="class-name-matcher-visitor.md"/>
                 <toc-element topic="stream-dumper-visitor.md"/>

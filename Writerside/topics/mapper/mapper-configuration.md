@@ -67,6 +67,10 @@ This option is responsible for converting user defined objects
 PHP into associative arrays.
 
 <note>
+This configuration option is enabled by default
+</note>
+
+<note>
 This option is only applicable if the output can be an array or an object.
 For example, in the <a href="standard-platform.md">standard platform</a>.
 </note>
@@ -129,28 +133,14 @@ $result = new Mapper(config: $config)
 This option is responsible for disabling the strict comparison 
 mode and attempts to coerce (cast) the values.
 
+<note>
+This configuration option is disabled by default
+</note>
+
 <tip>
 When this option is enabled, the corresponding cast rules 
 defined in the <a href="type-coercers.md">type coercers</a> are enabled.
 </tip>
-
-<warning>
-If the configuration value is not set, the option will
-be will depend on which direction is used:
-<list>
-<li>
-    <b>Normalization</b>:
-
-<code>strictTypes: false</code>
-</li>
-<li>
-    <b>Denormalization</b>:
-
-<code>strictTypes: true</code>
-</li>
-</list>
-</warning>
-
 
 <tabs>
 <tab title="default (null)">
@@ -168,9 +158,9 @@ $result = new Mapper(config: $config)
 $result = new Mapper(config: $config)
     ->denormalize(['k' => 42], 'list<string>');
 
-// TypeLang\Mapper\Exception\Mapping\InvalidValueException: 
-// Passed value {"k": 42} is invalid
-//
+// array:1 [
+//   0 => "42"
+// ]
 ]]>
 </code-block>
 </tab>
