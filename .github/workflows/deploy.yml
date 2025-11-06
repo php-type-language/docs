@@ -60,12 +60,12 @@ jobs:
   #       uses: JetBrains/writerside-checker-action@v1
   #       with:
   #         instance: ${{ env.INSTANCE }}
-#
+
   deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    needs: test
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Download Artifact
