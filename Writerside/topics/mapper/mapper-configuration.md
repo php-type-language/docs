@@ -67,10 +67,6 @@ This option is responsible for converting user defined objects
 PHP into associative arrays.
 
 <note>
-This configuration option is enabled by default
-</note>
-
-<note>
 This option is only applicable if the output can be an array or an object.
 For example, in the <a href="standard-platform.md">standard platform</a>.
 </note>
@@ -84,20 +80,6 @@ be <b>enabled</b>:
 </warning>
 
 <tabs>
-<tab title="default (null)">
-<code-block lang="php">
-<![CDATA[
-$config = new Configuration(objectAsArray: null);
-
-$result = new Mapper(config: $config)
-    ->normalize((object)['key' => 'value']);
-
-// array:1 [
-//   "key" => "value"
-// ]
-]]>
-</code-block>
-</tab>
 <tab title="enabled (true)">
 <code-block lang="php">
 <![CDATA[
@@ -133,37 +115,21 @@ $result = new Mapper(config: $config)
 This option is responsible for disabling the strict comparison 
 mode and attempts to coerce (cast) the values.
 
-<note>
-This configuration option is disabled by default
-</note>
-
 <tip>
 When this option is enabled, the corresponding cast rules 
 defined in the <a href="type-coercers.md">type coercers</a> are enabled.
 </tip>
 
+<warning>
+If the configuration value is not set, the option will
+be <b>disabled</b>:
+<list>
+<li><code>strictTypes: false</code></li>
+</list>
+</warning>
+
+
 <tabs>
-<tab title="default (null)">
-<code-block lang="php">
-<![CDATA[
-$config = new Configuration(strictTypes: null);
-
-$result = new Mapper(config: $config)
-    ->normalize(['k' => 42], 'list<string>');
-
-// array:1 [
-//   0 => "42"
-// ]
-
-$result = new Mapper(config: $config)
-    ->denormalize(['k' => 42], 'list<string>');
-
-// array:1 [
-//   0 => "42"
-// ]
-]]>
-</code-block>
-</tab>
 <tab title="enabled (true)">
 <code-block lang="php">
 <![CDATA[
