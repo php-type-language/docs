@@ -9,7 +9,7 @@ Such a mode will be convenient to use, for example, for analyzing phpdoc
 docblocks, separating types from their descriptions.
 
 ```php
-$parser = new TypeLang\Parser\Parser(
+$parser = new TypeLang\Parser\TypeParser(
     // enable "tolerant" mode
     tolerant: true,
 );
@@ -19,7 +19,7 @@ As an example, let's try to parse the contents of the "`@return`" docblock.
 Similar actions can be implemented for other annotations.
 
 ```php
-$parser = new TypeLang\Parser\Parser(
+$parser = new TypeLang\Parser\TypeParser(
     tolerant: true,
 );
 
@@ -36,29 +36,29 @@ var_dump($parser->parse($content));
 ```
 
 ```php
-TypeLang\Parser\Node\Stmt\NamedTypeNode {
+TypeLang\Type\NamedTypeNode {
   +offset: 0
-  +name: TypeLang\Parser\Node\Name {
+  +name: TypeLang\Type\Name {
     +offset: 0
     -parts: array:1 [
-      0 => TypeLang\Parser\Node\Identifier {
+      0 => TypeLang\Type\Identifier {
         +offset: 0
         +value: "Example"
       }
     ]
   }
-  +arguments: TypeLang\Parser\Node\Stmt\Template\ArgumentsListNode {
+  +arguments: TypeLang\Type\Template\ArgumentsListNode {
     +offset: 7
     +items: array:1 [
-      0 => TypeLang\Parser\Node\Stmt\Template\ArgumentNode {
+      0 => TypeLang\Type\Template\ArgumentNode {
         +offset: 8
         +hint: null
-        +value: TypeLang\Parser\Node\Stmt\NamedTypeNode {
+        +value: TypeLang\Type\NamedTypeNode {
           +offset: 8
-          +name: TypeLang\Parser\Node\Name {
+          +name: TypeLang\Type\Name {
             +offset: 8
             -parts: array:1 [
-              0 => TypeLang\Parser\Node\Identifier {
+              0 => TypeLang\Type\Identifier {
                 +offset: 8
                 +value: "T"
               }

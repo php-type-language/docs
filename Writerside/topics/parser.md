@@ -26,18 +26,18 @@ To create a parser instance, the `TypeLang\Parser\Parser` class is used.
 To run code analysis, you should use the `parse()` method.
 
 ```php
-$parser = new TypeLang\Parser\Parser();
+$parser = new TypeLang\Parser\TypeParser();
 
 $result = $parser->parse('example');
 ```
 
 ```php
-TypeLang\Parser\Node\Stmt\NamedTypeNode {
+TypeLang\Type\NamedTypeNode {
   +offset: 0
-  +name: TypeLang\Parser\Node\Name {
+  +name: TypeLang\Type\Name {
     +offset: 0
     -parts: array:1 [
-      0 => TypeLang\Parser\Node\Identifier {
+      0 => TypeLang\Type\Identifier {
         +offset: 0
         +value: "example"
       }
@@ -56,7 +56,7 @@ partial support of the functionality. Such a feature allows you to conveniently
 implement more strict functionality.
 
 ```php
-$parser = new TypeLang\Parser\Parser(
+$parser = new TypeLang\Parser\TypeParser(
     literals: false,
 );
 
