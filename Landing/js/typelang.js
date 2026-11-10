@@ -505,8 +505,6 @@
       const open = this.expect('T_BRACE_OPEN');
       const fields = [];
       let unsealed = null;
-      let explicit = null;
-      const seen = new Map();
       this.accept('T_COMMA'); // ShapeFields : `{` ShapeBody? `,`? `}`
 
       while (!this.is('T_BRACE_CLOSE')) {
@@ -523,16 +521,8 @@
           break;
         }
         const field = this.parseShapeField();
-        const isExplicit = field.kind === 'field';
-        if (explicit !== null && explicit !== isExplicit) {
-          throw this.semantic('Cannot mix explicit and implicit shape keys', field, 'ShapeKeysMixingException');
-        }
-        explicit = isExplicit;
-        if (isExplicit) {
-          const key = field.keyText;
-          if (seen.has(key)) throw this.semantic(`Duplicate key ${quote(field.keyName)}`, field, 'ShapeFieldDuplicationException');
-          seen.set(key, true);
-        }
+        // Fields are read as written: explicit and implicit ones may stand
+        // together, and a key may repeat — "array{int, a: string, a: bool}"
         fields.push(field);
         if (!this.accept('T_COMMA')) {
           if (!this.is('T_BRACE_CLOSE')) throw this.unexpected('a shape must be closed with a brace "}"');
@@ -660,7 +650,9 @@
       let ret = null, end = close.end;
       if (this.accept('T_COLON')) {
         if (!this.canStartType()) throw this.unexpected('a callable must carry a return type after the colon ":", for example "callable(): T"');
-        ret = this.parseType();
+        // CallableReturnType : `:` UnaryType — a union, an intersection or a
+        // condition behind it belongs to the type the callable is a part of
+        ret = this.parseNullable();
         end = ret.end;
       }
       const children = [...(tparams ? tparams.children : []), ...params, ...(ret ? [ret] : [])];
@@ -710,6 +702,7 @@
       const s = go(child, 0);
       const needs = (child.kind === 'union' || child.kind === 'intersection' || child.kind === 'cond')
         && (parentKind === 'nullable' || parentKind === 'list' || parentKind === 'offset' || parentKind === 'intersection'
+          || parentKind === 'callable'
           || (parentKind === 'union' && child.kind === 'cond'));
       return needs ? `(${s})` : s;
     };
@@ -748,7 +741,7 @@
           let s = n.name;
           if (n.tparams) s += `<${n.tparams.children.map(p => go(p, depth)).join(', ')}>`;
           s += `(${n.params.map(p => go(p, depth)).join(', ')})`;
-          if (n.returns) s += `: ${go(n.returns, depth)}`;
+          if (n.returns) s += `: ${wrap(n.returns, 'callable')}`;
           return s;
         }
         case 'tparam': {

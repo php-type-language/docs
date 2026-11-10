@@ -6,7 +6,7 @@ introduced in the previous section.
 
 ## Shape Types
 
-ShapeFields : `{` ShapeBody? `,`? `}`
+ShapeFields : `{` (ShapeBody `,`?)? `}`
 
 ShapeBody :
 
@@ -40,6 +40,19 @@ An empty shape body describes a container with no elements:
 
 ```typescript
 array{}
+```
+
+A trailing comma MAY follow the last field or the unsealed marker.
+
+**Counter-example.** An empty shape body carries nothing a trailing comma
+could follow.
+
+```typescript counter-example
+array{,}
+```
+
+```
+ParseException: Syntax error, unexpected ","
 ```
 
 ### Shape Fields
@@ -91,27 +104,12 @@ array{ First, Second }
 array{ Path\To\ClassName::CONSTANT_NAME: First, JSON_*: Second }
 ```
 
-**Mixed keys are not permitted.** A single shape MUST use either explicit
-keys throughout or implicit keys throughout.
+**Mixed keys are permitted.** A single shape MAY contain both explicit and
+implicit fields, in any order. What keys the implicit fields denote is not a
+matter of the syntax and is left to whoever interprets the shape.
 
-```typescript counter-example
-array{ named: First, Second }
-```
-
-```
-ParseException: Cannot mix explicit and implicit shape keys
-```
-
-**Duplicate explicit keys are not permitted.** No two explicit fields of the
-same shape may denote the same key, regardless of which of the five key forms
-each uses.
-
-```typescript counter-example
-array{ 1: int, 2: int, 1: string }
-```
-
-```
-ParseException: Duplicate key "1"
+```typescript
+array{ First, named: Second }
 ```
 
 ### Optional Fields
@@ -162,7 +160,7 @@ CallableType : Name TemplateParameters? `(` CallableParameters? `)` CallableRetu
 
 CallableParameters : CallableParameter (`,` CallableParameter)\* `,`?
 
-CallableReturnType : `:` Type
+CallableReturnType : `:` UnaryType
 
 A _callable type_ describes a function-like value. It is a
 [name](#sec-Names-and-Namespaces) — commonly `callable` or `Closure`, but any
@@ -181,6 +179,16 @@ callable(): void
 
 ```typescript
 Closure(int<0, max>, callable(?C): mixed): void
+```
+
+The return type is a {UnaryType}. A union, an intersection or a condition
+written behind it is not a part of the return type, but of the type the
+callable itself is an operand of, so `callable(): A|B` denotes a union of
+`callable(): A` and `B`. A return type of that kind MUST be grouped with
+parentheses.
+
+```typescript
+callable(): (A|B)
 ```
 
 ### Template Parameters

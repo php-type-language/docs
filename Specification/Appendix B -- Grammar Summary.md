@@ -97,9 +97,9 @@ ThisVariable :: `$this` [lookahead != VariableContinue]
 
 **Literal Tokens**
 
-BoolLiteral :: one of `true` `false` [lookahead != NameContinue]
+BoolLiteral :: one of `true` `false` [lookahead != NameContinue] [lookahead != `\`]
 
-NullLiteral :: `null` [lookahead != NameContinue]
+NullLiteral :: `null` [lookahead != NameContinue] [lookahead != `\`]
 
 NegativeSign :: `-`
 
@@ -324,7 +324,7 @@ LeadingMask : Wildcard Identifier MaskTail?
 
 **Shape Types**
 
-ShapeFields : `{` ShapeBody? `,`? `}`
+ShapeFields : `{` (ShapeBody `,`?)? `}`
 
 ShapeBody :
 
@@ -374,6 +374,6 @@ TemplateDefault : `=` Type
 
 CallableParameters : CallableParameter (`,` CallableParameter)\* `,`?
 
-CallableReturnType : `:` Type
+CallableReturnType : `:` UnaryType
 
 CallableParameter : Type `&`? `...`? Variable? `=`?
