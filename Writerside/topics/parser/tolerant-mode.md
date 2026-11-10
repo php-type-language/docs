@@ -73,8 +73,7 @@ var_dump($remainder); // string(13) "and more text"
 > ```php
 > $parser->parse('int and more text');
 > // TypeLang\Parser\Exception\UnexpectedTokenException:
-> //   Syntax error, unexpected "and " (T_NAME_WITH_SPACE),
-> //   T_NS_DELIMITER expected in "int and more text"
+> //   Unexpected "and"
 > ```
 > {style="note"}
 
@@ -104,9 +103,9 @@ var_dump($result->type);
 TypeLang\Type\NamedTypeNode {
   +offset: 0
   +name: TypeLang\Type\Name { ... "Example" ... }
-  +arguments: TypeLang\Type\Template\TemplateArgumentListNode {
+  +arguments: TypeLang\Type\Template\TemplateListNode {
     +items: array:1 [
-      0 => TypeLang\Type\Template\TemplateArgumentNode {
+      0 => TypeLang\Type\Template\TypedTemplateArgumentNode {
         +value: TypeLang\Type\NamedTypeNode { ... "T" ... }
         ...
       }
@@ -187,9 +186,28 @@ var_dump($parser->validate('array{ field: result } and more')::class);
 var_dump($parser->validate('array{')::class);
 // TypeLang\Parser\Validation\PartialCheckResult
 
+var_dump($parser->validate(')')::class);
+// TypeLang\Parser\Validation\FailureCheckResult
+
 // A check for a source that is a type whole:
 $isType = $parser->validate($source) instanceof SuccessfulCheckResult;
 ```
+
+The `$position` is a `Phplrt\Position\PositionInterface`, its `line` and
+`column` properties are 1-based:
+
+```php
+$result = $parser->validate('int string');
+
+var_dump($result->message);          // string(19) "Unexpected "string""
+var_dump($result->offset);           // int(4)
+var_dump($result->position->line);   // int(1)
+var_dump($result->position->column); // int(5)
+```
+
+> `validate()` ignores the [feature flags](features.md): it checks the grammar
+> only. Disabled syntax is reported by `parse()` and `partial()`.
+> {style="note"}
 
 > A `PartialCheckResult` **is** a `FailureCheckResult`, and a
 > `PartialParsedResult` **is** a `SuccessfulParsedResult`. Each hierarchy is
