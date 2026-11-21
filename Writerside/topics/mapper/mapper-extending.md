@@ -200,6 +200,12 @@ final class LoggingDecorator implements TypeDecoratorInterface
 $mapper = new Mapper(decorators: [new LoggingDecorator()]);
 ```
 
+<warning>
+<code>int-mask&lt;...&gt;</code> and <code>int-mask-of&lt;...&gt;</code> fail to build
+when the types of their members are wrapped: return the types of integer
+literals, constants and their unions as is.
+</warning>
+
 ## Class Hooks
 
 A hook runs before or after the conversion of objects of the classes it
@@ -283,6 +289,11 @@ $mapper = new Mapper(instantiators: [new EntityStrategy()]);
 All mapped properties of the created object are written, missing fields get
 their default values.
 </warning>
+
+<note>
+The choice of a branch of a union does not call the instantiator: in
+`Entity|int` the data of an unknown entity selects `Entity` and fails.
+</note>
 
 ## Property Access
 
