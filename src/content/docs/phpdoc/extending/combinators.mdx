@@ -18,7 +18,7 @@ interface CombinatorInterface
 ```
 
 A combinator reads its part from the `Cursor` and returns the value, or
-throws a `NoMatchException`: the grammar then rolls the cursor back and
+calls `$cursor->fail()`: the grammar then rolls the cursor back and
 tries the next alternative.
 
 | `Cursor` method                               | Reads                                  |
@@ -30,6 +30,7 @@ tries the next alternative.
 | `readLiteral($text)`                          | the exact text, `false` when it is not next |
 | `readRemainder()`                             | everything left                        |
 | `skipWhitespace()`, `isEof()`                 |                                        |
+| `fail($message)`                              | nothing: rejects the input             |
 
 ## Built-in combinators
 
@@ -43,7 +44,7 @@ tries the next alternative.
 | `Reference`     | `CodeReference`        | a class, function, method, constant, property or variable |
 | `AssertSubject` | `CodeReference`        | `$value`, `$this->items`, `$this->getItems()`, `self::$instances` |
 | `URI`           | `UriReference`         | a word of RFC 3986                          |
-| `URL`           | `UrlReference`         | a URI with a scheme                         |
+| `URL`           | `UrlReference`         | a URL of WHATWG with a host                 |
 | `Version`       | `string`               | a word beginning with a digit               |
 | `IssueName`     | `string`               | letters, digits, `_`, `-` and `.`           |
 | `Description`   | `DescriptionInterface` | everything left, with its inline tags       |
@@ -77,7 +78,7 @@ final class PriorityCombinator implements CombinatorInterface
     public function __invoke(Cursor $cursor): Priority
     {
         return Priority::tryFrom($cursor->readWord())
-            ?? throw new NoMatchException('Expected a priority level');
+            ?? $cursor->fail('Expected a priority level');
     }
 }
 ```
@@ -110,6 +111,13 @@ $parser->parse('/** @priority urgent */')[0];
 
 <Aside type="tip">
 Read only your own syntax: the whitespace between the parts of a grammar is
-skipped by `Spec::sequence()`. When the input does not fit, throw instead of
-guessing: another alternative of `Spec::oneOf()` may take it.
+skipped by `Spec::sequence()`. When the input does not fit, call
+`$cursor->fail()` instead of guessing: another alternative of
+`Spec::oneOf()` may take it.
+</Aside>
+
+<Aside type="caution">
+Only `$cursor->fail()` turns the tag into an `InvalidTag`. Any other
+exception of a combinator, and a grammar that refers to an unregistered
+combinator, is thrown by the parser.
 </Aside>
